@@ -22,3 +22,7 @@ for city, people in contacts.items():
 df = pd.DataFrame(rows)
 df.to_csv("all_contacts.csv", index=False, encoding="utf-8-sig")
 print("✅ הקובץ נשמר: all_contacts.csv")
+
+# Save to Excel
+df.to_excel("all_contacts.xlsx", index=False, engine="openpyxl")
+print("✅ הקובץ נשמר גם כ־all_contacts.xlsx")
