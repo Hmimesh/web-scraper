@@ -1,0 +1,32 @@
+{
+  "אנו נעזרים בעובדים פרא": {
+    "phone": null,
+    "email": "amnon@emanuel.muni.il",
+    "job_title": "טבלת אנשי קשר - רווחה",
+    "department": "מחלקת רווחה"
+  },
+  "טבלת אנשי קשר": {
+    "phone": "09-7927108",
+    "email": "amnon@emanuel.muni.il",
+    "job_title": "אמנון אסף\tמנהל מחלקת רווחה\tשלוחה 252\t\t\tamnon@emanuel.muni.il",
+    "department": "מחלקת רווחה"
+  },
+  "אפרת רקנטי\tעו\"ס מועדונית ורכזת וועדות\tשלוחה": {
+    "phone": null,
+    "email": "efrat@emanuel.muni.il",
+    "job_title": "איציק אהרוני\tעו\"ס משפחות נוער וצעירים\tשלוחה 231\t\t\titzik@emanuel.muni.il",
+    "department": "מחלקות צעירים"
+  },
+  "צפרית פלד\tעו\"ס נערות וצעירות\tשלוחה": {
+    "phone": null,
+    "email": "tzafrit@emanuel.muni.il",
+    "job_title": "אילת ברוכי\tעו\"ס משפחות וותיקים\tשלוחה 221\t\t\tayeletb@emanuel.muni.il",
+    "department": "מחלקת אזרחים וותיקים"
+  },
+  "אילת ברוכי\tעו\"ס משפחות וותיקים\tשלוחה": {
+    "phone": null,
+    "email": "ayeletb@emanuel.muni.il",
+    "job_title": "אבישי הברי\tרווחה",
+    "department": "מחלקת רווחה"
+  }
+}

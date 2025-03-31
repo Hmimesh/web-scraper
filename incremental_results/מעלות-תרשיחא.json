@@ -1,0 +1,44 @@
+{
+  "סבטלנה חליף\tעו\"ס משפחה": {
+    "phone": "04-9578996",
+    "email": "revaha-19@maltar.co.il",
+    "job_title": "רעות לוריא\tעו\"ס לחוק נוער\t04-9578963\t\trevaha-42@maltar.co.il",
+    "department": "מחלקות נוער"
+  },
+  "מירית גולדמן\tעו\"ס משפחה": {
+    "phone": "04-9578930",
+    "email": "revaha-27@maltar.co.il",
+    "job_title": "מיכאל ביטון\tרכז צעירים ושיקום האסיר\t04-9578994​\t\trevaha-20@maltar.co.il",
+    "department": "מחלקות צעירים"
+  },
+  "דורית דדון\tמנהלת היחידה לטיפול ומניעת אלימות במשפחה": {
+    "phone": "04-9576307",
+    "email": "revaha-33@maltar.co.il",
+    "job_title": "מרכז עוצמה ותכנית נושמים לרווחה",
+    "department": "מחלקת רווחה"
+  },
+  "וולא סובח\tעו\"ס טיפול באלימות": {
+    "phone": "04-9578942",
+    "email": "revaha-48@maltar.co.il",
+    "job_title": "טבלת אנשי קשר - מרכז עוצמה ותכנית נושמים לרווחה",
+    "department": "מחלקת רווחה"
+  },
+  "חני לוי\tעו\"ס מועדונית": {
+    "phone": "04-6851803",
+    "email": "revaha-43@maltar.co.il",
+    "job_title": "איתור וטיפול בנוער בסיכון",
+    "department": "מחלקות נוער"
+  },
+  "מירית גולדמן\tעו\"ס מועדונית": {
+    "phone": "04-9578930",
+    "email": "revaha-27@maltar.co.il",
+    "job_title": "טבלת אנשי קשר - איתור וטיפול בנוער בסיכון",
+    "department": "מחלקות נוער"
+  },
+  "טבלת אנשי קשר": {
+    "phone": null,
+    "email": "Noar@maalot.matnasim.co.il",
+    "job_title": "זהר כהן\tמנהלת מחלקת נוער\t\t\tNoar@maalot.matnasim.co.il",
+    "department": "מחלקות נוער"
+  }
+}

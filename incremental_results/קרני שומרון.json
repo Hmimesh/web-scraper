@@ -1,0 +1,44 @@
+{
+  "טבלת אנשי קשר": {
+    "phone": "09-7920230",
+    "email": "Y-Gshomr-Ksn-s1@kishurim.K12.il",
+    "job_title": "רותי רוזנטל\tמנהלת בית ספר רימו\"ן – בית חינוך יסודי ממלכתי\t09-7920230\t\tY-Gshomr-Ksn-s1@kishurim.K12.il",
+    "department": "מחלקת חינוך"
+  },
+  "משרד מפתח\tמשרד מפתח": {
+    "phone": "09-7929980",
+    "email": "mtc@kshomron.co.il",
+    "job_title": "מוסדות חינוך ספר לפי שכונות",
+    "department": "מחלקת חינוך"
+  },
+  "אדר' אלון גינדיס\tמהנדס המועצה": {
+    "phone": "09-7940335",
+    "email": "alon@kshomron.co.il",
+    "job_title": "איציק תורג'מן\tמפקח בניה ציבורית ומוסדות חינוך\t09-7940337\t\titzikt@kshomron.co.il",
+    "department": "מחלקת חינוך"
+  },
+  "מיכל מיסן\tעו\"ס לסדרי דין ותוכנית ראשית לגיל הרך": {
+    "phone": "09-7940302",
+    "email": "michal@kshomron.co.il",
+    "job_title": "שחר אנטמן\tעו\"ס נוער, צעירים והתמכרויות\t09-7940305\t\tshahar@kshomron.co.il",
+    "department": "מחלקות צעירים"
+  },
+  "קרן הילה דר\tעו\"ס משפחות": {
+    "phone": "09-7940319",
+    "email": "kerenhilla@kshomron.co.il",
+    "job_title": "נועה זילברמן\tעו\"ס אזרחים וותיקים , עו\"ס שיקום\t073-3265476\t\tnoaz@kshomron.co.il",
+    "department": "מחלקת אזרחים וותיקים"
+  },
+  "רעיה בולוויק\tעו\"ס משפחות": {
+    "phone": "09-7940319",
+    "email": "raaya@kshomron.co.il",
+    "job_title": "שרה ויינשטיין\tרכזת התנדבות וקהילה תומכת (פז\"ם בקהילה )\t09-7940459\t\tsaraw@kshomron.co.il",
+    "department": "מחלקת קהילה"
+  },
+  "נועה זילברמן\tעו\"ס אזרחים וותיקים": {
+    "phone": "09-7940459",
+    "email": "noaz@kshomron.co.il",
+    "job_title": "יוסף גרינוולד\tאב בית קהילה תומכת (פז\"ם בקהילה)\t073-3261296\t\tiosef_g@yahoo.com",
+    "department": "מחלקת קהילה"
+  }
+}

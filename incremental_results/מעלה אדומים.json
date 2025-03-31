@@ -1,0 +1,20 @@
+{
+  "טבלת אנשי קשר": {
+    "phone": null,
+    "email": "anatn@mam.org.il",
+    "job_title": "ענת נחום\tמנהלת מחלקת חינוך מיוחד\t073-3485665\tanatn@mam.org.il",
+    "department": "מחלקת חינוך"
+  },
+  "הדס כהן\tקבסי\"ת אחראית ממ\"ד וחנ\"מ כוללני": {
+    "phone": "02-5913112",
+    "email": "hadasc@mam.org.il",
+    "job_title": "רוני זכאי\tמנהל קידום נוער\t02-5913112\tronizakai1961@gmail.com",
+    "department": "מחלקות נוער"
+  },
+  "משה סוריט\tמנהל מדור לוגיסטיקה": {
+    "phone": "050376436",
+    "email": "meitala@mam.org.il",
+    "job_title": "טבלת אנשי קשר - הנגשה פרטנית ואקוסטית במוסדות חינוך",
+    "department": "מחלקת חינוך"
+  }
+}

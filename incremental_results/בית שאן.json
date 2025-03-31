@@ -1,0 +1,44 @@
+{
+  "איכות הסביבה": {
+    "phone": "04-6587525",
+    "email": null,
+    "job_title": "איכות הסביבה",
+    "department": "מחלקת איכות סביבה"
+  },
+  "איכות הסביבה\nמעיין דורי": {
+    "phone": "04-9587705",
+    "email": "timor@bet-shean.org.il",
+    "job_title": "איכות הסביבה",
+    "department": "מחלקת איכות סביבה"
+  },
+  "ד\"ר עבד מחאג'נה": {
+    "phone": "04-6060306",
+    "email": null,
+    "job_title": "חינוך",
+    "department": "מחלקת חינוך"
+  },
+  "חינוך\nמאיר מירו דיין": {
+    "phone": "04-6060306",
+    "email": null,
+    "job_title": "מאיר מירו דיין - מנהל אגף החינוך",
+    "department": "מחלקת חינוך"
+  },
+  "מאיר מירו דיין": {
+    "phone": "04-6489416",
+    "email": "karolin@bet-shean.org.il",
+    "job_title": "מזכירת אגף החינוך -קרולין גבאי",
+    "department": "מחלקת חינוך"
+  },
+  "קרן אלימלך\nקבסי\"ת ורכזת חינוך מיוחד": {
+    "phone": "04-6489443",
+    "email": "keren@bet-shean.org.il",
+    "job_title": "קבסי\"ת ורכזת חינוך מיוחד: 04-6489443 | keren@bet-shean.org.il",
+    "department": "מחלקת חינוך"
+  },
+  "חן זגורי \n\nמנהלת תחום חינוך מיוחד": {
+    "phone": null,
+    "email": "chen@bet-shean.org.il",
+    "job_title": "מנהלת תחום חינוך מיוחד | דוא\"ל: chen@bet-shean.org.il",
+    "department": "מחלקת חינוך"
+  }
+}
