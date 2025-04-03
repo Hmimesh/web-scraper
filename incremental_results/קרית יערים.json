@@ -1,86 +1,11 @@
 {
-  "עו\"ס אלי מן\nקהילה": {
-    "phone": "02-5410000",
-    "email": "ilana@yearim.co.il",
-    "job_title": "קהילה",
-    "department": "מחלקת קהילה"
-  },
-  "עו\"ס טובה ולר\nחוק נוער": {
-    "phone": "02-5410007",
-    "email": "chananel@Yearim.co.il",
-    "job_title": "חוק נוער; מועדונית; ו'נתיבים להורות'",
-    "department": "מחלקות נוער"
-  },
-  "יהודית סמבר\nרכזת תכנית": {
-    "phone": null,
-    "email": "tova@yearim.co.il",
-    "job_title": "רכזת תכנית 'לב שמח' להתנדבות בקהילה",
-    "department": "מחלקת קהילה"
-  },
-  "לוי פרוידנברגר\nרכז תכנית": {
-    "phone": "02-5410000",
-    "email": "yb@yearim.co.il",
-    "job_title": "רכז תכנית 'יתד' לצעירים",
-    "department": "מחלקות צעירים"
-  },
-  "גב' רייזי וייס\nרכזת": {
-    "phone": "02-5410023",
-    "email": null,
-    "job_title": "פקס ישיר רווחה",
-    "department": "מחלקת רווחה"
-  },
-  "פרטי יצירת קשר\nאברהם וינטרוב\nחבר מועצה": {
-    "phone": null,
-    "email": "a.vaintrob@yearim.co.il",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "אורי פוקס\nחבר מועצה": {
-    "phone": null,
-    "email": "a.vaintrob@yearim.co.il",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "אחיעזר פרקש\nחבר מועצה": {
-    "phone": null,
-    "email": "ori@saia.co.il",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "אסף נגר\nחבר מועצה": {
-    "phone": null,
-    "email": "azfarkash@gmail.com",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "דוד קניאל\nחבר מועצה": {
-    "phone": null,
-    "email": "assinagar@gmail.com",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "חיים שפירא\nחבר מועצה": {
-    "phone": null,
-    "email": "davidk@rhcpa.co.il",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "ישראל איפרגן\nחבר מועצה": {
-    "phone": null,
-    "email": "chaim1989@gmail.com",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "שי נגיד\nחבר מועצה": {
-    "phone": null,
-    "email": "i.ifergan@gmail.com",
-    "job_title": "חבר מועצה",
-    "department": "מועצה"
-  },
-  "הרב יהודה קבסה שליט\"א\nרב שכונה לקהילה הספרדית\n מנחת שלמה": {
-    "phone": "02-5341565",
-    "email": null,
-    "job_title": "רב שכונה לקהילה הספרדית",
-    "department": "מחלקת קהילה"
+  "לא נמצא שם (None)": {
+    "שם": "לא נמצא שם (None)",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "קרית יערים",
+    "מייל": "sarip@Yearim.co.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
   }
 }

@@ -1,0 +1,26 @@
+{
+  "דואר אלקטרוני": {
+    "phone": null,
+    "email": "poptop2@walla.com",
+    "job_title": "רב הקהילה: הרב אורי איינהורן",
+    "department": "מחלקת קהילה"
+  },
+  "יונתן גלפנד\nחבר מועצה": {
+    "phone": null,
+    "email": "yonatangelfand@gmail.com",
+    "job_title": "חבר מועצה",
+    "department": "מועצה"
+  },
+  "נתנאל הירשנזון\nחבר מועצה": {
+    "phone": null,
+    "email": "hirshenson@barak.net.il",
+    "job_title": "חבר מועצה",
+    "department": "מועצה"
+  },
+  "עמיקם כהן\nחבר מועצה": {
+    "phone": null,
+    "email": "Cohen.amikam@gmail.com",
+    "job_title": "חבר מועצה",
+    "department": "מועצה"
+  }
+}

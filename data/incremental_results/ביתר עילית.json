@@ -1,0 +1,62 @@
+{
+  "גב' אתי פריד\tרכזת גיל הרך": {
+    "phone": "02-5889914",
+    "email": "fride@betar-illit.muni.il",
+    "job_title": "גב' פייגי בן שם\tרכזת נוער ומבוגרים\t02-5889913\t\tfeigi@betar-illit.muni.il",
+    "department": "מחלקות נוער"
+  },
+  "גב' נחמה וואלאך\tרכזת חברה וקהילה ומרכז אוריינות": {
+    "phone": "02-5889927",
+    "email": "nechama@Betar.matnasim.co.il",
+    "job_title": "גב' ציפי זלצמן\tמנהלת מחלקת קליטה בקהילה ופרויקטים\t02-5889915\t\ttzipi@betar-illit.muni.il",
+    "department": "מחלקת קליטה"
+  },
+  "טבלת אנשי קשר": {
+    "phone": null,
+    "email": "ahuvar@betar-illit.muni.il",
+    "job_title": "אהובה רוט\tעו\"ס לפי חוק הנוער גבעה A\t\t\tahuvar@betar-illit.muni.il",
+    "department": "מחלקות נוער"
+  },
+  "גב' גיטי וינגרטן\tמנהלת כספים": {
+    "phone": "02-5889923",
+    "email": "gitti@betar.matnasim.co.il",
+    "job_title": "גב' שרה שחר\tמלווה עולים (אנגלית, רוסית)\t02-5888570\t\tsara@betar.matnasim.co.il",
+    "department": "מחלקת קליטה"
+  },
+  "גב' גיטי הולס\tחשבת שכר והנה\"ח": {
+    "phone": "02-5889925",
+    "email": "sachar@betar.matnasim.co.il",
+    "job_title": "גב' לאה אופן\tמלווה עולים (אנגלית, ספרדית, פורטוגזית)\t02-5889924\t\tlea@betar.matnasim.co.il",
+    "department": "מחלקת קליטה"
+  },
+  "הנהלת קהילה ורווחה\nטבלת אנשי קשר": {
+    "phone": null,
+    "email": "avi@betar-illit.muni.il",
+    "job_title": "טבלת אנשי קשר - הנהלת קהילה ורווחה",
+    "department": "מחלקת רווחה"
+  },
+  "מזכירות קהילה ורווחה\nטבלת אנשי קשר": {
+    "phone": null,
+    "email": "tzili@betar-illit.muni.il",
+    "job_title": "טבלת אנשי קשר - מזכירות קהילה ורווחה",
+    "department": "מחלקת רווחה"
+  },
+  "תמר וולף\tעו\"ס אזרחים ותיקים": {
+    "phone": null,
+    "email": "tamar.w@betar-illit.muni.il",
+    "job_title": "נוער צעירים התמכרויות ותעסוקה",
+    "department": "מחלקות צעירים"
+  },
+  "נוער צעירים התמכרויות ותעסוקה\nטבלת אנשי קשר": {
+    "phone": null,
+    "email": "sara.s@betar-illit.muni.il",
+    "job_title": "טבלת אנשי קשר - נוער צעירים התמכרויות ותעסוקה",
+    "department": "מחלקות צעירים"
+  },
+  "יצחק וענונו\tסגן גזבר": {
+    "phone": "02-5888126",
+    "email": null,
+    "job_title": "יעקב טורנהיים\tמנהל מחלקת תרבות\t02-5889912",
+    "department": "מחלקות תרבות"
+  }
+}

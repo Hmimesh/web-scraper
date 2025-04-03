@@ -1,0 +1,32 @@
+{
+  "פועה כהן\n\n\t מנ' מח' חינוך": {
+    "phone": "03-9151231",
+    "email": null,
+    "job_title": "מנ' מח' חינוך\t03-9151231",
+    "department": "מחלקת חינוך"
+  },
+  "דומב תהילה\n\n\t מנהלת יחידת הנוער": {
+    "phone": null,
+    "email": "noar@elkana.org.il",
+    "job_title": "מנהלת יחידת הנוער\t \t054-4655245",
+    "department": "מחלקות נוער"
+  },
+  "גלית בודנשטיין\n\n\t מנהלת רווחה": {
+    "phone": "03-9151219",
+    "email": "Galit@elkana.org.il",
+    "job_title": "מנהלת רווחה\t03-9151219\t \t03-9151234",
+    "department": "מחלקת רווחה"
+  },
+  "מוריה שורץ\n\n\tעו\"ס תחום הגיל השלישי": {
+    "phone": "03-9151262",
+    "email": "moriya@elkana.org.il",
+    "job_title": "עו\"ס תחום הגיל השלישי\t03-9151262",
+    "department": "מחלקת אזרחים וותיקים"
+  },
+  "שירה אורן\n\n\t רכזת צעירים": {
+    "phone": null,
+    "email": "youngselkana@gmail.com",
+    "job_title": "רכזת צעירים\t054-5997824",
+    "department": "מחלקות צעירים"
+  }
+}

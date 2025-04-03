@@ -1,86 +1,11 @@
 {
-  "ועדת חינוך": {
-    "phone": null,
-    "email": "8732000@gmail.com",
-    "job_title": "ועדת חינוך (רשות)",
-    "department": "מחלקת חינוך"
-  },
-  "ועדת רווחה": {
-    "phone": null,
-    "email": "v.yehuda@pardes-hanna-karkur.muni.il",
-    "job_title": "ועדת רווחה (רשות)",
-    "department": "מחלקת רווחה"
-  },
-  "ועדת תרבות ואומנות": {
-    "phone": null,
-    "email": "hagar.phk@gmail.com",
-    "job_title": "ועדת תרבות ואומנות (רשות)",
-    "department": "מחלקות תרבות"
-  },
-  "ועדת קהילה": {
-    "phone": null,
-    "email": "hagar.phk@gmail.com",
-    "job_title": "ועדת קהילה (רשות)",
-    "department": "מחלקת קהילה"
-  },
-  "ד\"ר רותם עירית": {
-    "phone": null,
-    "email": "s.aviad@pardes-hanna-karkur.muni.il",
-    "job_title": "ד\"ר רותם עירית - מחזיקת תיק חדשנות, סגנית מחזיק תיק קהילה",
-    "department": "מחלקת קהילה"
-  },
-  "נחום גנצ'רסקי": {
-    "phone": null,
-    "email": "iritrotem64@gmail.com",
-    "job_title": "נחום גנצ'רסקי- מחזיק תיק אזרחים וותיקים",
-    "department": "מחלקת אזרחים וותיקים"
-  },
-  "עו\"ד אייל כגן": {
-    "phone": null,
-    "email": "mayor@pardes-hanna-karkur.muni.il",
-    "job_title": "עו\"ד אייל כגן - ממלא מקום וסגן ראש המועצה ויו\"ר ועדת המשנה",
-    "department": "מועצה"
-  },
-  "עו\"ד אביעד סיני": {
-    "phone": null,
-    "email": "lishka.mm@pardes-hanna-karkur.muni.il",
-    "job_title": "עו\"ד אביעד סיני - סגן ראש המועצה",
-    "department": "מועצה"
-  },
-  "טל דנטס": {
-    "phone": "052845657",
-    "email": "s.aviad@pardes-hanna-karkur.muni.il",
-    "job_title": "טל דנטס- חבר מועצה",
-    "department": "מועצה"
-  },
-  "אלון מרחב": {
-    "phone": null,
-    "email": "yaelparan@gmail.com",
-    "job_title": "אלון מרחב - חבר מועצה",
-    "department": "מועצה"
-  },
-  "נחמיה מנצור": {
-    "phone": null,
-    "email": "allon.merhav@gmail.com",
-    "job_title": "נחמיה מנצור- חבר מועצה",
-    "department": "מועצה"
-  },
-  "נחום גנצרסקי": {
-    "phone": null,
-    "email": "Nehemiah_m@walla.co.il",
-    "job_title": "נחום גנצרסקי- חבר מועצה",
-    "department": "מועצה"
-  },
-  "נתנאל קסטן": {
-    "phone": null,
-    "email": "hagar.phk@gmail.com",
-    "job_title": "נתנאל קסטן - חבר מועצה",
-    "department": "מועצה"
-  },
-  "אלדד בר כוכבא": {
-    "phone": null,
-    "email": "8732000@gmail.com",
-    "job_title": "אלדד בר כוכבא - חבר מועצה",
-    "department": "מועצה"
+  "לא נמצא שם (None)": {
+    "שם": "לא נמצא שם (None)",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "פרדס חנה-כרכור",
+    "מייל": "y.orly@pardes-hanna-karkur.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
   }
 }

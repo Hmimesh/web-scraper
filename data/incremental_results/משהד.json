@@ -1,0 +1,32 @@
+{
+  "גזברות וגביה\tגסאן סאלח": {
+    "phone": "04-6859931",
+    "email": "gizbar@mashhad.muni.il",
+    "job_title": "חינוך\tד\"ר סעיד סלימאן\t04-6859938\thinuch@mashhad.muni.il / ssuliman09@yahoo.com",
+    "department": "מחלקת חינוך"
+  },
+  "חינוך\tד\"ר סעיד סלימאן": {
+    "phone": "04-6859938",
+    "email": "hinuch@mashhad.muni.il",
+    "job_title": "רווחה ושירותים חברתיים\tנואל אטרש\t04-6859947\trivaha@mashhad.muni.il",
+    "department": "מחלקת רווחה"
+  },
+  "קצין ביקור סדיר\tיאסמין חסן": {
+    "phone": "04-6859954",
+    "email": "kabas@mashhad.muni.il",
+    "job_title": "יחידת הנוער\tמרואן חסן\t04-6859936\tm.noar@mashhad.muni.il",
+    "department": "מחלקות נוער"
+  },
+  "ספורט\tמוחמד אסעד סאלח": {
+    "phone": "04-6859948",
+    "email": "sport@mashhad.muni.il",
+    "job_title": "קידום נוער\tטארק סולימאן\t054-6122566\tk.noar@mashhad.muni.il",
+    "department": "מחלקות נוער"
+  },
+  "מלחמה באלימות": {
+    "phone": "04-6859930",
+    "email": "alemot@mashhad.muni.il",
+    "job_title": "מרכז נוער\tאיאת סולימאן\t052-3201224\tayat.slem12@gmail.com",
+    "department": "מחלקות נוער"
+  }
+}

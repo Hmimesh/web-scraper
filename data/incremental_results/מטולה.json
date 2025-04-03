@@ -1,0 +1,20 @@
+{
+  "שם \tתפקיד \tדוא": {
+    "phone": null,
+    "email": "lishka@metulla.muni.il",
+    "job_title": "אבי נדיב\tחבר מועצה וסגן ראש המועצה\tres2hagoshrim@kayak.co.il",
+    "department": "מועצה"
+  },
+  "דוד אזולאי\tראש המועצה": {
+    "phone": null,
+    "email": "lishka@metulla.muni.il",
+    "job_title": "חגי רוזנבאום\tחבר מועצה\t hrozenbaum@gmail.com",
+    "department": "מועצה"
+  },
+  "אבי נדיב\tחבר מועצה וסגן ראש המועצה": {
+    "phone": null,
+    "email": "res2hagoshrim@kayak.co.il",
+    "job_title": "יונתן דייויס\tחבר מועצה\tdavisyonatan@gmail.com",
+    "department": "מועצה"
+  }
+}
