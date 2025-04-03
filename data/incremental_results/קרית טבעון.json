@@ -1,0 +1,50 @@
+{
+  "חינוך\n\nקבלת קהל בתאום מראש": {
+    "phone": "04-9539292",
+    "email": null,
+    "job_title": "חינוך",
+    "department": "מחלקת חינוך"
+  },
+  "טבלת אנשי קשר": {
+    "phone": "04-9537157",
+    "email": "mazkiruth@kiryat-tivon.muni.il",
+    "job_title": "מוקד פניות - חינוך\tימים א'-ה' 8:00-14:00\t04-9537157",
+    "department": "מחלקת חינוך"
+  },
+  "מוקד פניות": {
+    "phone": "04-9537157",
+    "email": "mazkiruth@kiryat-tivon.muni.il",
+    "job_title": "טלי רביב קרויטורו\tמנהלת מחלקת חינוך\tניתן לצור קשר באמצעות דוא\"ל\t\tmazkiruth@kiryat-tivon.muni.il",
+    "department": "מחלקת חינוך"
+  },
+  "סילביה מרג'יה\tרכזת תחום התנדבות": {
+    "phone": "04-9539272",
+    "email": "ostiv1@kiryat-tivon.muni.il",
+    "job_title": "טניה פרקש\tעו\"ס לחוק הנוער\t04-9539220\t\ttanya_f@kiryat-tivon.muni.il",
+    "department": "מחלקות נוער"
+  },
+  "אילנית רף\tעו\"ס משפחות": {
+    "phone": "04-9539232",
+    "email": "elanit@kiryat-tivon.muni.il",
+    "job_title": "יעל פרץ\tעו\"ס נוער וצעירים\t04-9539264\t052-3305795 [וואטסאפ בלבד]\tos2tiv@kiryat-tivon.muni.il",
+    "department": "מחלקות צעירים"
+  },
+  "יואב פרל\tעו\"ס משפחה": {
+    "phone": "04-9539264",
+    "email": "ostiv6@kiryat-tivon.muni.il",
+    "job_title": "אייה גוזלי\tעו\"ס צעירים ומשפחות\t04-9539231\t\tostiv10@kiryar-tivon.muni.il",
+    "department": "מחלקות צעירים"
+  },
+  "רותם אבואב": {
+    "phone": "04-9539297",
+    "email": "rotem@kiryat-tivon.muni.il",
+    "job_title": "שני אוסטרייכר\tמנהלת מחלקת פרויקטים, קיימות וסביבה\t04-9537174\t\tprojects@kiryat-tivon.muni.il",
+    "department": "מחלקת איכות סביבה"
+  },
+  "תושבות ותושבים יקרים": {
+    "phone": null,
+    "email": "tami@kiryat-tivon.muni.il",
+    "job_title": "אני שמחה לפנות אליכם באמצעות אתר המועצה מקומית קרית טבעון. האתר מפרט את מגוון השירותים והמענים הניתנים במחלקה לשירותים חברתיים ובשלוחותיה. אני מזמינה אתכם להכיר מקרוב את שרותי הרווחה הניתנים במחלקה:  ייעוץ, תמיכה, טיפול רגשי, ליווי קצר מועד או ארוך טווח ועוד.",
+    "department": "מחלקת רווחה"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "חינוך\nיחידה ארגונית": {
+    "phone": null,
+    "email": "matya.zfat@matya365.org.il",
+    "job_title": "מינהל: חינוך",
+    "department": "מחלקת חינוך"
+  },
+  "יחידה ארגונית": {
+    "phone": "04-6927423",
+    "email": null,
+    "job_title": "תפקיד: מזכירה - ילדים ונוער בסיכון",
+    "department": "מחלקות נוער"
+  },
+  "סביבה ופיקוח\nיחידה ארגונית": {
+    "phone": null,
+    "email": "roy@eastgalil.org.il",
+    "job_title": "מינהל: סביבה ופיקוח",
+    "department": "מחלקת איכות סביבה"
+  }
+}

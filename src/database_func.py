@@ -1,20 +1,20 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
 import re
-from bs4 import BeautifulSoup
 import time
 import json
 import logging
 from urllib.parse import urljoin
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+from jobs import Contacts
+
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
                     filename='scraper.log')
 
-def clean_phone(phone):
-    return re.sub(r'[^\d]', '', phone) if phone else None
 
 def get_contact_page_links_with_browser(page, base_url):
     contact_keywords = [
@@ -76,69 +76,47 @@ def extract_relevant_contacts_from_text(text, city_name):
     if city_name in arabic_authorities:
         return {city_name: {}}
 
-    department_keywords = {
-        "מחלקות נוער": ["נוער", "רכז נוער", "מנהלת נוער"],
-        "מחלקות צעירים": ["צעירים", "רכז צעירים", "נוער וצעירים"],
-        "מחלקות תרבות": ["תרבות", "רכז תרבות", "מנהלת תרבות"],
-        "מחלקות אירועים": ["אירועים", "מארגנת אירועים"],
-        "מחלקת חינוך": ["חינוך", "מפקחת חינוך"],
-        "מחלקת קהילה": ["קהילה", "רכז קהילה", "פעילות קהילתית"],
-        "מחלקת רווחה": ["רווחה", "עובד סוציאלי"],
-        "מחלקת קליטה": ["קליטה", "עולים"],
-        "מחלקת איכות סביבה": ["סביבה", "קיימות", "ירוק"],
-        "מחלקת אזרחים וותיקים": ["וותיקים", "הגיל השלישי"],
-        "מועצה": ["חבר מועצה", "חברי מועצה", "יושב ראש מועצה", "סגן ראש המועצה", "תפקידי מועצה"]
-    }
-
-    excluded_keywords = [
-        "וטרינר", "ביטחון", "הנדסה", "ספורט", "תחבורה",
-        "חנייה", "גבייה", "מכרזים", "מיסוי", "ארנונה", "תשתיות"
-    ]
-
-    non_person_keywords = [
-        "פרטי קשר", "אגף", "אגפים", "מחלקה", "מחלקת", "צוות",
-        "פרטי התקשרות", "רשימת בעלי", "טלפון", "מייל", "אימייל", "דוא\"ל",
-        "מידע כללי", "שעות פעילות", "שעות קבלת קהל"
-    ]
-
     people = {}
     seen = set()
-    lines = text.split("\n")
+    buffer = []
 
-    for i, line in enumerate(lines):
-        if any(ex_kw in line for ex_kw in excluded_keywords):
+    lines = text.split("\n")
+    for line in lines:
+        line = line.strip()
+        if not line:
             continue
 
-        for dept, keywords in department_keywords.items():
-            if any(kw in line for kw in keywords):
-                context = "\n".join(lines[max(0, i - 2): i + 3])
+        buffer.append(line)
 
-                name_match = re.search(r'(?:[א-ת][\'"״׳]?){2,}(?:\s+(?:[א-ת][\'"״׳]?){2,})+', context)
-                phone_match = re.search(r'\b0[2-9](?:[-\s]?\d){7}\b', context)
+        if re.search(r'@|0[2-9]', line):
+            contact_raw = " ".join(buffer)
+            contact_obj = Contacts(contact_raw, city_name)
 
-                email_match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', context)
+            unique_key = (contact_obj.email, contact_obj.phone_office, contact_obj.phone_mobile)
+            if any(unique_key) and unique_key not in seen:
+                people[contact_obj.name] = contact_obj.to_dict()
+                seen.add(unique_key)
 
-                name = name_match.group(0) if name_match else f"אין שם ({dept})"
-                phone = clean_phone(phone_match.group(0)) if phone_match else None
-                email = email_match.group(0) if email_match else None
-
-                if not phone and not email:
-                    continue
-
-                if any(kw in name for kw in non_person_keywords):
-                    continue
-
-                contact_key = (name, phone, email, dept)
-                if contact_key not in seen:
-                    seen.add(contact_key)
-                    people[name] = {
-                        "phone": phone,
-                        "email": email,
-                        "job_title": line.strip(),
-                        "department": dept
-                    }
+            buffer = []
 
     return {city_name: people}
+
+
+def split_contacts_block(text, city):
+    segments = re.split(r'\t+|\s{2,}', text)
+    buffer = []
+    contacts = []
+
+    for item in segments:
+        buffer.append(item.strip())
+
+        if any(re.search(p, item) for p in [r'@', r'0[2-9]\d{7,8}']):
+            contact_raw = " ".join(buffer).strip()
+            if contact_raw:
+                contacts.append(Contacts(contact_raw, city))
+            buffer = []
+
+    return contacts
 
 def process_city(row, existing_data):
     city = row["עיר"]
@@ -173,8 +151,8 @@ def process_city(row, existing_data):
                 contact_info = extract_relevant_contacts_from_text(text, city)
                 city_data.update(contact_info.get(city, {}))
 
-            os.makedirs("incremental_results", exist_ok=True)
-            with open(f"incremental_results/{city}.json", "w", encoding="utf-8") as f:
+            os.makedirs(os.path.join(base_dir, "incremental_results"), exist_ok=True)
+            with open(os.path.join(base_dir, "incremental_results", f"{city}.json"), "w", encoding="utf-8") as f:
                 json.dump(city_data, f, ensure_ascii=False, indent=2)
 
             return city, city_data
@@ -185,22 +163,36 @@ def process_city(row, existing_data):
             browser.close()
 
 def scrape_with_browser():
-    df = pd.read_csv("cities_links.csv")
+    df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"))
     results = {}
 
-    if os.path.exists("smart_contacts.json"):
-        with open("smart_contacts.json", encoding="utf-8") as f:
-            results = json.load(f)
+    dict_path = os.path.join(base_dir, "third_test.json")
+    if not os.path.exists(dict_path):
+        with open(dict_path, "w", encoding="utf-8") as f:
+            json.dump({}, f, ensure_ascii=False, indent=2)
+
+    with open(dict_path, encoding="utf-8") as f:
+        results = json.load(f)
 
     with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = executor.map(lambda row: process_city(row, results), [row for _, row in df.iterrows()])
-        for city, data in futures:
-            results[city] = data
+        future_to_city = {
+            executor.submit(process_city, row, results): row["עיר"]
+            for _, row in df.iterrows()
+        }
 
-    with open("smart_contacts.json", "w", encoding="utf-8") as f:
+        for future in as_completed(future_to_city):
+            city = future_to_city[future]
+            try:
+                city, data = future.result(timeout=60)
+                results[city] = data
+            except Exception as exc:
+                logging.error(f"[TIMEOUT/ERROR] {city}: {exc}")
+
+    with open(dict_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    logging.info("Done scraping all cities into smart_contacts.json")
+    logging.info(f"Done scraping all cities into third_test.json, there were {Contacts.contacts}")
+    print(" File saved:", dict_path)
 
 if __name__ == "__main__":
     scrape_with_browser()

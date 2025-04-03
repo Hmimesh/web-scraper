@@ -1,0 +1,728 @@
+2025-03-31 16:40:55,906 - INFO - אבן יהודה: Found 23 potential contact links
+2025-03-31 16:40:56,214 - INFO - אבו סנאן: Found 0 potential contact links
+2025-03-31 16:40:56,215 - ERROR - [ERROR] אבו סנאן: [Errno 2] No such file or directory: 'incremental_results/אבו סנאן.json'
+2025-03-31 16:40:56,965 - INFO - אבו גוש: Found 6 potential contact links
+2025-03-31 16:40:58,017 - INFO - אום אל-פחם: Found 9 potential contact links
+2025-03-31 16:40:59,436 - INFO - אור יהודה: Found 1 potential contact links
+2025-03-31 16:40:59,580 - INFO - אופקים: Found 27 potential contact links
+2025-03-31 16:41:01,244 - ERROR - [ERROR] אור יהודה: [Errno 2] No such file or directory: 'incremental_results/אור יהודה.json'
+2025-03-31 16:41:09,327 - INFO - אור עקיבא: Found 7 potential contact links
+2025-03-31 16:41:09,960 - ERROR - [ERROR] אבו גוש: [Errno 2] No such file or directory: 'incremental_results/אבו גוש.json'
+2025-03-31 16:41:10,696 - ERROR - [ERROR] אום אל-פחם: [Errno 2] No such file or directory: 'incremental_results/אום אל-פחם.json'
+2025-03-31 16:41:16,643 - INFO - אזור: Found 26 potential contact links
+2025-03-31 16:41:16,992 - INFO - אורנית: Found 15 potential contact links
+2025-03-31 16:41:17,047 - ERROR - [FAILED] Could not fetch javascript: document.querySelector('.services-slick').click(); after retries
+2025-03-31 16:41:17,699 - ERROR - [ERROR] אור עקיבא: [Errno 2] No such file or directory: 'incremental_results/אור עקיבא.json'
+2025-03-31 16:41:21,734 - INFO - אילת: Found 0 potential contact links
+2025-03-31 16:41:21,734 - ERROR - [ERROR] אילת: [Errno 2] No such file or directory: 'incremental_results/אילת.json'
+2025-03-31 16:41:26,401 - ERROR - [ERROR] אבן יהודה: [Errno 2] No such file or directory: 'incremental_results/אבן יהודה.json'
+2025-03-31 16:41:28,006 - INFO - אכסאל: Found 0 potential contact links
+2025-03-31 16:41:28,006 - ERROR - [ERROR] אכסאל: [Errno 2] No such file or directory: 'incremental_results/אכסאל.json'
+2025-03-31 16:41:30,130 - INFO - אליכין: Found 10 potential contact links
+2025-03-31 16:41:32,059 - INFO - אלעד: Found 9 potential contact links
+2025-03-31 16:41:36,357 - ERROR - [ERROR] אורנית: [Errno 2] No such file or directory: 'incremental_results/אורנית.json'
+2025-03-31 16:41:46,980 - ERROR - [ERROR] אופקים: [Errno 2] No such file or directory: 'incremental_results/אופקים.json'
+2025-03-31 16:41:47,763 - ERROR - [ERROR] אליכין: [Errno 2] No such file or directory: 'incremental_results/אליכין.json'
+2025-03-31 16:41:47,777 - ERROR - [ERROR] אלעד: [Errno 2] No such file or directory: 'incremental_results/אלעד.json'
+2025-03-31 16:41:55,005 - INFO - אלקנה: Found 7 potential contact links
+2025-03-31 16:41:55,431 - ERROR - [ERROR] אזור: [Errno 2] No such file or directory: 'incremental_results/אזור.json'
+2025-03-31 16:41:55,572 - INFO - אעבלין: Found 0 potential contact links
+2025-03-31 16:41:55,572 - ERROR - [ERROR] אעבלין: [Errno 2] No such file or directory: 'incremental_results/אעבלין.json'
+2025-03-31 16:41:55,589 - INFO - אפרת: Found 0 potential contact links
+2025-03-31 16:41:55,589 - ERROR - [ERROR] אפרת: [Errno 2] No such file or directory: 'incremental_results/אפרת.json'
+2025-03-31 16:42:01,008 - INFO - אריאל: Found 18 potential contact links
+2025-03-31 16:42:01,648 - INFO - אשקלון: Found 11 potential contact links
+2025-03-31 16:42:04,116 - ERROR - [ERROR] אלקנה: [Errno 2] No such file or directory: 'incremental_results/אלקנה.json'
+2025-03-31 16:42:08,170 - INFO - באקה אל גרבייה: Found 6 potential contact links
+2025-03-31 16:42:08,621 - INFO - אשדוד: Found 87 potential contact links
+2025-03-31 16:42:17,298 - INFO - אלפי מנשה: Found 27 potential contact links
+2025-03-31 16:42:19,671 - ERROR - [ERROR] באקה אל גרבייה: [Errno 2] No such file or directory: 'incremental_results/באקה אל גרבייה.json'
+2025-03-31 16:42:21,969 - ERROR - [ERROR] אריאל: [Errno 2] No such file or directory: 'incremental_results/אריאל.json'
+2025-03-31 16:42:27,540 - INFO - באר יעקב: Found 38 potential contact links
+2025-03-31 16:42:30,431 - ERROR - [ERROR] אשקלון: [Errno 2] No such file or directory: 'incremental_results/אשקלון.json'
+2025-03-31 16:42:32,609 - INFO - באר שבע: Found 14 potential contact links
+2025-03-31 16:42:35,070 - INFO - בועיינה-נוג'ידאת: Found 0 potential contact links
+2025-03-31 16:42:35,070 - ERROR - [ERROR] בועיינה-נוג'ידאת: [Errno 2] No such file or directory: "incremental_results/בועיינה-נוג'ידאת.json"
+2025-03-31 16:42:40,098 - INFO - בוקעאתא: Found 16 potential contact links
+2025-03-31 16:42:50,897 - ERROR - [ERROR] בוקעאתא: [Errno 2] No such file or directory: 'incremental_results/בוקעאתא.json'
+2025-03-31 16:42:56,466 - INFO - ביר אל-מכסור: Found 16 potential contact links
+2025-03-31 16:43:10,868 - ERROR - [ERROR] ביר אל-מכסור: [Errno 2] No such file or directory: 'incremental_results/ביר אל-מכסור.json'
+2025-03-31 16:43:15,278 - ERROR - [ERROR] אלפי מנשה: [Errno 2] No such file or directory: 'incremental_results/אלפי מנשה.json'
+2025-03-31 16:43:17,141 - INFO - בית אל: Found 0 potential contact links
+2025-03-31 16:43:17,142 - ERROR - [ERROR] בית אל: [Errno 2] No such file or directory: 'incremental_results/בית אל.json'
+2025-03-31 16:43:18,486 - ERROR - [ERROR] באר יעקב: [Errno 2] No such file or directory: 'incremental_results/באר יעקב.json'
+2025-03-31 16:43:19,263 - INFO - בית אריה: Found 15 potential contact links
+2025-03-31 16:43:26,604 - INFO - בית ג'ן: Found 10 potential contact links
+2025-03-31 16:43:35,921 - INFO - בית דגן: Found 9 potential contact links
+2025-03-31 16:43:39,238 - ERROR - [ERROR] בית אריה: [Errno 2] No such file or directory: 'incremental_results/בית אריה.json'
+2025-03-31 16:43:42,492 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:43:46,343 - INFO - בית שאן: Found 9 potential contact links
+2025-03-31 16:43:46,824 - ERROR - [ERROR] בית ג'ן: [Errno 2] No such file or directory: "incremental_results/בית ג'ן.json"
+2025-03-31 16:43:51,430 - ERROR - [ERROR] בית דגן: [Errno 2] No such file or directory: 'incremental_results/בית דגן.json'
+2025-03-31 16:43:53,299 - INFO - בית שמש: Found 26 potential contact links
+2025-03-31 16:43:54,689 - INFO - ביתר עילית: Found 9 potential contact links
+2025-03-31 16:43:57,269 - ERROR - [ERROR] בית שאן: [Errno 2] No such file or directory: 'incremental_results/בית שאן.json'
+2025-03-31 16:44:01,393 - INFO - בני ברק: Found 17 potential contact links
+2025-03-31 16:44:12,216 - ERROR - [ERROR] ביתר עילית: [Errno 2] No such file or directory: 'incremental_results/ביתר עילית.json'
+2025-03-31 16:44:13,890 - ERROR - [FAILED] Could not fetch https://www.beer-sheva.muni.il/Services/Pages/ContactUS.aspx after retries
+2025-03-31 16:44:15,593 - INFO - בני עיש: Found 23 potential contact links
+2025-03-31 16:44:35,949 - ERROR - [ERROR] בית שמש: [Errno 2] No such file or directory: 'incremental_results/בית שמש.json'
+2025-03-31 16:44:37,194 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:44:38,718 - ERROR - [ERROR] בני ברק: [Errno 2] No such file or directory: 'incremental_results/בני ברק.json'
+2025-03-31 16:44:41,146 - INFO - בנימינה-גבעת עדה: Found 13 potential contact links
+2025-03-31 16:44:45,155 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:44:45,836 - INFO - בסמה: Found 20 potential contact links
+2025-03-31 16:44:47,266 - ERROR - [ERROR] בני עיש: [Errno 2] No such file or directory: 'incremental_results/בני עיש.json'
+2025-03-31 16:44:50,478 - ERROR - [FAILED] Could not fetch https://www.bin-ada.co.il/SystemFiles/kavirov.pdf after retries
+2025-03-31 16:44:53,218 - ERROR - [ERROR] באר שבע: [Errno 2] No such file or directory: 'incremental_results/באר שבע.json'
+2025-03-31 16:44:53,544 - INFO - בסמת טבעון: Found 0 potential contact links
+2025-03-31 16:44:53,544 - ERROR - [ERROR] בסמת טבעון: [Errno 2] No such file or directory: 'incremental_results/בסמת טבעון.json'
+2025-03-31 16:44:59,335 - INFO - בענה: Found 6 potential contact links
+2025-03-31 16:45:00,746 - INFO - בת ים: Found 23 potential contact links
+2025-03-31 16:45:06,877 - ERROR - [ERROR] בענה: [Errno 2] No such file or directory: 'incremental_results/בענה.json'
+2025-03-31 16:45:13,155 - INFO - גבעת זאב: Found 0 potential contact links
+2025-03-31 16:45:13,155 - ERROR - [ERROR] גבעת זאב: [Errno 2] No such file or directory: 'incremental_results/גבעת זאב.json'
+2025-03-31 16:45:18,396 - INFO - גבעת שמואל: Found 32 potential contact links
+2025-03-31 16:48:14,829 - INFO - אבו סנאן: Found 0 potential contact links
+2025-03-31 16:48:14,830 - ERROR - [ERROR] אבו סנאן: [Errno 2] No such file or directory: 'incremental_results/אבו סנאן.json'
+2025-03-31 16:48:15,905 - INFO - אבו גוש: Found 6 potential contact links
+2025-03-31 16:48:16,352 - INFO - אבן יהודה: Found 23 potential contact links
+2025-03-31 16:48:18,047 - INFO - אור יהודה: Found 1 potential contact links
+2025-03-31 16:48:19,353 - INFO - אופקים: Found 27 potential contact links
+2025-03-31 16:48:19,470 - INFO - אום אל-פחם: Found 9 potential contact links
+2025-03-31 16:48:19,860 - ERROR - [ERROR] אור יהודה: [Errno 2] No such file or directory: 'incremental_results/אור יהודה.json'
+2025-03-31 16:48:27,953 - ERROR - [ERROR] אבו גוש: [Errno 2] No such file or directory: 'incremental_results/אבו גוש.json'
+2025-03-31 16:48:28,091 - INFO - אור עקיבא: Found 7 potential contact links
+2025-03-31 16:48:33,282 - INFO - אורנית: Found 15 potential contact links
+2025-03-31 16:48:33,555 - ERROR - [ERROR] אום אל-פחם: [Errno 2] No such file or directory: 'incremental_results/אום אל-פחם.json'
+2025-03-31 16:48:37,913 - ERROR - [ERROR] אור עקיבא: [Errno 2] No such file or directory: 'incremental_results/אור עקיבא.json'
+2025-03-31 16:48:38,405 - INFO - אזור: Found 26 potential contact links
+2025-03-31 16:48:42,016 - INFO - אילת: Found 0 potential contact links
+2025-03-31 16:48:42,016 - ERROR - [ERROR] אילת: [Errno 2] No such file or directory: 'incremental_results/אילת.json'
+2025-03-31 16:48:45,749 - ERROR - [ERROR] אבן יהודה: [Errno 2] No such file or directory: 'incremental_results/אבן יהודה.json'
+2025-03-31 16:48:48,365 - INFO - אכסאל: Found 0 potential contact links
+2025-03-31 16:48:48,365 - ERROR - [ERROR] אכסאל: [Errno 2] No such file or directory: 'incremental_results/אכסאל.json'
+2025-03-31 16:48:51,510 - ERROR - [FAILED] Could not fetch javascript: document.querySelector('.services-slick').click(); after retries
+2025-03-31 16:48:51,532 - INFO - אליכין: Found 10 potential contact links
+2025-03-31 16:48:51,689 - INFO - אלעד: Found 9 potential contact links
+2025-03-31 16:48:52,378 - ERROR - [ERROR] אורנית: [Errno 2] No such file or directory: 'incremental_results/אורנית.json'
+2025-03-31 16:49:51,555 - INFO - אבו סנאן: Found 0 potential contact links
+2025-03-31 16:49:52,148 - INFO - אבן יהודה: Found 23 potential contact links
+2025-03-31 16:49:52,567 - INFO - אבו גוש: Found 6 potential contact links
+2025-03-31 16:49:53,283 - INFO - אום אל-פחם: Found 9 potential contact links
+2025-03-31 16:49:54,265 - INFO - אור יהודה: Found 1 potential contact links
+2025-03-31 16:49:55,117 - INFO - אופקים: Found 27 potential contact links
+2025-03-31 16:50:06,875 - INFO - אור עקיבא: Found 7 potential contact links
+2025-03-31 16:50:10,803 - INFO - אורנית: Found 15 potential contact links
+2025-03-31 16:50:13,184 - INFO - אזור: Found 26 potential contact links
+2025-03-31 16:50:17,549 - INFO - אילת: Found 0 potential contact links
+2025-03-31 16:50:25,646 - INFO - אכסאל: Found 0 potential contact links
+2025-03-31 16:50:27,883 - INFO - אליכין: Found 10 potential contact links
+2025-03-31 16:50:29,370 - INFO - אלעד: Found 9 potential contact links
+2025-03-31 16:50:36,767 - ERROR - [FAILED] Could not fetch javascript: document.querySelector('.services-slick').click(); after retries
+2025-03-31 16:50:49,415 - INFO - אעבלין: Found 0 potential contact links
+2025-03-31 16:50:49,593 - INFO - אלקנה: Found 7 potential contact links
+2025-03-31 16:50:50,976 - INFO - אפרת: Found 0 potential contact links
+2025-03-31 16:50:53,366 - INFO - אריאל: Found 18 potential contact links
+2025-03-31 16:51:02,983 - INFO - אשדוד: Found 87 potential contact links
+2025-03-31 16:51:08,505 - INFO - אשקלון: Found 11 potential contact links
+2025-03-31 16:51:16,237 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:51:16,323 - INFO - אלפי מנשה: Found 27 potential contact links
+2025-03-31 16:51:21,091 - INFO - באקה אל גרבייה: Found 6 potential contact links
+2025-03-31 16:51:33,967 - INFO - באר יעקב: Found 38 potential contact links
+2025-03-31 16:51:40,744 - INFO - באר שבע: Found 14 potential contact links
+2025-03-31 16:51:40,920 - INFO - בועיינה-נוג'ידאת: Found 0 potential contact links
+2025-03-31 16:51:43,183 - INFO - בוקעאתא: Found 16 potential contact links
+2025-03-31 16:51:52,973 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:51:56,897 - INFO - ביר אל-מכסור: Found 16 potential contact links
+2025-03-31 16:52:17,591 - INFO - בית אל: Found 0 potential contact links
+2025-03-31 16:52:19,045 - INFO - בית אריה: Found 15 potential contact links
+2025-03-31 16:52:24,295 - INFO - בית ג'ן: Found 10 potential contact links
+2025-03-31 16:52:49,256 - INFO - בית שמש: Found 26 potential contact links
+2025-03-31 16:52:50,352 - INFO - בית דגן: Found 9 potential contact links
+2025-03-31 16:52:50,525 - INFO - בית שאן: Found 9 potential contact links
+2025-03-31 16:53:05,783 - INFO - ביתר עילית: Found 9 potential contact links
+2025-03-31 16:53:11,023 - INFO - בני ברק: Found 17 potential contact links
+2025-03-31 16:53:28,398 - INFO - בני עיש: Found 23 potential contact links
+2025-03-31 16:53:29,957 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:53:36,526 - INFO - בנימינה-גבעת עדה: Found 13 potential contact links
+2025-03-31 16:53:41,423 - ERROR - [FAILED] Could not fetch https://www.beer-sheva.muni.il/Services/Pages/ContactUS.aspx after retries
+2025-03-31 16:53:44,085 - ERROR - [FAILED] Could not fetch https://www.bin-ada.co.il/SystemFiles/kavirov.pdf after retries
+2025-03-31 16:53:56,520 - INFO - בסמה: Found 20 potential contact links
+2025-03-31 16:54:04,921 - INFO - בסמת טבעון: Found 0 potential contact links
+2025-03-31 16:54:07,658 - INFO - בענה: Found 6 potential contact links
+2025-03-31 16:54:11,009 - INFO - בת ים: Found 23 potential contact links
+2025-03-31 16:54:23,891 - INFO - גבעת זאב: Found 0 potential contact links
+2025-03-31 16:54:27,795 - INFO - גבעת שמואל: Found 32 potential contact links
+2025-03-31 16:54:29,852 - INFO - גבעתיים: Found 11 potential contact links
+2025-03-31 16:55:13,823 - INFO - ג'דיידה-מכר: Found 12 potential contact links
+2025-03-31 16:55:17,014 - INFO - גדרה: Found 21 potential contact links
+2025-03-31 16:55:20,144 - INFO - ג'וליס: Found 4 potential contact links
+2025-03-31 16:55:26,255 - INFO - גן יבנה: Found 24 potential contact links
+2025-03-31 16:55:28,448 - INFO - ג'לג'וליה: Found 7 potential contact links
+2025-03-31 16:55:29,015 - ERROR - [FAILED] Could not fetch javascript:void(0); after retries
+2025-03-31 16:55:39,235 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1391 after retries
+2025-03-31 16:55:48,574 - INFO - ג'סר א-זרקא: Found 0 potential contact links
+2025-03-31 16:55:51,776 - INFO - ג'ש (גוש חלב): Found 2 potential contact links
+2025-03-31 16:55:53,680 - ERROR - [FAILED] Could not fetch http://gederamd.co.il/ after retries
+2025-03-31 16:56:01,658 - ERROR - [FAILED] Could not fetch http://gedera.mpage.co.il/RichText/GeneralPage.aspx?nodeId=976 after retries
+2025-03-31 16:56:08,344 - INFO - ג'ת: Found 0 potential contact links
+2025-03-31 16:56:11,223 - INFO - דבוריה: Found 13 potential contact links
+2025-03-31 16:56:12,839 - INFO - דייר חנא: Found 10 potential contact links
+2025-03-31 16:56:30,101 - INFO - דימונה: Found 14 potential contact links
+2025-03-31 16:56:30,687 - INFO - דליית אל כרמל: Found 2 potential contact links
+2025-03-31 16:56:40,890 - INFO - הוד השרון: Found 16 potential contact links
+2025-03-31 16:56:42,609 - INFO - דיר אל אסד: Found 13 potential contact links
+2025-03-31 16:56:48,289 - INFO - גני תקווה: Found 26 potential contact links
+2025-03-31 16:56:53,638 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:56:54,322 - INFO - הר אדר: Found 21 potential contact links
+2025-03-31 16:57:12,032 - INFO - זכרון יעקב: Found 14 potential contact links
+2025-03-31 16:57:19,625 - INFO - זרזיר: Found 0 potential contact links
+2025-03-31 16:57:22,177 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1392 after retries
+2025-03-31 16:57:23,294 - ERROR - [FAILED] Could not fetch https://www.zy1882.co.il/SystemFiles/22522524.pdf after retries
+2025-03-31 16:57:24,898 - INFO - הרצליה: Found 58 potential contact links
+2025-03-31 16:57:25,938 - INFO - חברון: Found 0 potential contact links
+2025-03-31 16:57:34,042 - INFO - חדרה: Found 6 potential contact links
+2025-03-31 16:57:42,683 - INFO - חולון: Found 1 potential contact links
+2025-03-31 16:57:51,805 - INFO - חורה: Found 13 potential contact links
+2025-03-31 16:58:03,075 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:58:03,717 - INFO - חורפיש: Found 10 potential contact links
+2025-03-31 16:58:20,297 - INFO - חיפה: Found 49 potential contact links
+2025-03-31 16:58:21,221 - INFO - זמר: Found 1 potential contact links
+2025-03-31 16:58:25,191 - INFO - חצור הגלילית: Found 16 potential contact links
+2025-03-31 16:58:35,487 - INFO - חריש: Found 11 potential contact links
+2025-03-31 16:59:00,317 - INFO - טבריה: Found 3 potential contact links
+2025-03-31 16:59:04,758 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1352 after retries
+2025-03-31 16:59:13,547 - INFO - טובא-זנגריה: Found 3 potential contact links
+2025-03-31 16:59:14,815 - INFO - טורעאן: Found 9 potential contact links
+2025-03-31 16:59:17,828 - INFO - טייבה: Found 4 potential contact links
+2025-03-31 16:59:26,577 - INFO - טירה: Found 0 potential contact links
+2025-03-31 16:59:34,611 - INFO - טירת כרמל: Found 14 potential contact links
+2025-03-31 16:59:45,684 - ERROR - [FAILED] Could not fetch http://www.t-hevrati.co.il/ after retries
+2025-03-31 16:59:51,690 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 16:59:58,778 - INFO - טמרה: Found 20 potential contact links
+2025-03-31 17:00:15,390 - INFO - יאנוח-ג'ת: Found 10 potential contact links
+2025-03-31 17:00:20,603 - INFO - יבנאל: Found 11 potential contact links
+2025-03-31 17:00:36,762 - INFO - יבנה: Found 0 potential contact links
+2025-03-31 17:00:43,908 - INFO - יסוד המעלה: Found 8 potential contact links
+2025-03-31 17:00:44,230 - INFO - יהוד-נווה אפריים: Found 1 potential contact links
+2025-03-31 17:00:47,436 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1673 after retries
+2025-03-31 17:00:49,458 - INFO - יפיע: Found 14 potential contact links
+2025-03-31 17:00:58,140 - INFO - יקנעם עילית: Found 13 potential contact links
+2025-03-31 17:01:01,014 - INFO - ירושלים: Found 0 potential contact links
+2025-03-31 17:01:01,242 - INFO - ירוחם: Found 2 potential contact links
+2025-03-31 17:01:02,263 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 17:01:10,024 - INFO - כאוכב אבו אל-היג'א: Found 0 potential contact links
+2025-03-31 17:01:13,954 - INFO - ירכא: Found 15 potential contact links
+2025-03-31 17:01:18,541 - INFO - כוכב יאיר: Found 0 potential contact links
+2025-03-31 17:01:24,914 - INFO - כאבול: Found 0 potential contact links
+2025-03-31 17:01:28,210 - INFO - כסיפה: Found 10 potential contact links
+2025-03-31 17:01:32,356 - INFO - כעביה-טבאש-חג'אג'רה: Found 12 potential contact links
+2025-03-31 17:01:33,802 - INFO - כסרא-סמיע: Found 13 potential contact links
+2025-03-31 17:01:44,200 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 17:01:45,364 - INFO - כפר ברא: Found 10 potential contact links
+2025-03-31 17:02:01,466 - INFO - כפר ורדים: Found 9 potential contact links
+2025-03-31 17:02:04,452 - INFO - כפר יונה: Found 15 potential contact links
+2025-03-31 17:02:04,995 - INFO - כפר יאסיף: Found 8 potential contact links
+2025-03-31 17:02:26,506 - INFO - כפר כמא: Found 5 potential contact links
+2025-03-31 17:02:26,580 - INFO - כפר מנדא: Found 8 potential contact links
+2025-03-31 17:02:28,684 - INFO - כפר כנא: Found 9 potential contact links
+2025-03-31 17:02:30,083 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1425 after retries
+2025-03-31 17:02:36,442 - INFO - כפר סבא: Found 77 potential contact links
+2025-03-31 17:02:48,717 - INFO - כפר קאסם: Found 3 potential contact links
+2025-03-31 17:02:52,640 - INFO - כפר קרע: Found 8 potential contact links
+2025-03-31 17:03:00,897 - INFO - כפר שמריהו: Found 38 potential contact links
+2025-03-31 17:03:07,625 - INFO - כפר תבור: Found 12 potential contact links
+2025-03-31 17:03:24,059 - INFO - כרמיאל: Found 17 potential contact links
+2025-03-31 17:03:29,799 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 17:03:34,999 - INFO - להבים: Found 30 potential contact links
+2025-03-31 17:03:47,060 - ERROR - [FAILED] Could not fetch http://www.kfar-shemaryahu.muni.il/_Uploads/dbsAttachedFiles/solid_local_council.pdf after retries
+2025-03-31 17:03:57,675 - INFO - לקיה: Found 13 potential contact links
+2025-03-31 17:03:57,827 - INFO - לוד: Found 20 potential contact links
+2025-03-31 17:04:13,092 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1344 after retries
+2025-03-31 17:04:19,087 - INFO - מגאר: Found 13 potential contact links
+2025-03-31 17:04:21,608 - INFO - מגדל: Found 13 potential contact links
+2025-03-31 17:04:43,416 - INFO - מגדל העמק: Found 7 potential contact links
+2025-03-31 17:05:01,125 - ERROR - [FAILED] Could not fetch http://www.kfar-shemaryahu.muni.il/_Uploads/dbsAttachedFiles/mevaker.pdf after retries
+2025-03-31 17:05:02,370 - INFO - מג'דל שמס: Found 0 potential contact links
+2025-03-31 17:05:05,699 - INFO - מגדל תפן: Found 3 potential contact links
+2025-03-31 17:05:06,872 - INFO - מג'דל אל כרום: Found 16 potential contact links
+2025-03-31 17:05:18,291 - INFO - מודיעין עילית: Found 9 potential contact links
+2025-03-31 17:05:27,188 - INFO - מודיעין-מכבים-רעות: Found 28 potential contact links
+2025-03-31 17:05:31,778 - INFO - מזרעה: Found 5 potential contact links
+2025-03-31 17:05:38,700 - INFO - מטולה: Found 3 potential contact links
+2025-03-31 17:05:48,717 - INFO - מיתר: Found 6 potential contact links
+2025-03-31 17:05:52,602 - INFO - מבשרת ציון: Found 39 potential contact links
+2025-03-31 17:05:57,316 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1393 after retries
+2025-03-31 17:05:58,161 - ERROR - [FAILED] Could not fetch javascript:openCon() after retries
+2025-03-31 17:06:07,020 - INFO - מסעדה: Found 0 potential contact links
+2025-03-31 17:06:09,419 - INFO - מעיליא: Found 7 potential contact links
+2025-03-31 17:06:13,624 - INFO - מעלה אדומים: Found 61 potential contact links
+2025-03-31 17:06:31,160 - INFO - מעלה אפרים: Found 12 potential contact links
+2025-03-31 17:07:11,002 - INFO - מזכרת בתיה: Found 3 potential contact links
+2025-03-31 17:07:12,966 - INFO - מעלה עירון: Found 0 potential contact links
+2025-03-31 17:07:18,713 - INFO - מעלות-תרשיחא: Found 21 potential contact links
+2025-03-31 17:07:33,077 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/אזורי-רישום-לגני-מועצה-לשנה-ל/ after retries
+2025-03-31 17:07:37,792 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1330 after retries
+2025-03-31 17:07:53,581 - INFO - מצפה רמון: Found 10 potential contact links
+2025-03-31 17:08:21,482 - INFO - משהד: Found 10 potential contact links
+2025-03-31 17:08:37,838 - INFO - נאות חובב: Found 4 potential contact links
+2025-03-31 17:08:42,487 - INFO - נהריה: Found 13 potential contact links
+2025-03-31 17:08:52,027 - ERROR - [FAILED] Could not fetch https://mazkeret-batya.muni.il/ after retries
+2025-03-31 17:08:52,524 - INFO - נוף הגליל: Found 21 potential contact links
+2025-03-31 17:09:01,935 - INFO - נחף: Found 1 potential contact links
+2025-03-31 17:09:07,976 - ERROR - [FAILED] Could not fetch https://www.nahef.muni.il/userfiles/file/NAHEF_profile_2023_07.PDF after retries
+2025-03-31 17:09:11,410 - INFO - נס ציונה: Found 12 potential contact links
+2025-03-31 17:09:16,258 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/10/ after retries
+2025-03-31 17:09:20,971 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1637 after retries
+2025-03-31 17:09:59,289 - INFO - נצרת: Found 4 potential contact links
+2025-03-31 17:10:15,416 - INFO - נשר: Found 16 potential contact links
+2025-03-31 17:10:34,492 - ERROR - [FAILED] Could not fetch https://mazkeret-batya.muni.il/%f0%9f%8c%9f-%d7%94%d7%96%d7%9e%d7%a0%d7%94-%d7%9c%d7%9e%d7%a0%d7%97%d7%99%d7%9d-%d7%95%d7%9e%d7%a0%d7%97%d7%95%d7%aa-%d7%9e%d7%a7%d7%a6%d7%95%d7%a2%d7%99%d7%99%d7%9d-%d7%9e%d7%a4%d7%92/ after retries
+2025-03-31 17:10:39,630 - INFO - נתיבות: Found 10 potential contact links
+2025-03-31 17:10:45,132 - ERROR - [FAILED] Could not fetch https://www.mdnh.org.il/ after retries
+2025-03-31 17:10:58,194 - INFO - נתניה: Found 7 potential contact links
+2025-03-31 17:10:58,727 - ERROR - [FAILED] Could not fetch https://m-zion.smarticket.co.il/ after retries
+2025-03-31 17:11:03,440 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1351 after retries
+2025-03-31 17:11:27,273 - ERROR - [FAILED] Could not fetch javascript:; after retries
+2025-03-31 17:11:34,588 - INFO - סאג'ור: Found 2 potential contact links
+2025-03-31 17:11:37,592 - INFO - סביון: Found 2 potential contact links
+2025-03-31 17:11:43,639 - INFO - סח'נין: Found 7 potential contact links
+2025-03-31 17:11:52,644 - INFO - ע'ג'ר: Found 8 potential contact links
+2025-03-31 17:12:08,307 - INFO - עומר: Found 19 potential contact links
+2025-03-31 17:12:17,121 - ERROR - [FAILED] Could not fetch https://mazkeret-batya.muni.il/שירותים-לתושב after retries
+2025-03-31 17:12:20,081 - INFO - עוספיה: Found 13 potential contact links
+2025-03-31 17:12:27,482 - ERROR - [FAILED] Could not fetch https://www.mdnetivot.org/ after retries
+2025-03-31 17:12:39,200 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/ועדת-בחינה-לקבלת-עובדים/ after retries
+2025-03-31 17:12:45,403 - INFO - עיילבון: Found 6 potential contact links
+2025-03-31 17:12:45,941 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=2747 after retries
+2025-03-31 17:12:53,624 - ERROR - [FAILED] Could not fetch javascript:openCon() after retries
+2025-03-31 17:13:04,031 - ERROR - [FAILED] Could not fetch https://www.eilaboun.muni.il/about/Documents/תפקידים וסמכויות המועצה.pdf after retries
+2025-03-31 17:13:08,362 - INFO - עין מאהל: Found 20 potential contact links
+2025-03-31 17:13:48,079 - INFO - עין קנייא: Found 16 potential contact links
+2025-03-31 17:13:52,353 - INFO - עכו: Found 17 potential contact links
+2025-03-31 17:14:20,451 - INFO - עמנואל: Found 23 potential contact links
+2025-03-31 17:14:21,768 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/תקשורת-טלפונים-מרכזיות-נייחים-ניידים/ after retries
+2025-03-31 17:14:28,867 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1353 after retries
+2025-03-31 17:14:34,509 - INFO - עילוט: Found 14 potential contact links
+2025-03-31 17:15:07,667 - INFO - עפולה: Found 23 potential contact links
+2025-03-31 17:15:51,079 - INFO - עראבה: Found 8 potential contact links
+2025-03-31 17:15:51,836 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 17:16:00,314 - INFO - ערד: Found 22 potential contact links
+2025-03-31 17:16:04,881 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/45/ after retries
+2025-03-31 17:16:11,858 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1507 after retries
+2025-03-31 17:16:17,498 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1277 after retries
+2025-03-31 17:16:31,726 - INFO - ערערה: Found 9 potential contact links
+2025-03-31 17:16:35,667 - INFO - ערערה-בנגב: Found 12 potential contact links
+2025-03-31 17:16:46,276 - INFO - פוריידיס: Found 0 potential contact links
+2025-03-31 17:16:50,261 - INFO - פסוטה: Found 5 potential contact links
+2025-03-31 17:16:59,378 - INFO - פקיעין (בוקייעה): Found 4 potential contact links
+2025-03-31 17:17:02,470 - INFO - פרדס חנה-כרכור: Found 20 potential contact links
+2025-03-31 17:17:27,803 - ERROR - [FAILED] Could not fetch https://ad.simplyad.co.il/pardes-hana.html after retries
+2025-03-31 17:17:37,844 - INFO - פרדסיה: Found 21 potential contact links
+2025-03-31 17:17:47,843 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/מחשוב-המועצה/ after retries
+2025-03-31 17:17:54,826 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1628 after retries
+2025-03-31 17:18:00,467 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1270 after retries
+2025-03-31 17:18:43,517 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 17:18:53,440 - INFO - צורן קדימה: Found 33 potential contact links
+2025-03-31 17:19:30,831 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/דבר-ראש-המועצה/ after retries
+2025-03-31 17:19:37,917 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1505 after retries
+2025-03-31 17:19:44,130 - INFO - צור הדסה: Found 75 potential contact links
+2025-03-31 17:19:46,474 - INFO - פתח תקווה: Found 10 potential contact links
+2025-03-31 17:19:46,942 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1249 after retries
+2025-03-31 17:19:57,829 - ERROR - [FAILED] Could not fetch javascript:collapseInnerMenu('16') after retries
+2025-03-31 17:21:13,783 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/duplicated-1728906500/ after retries
+2025-03-31 17:21:16,365 - INFO - צפת: Found 3 potential contact links
+2025-03-31 17:21:18,480 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1473 after retries
+2025-03-31 17:21:23,839 - INFO - קדומים: Found 5 potential contact links
+2025-03-31 17:21:24,973 - ERROR - [FAILED] Could not fetch javascript:collapseInnerMenu('22') after retries
+2025-03-31 17:21:29,621 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1245 after retries
+2025-03-31 17:21:35,608 - INFO - קלנסווה: Found 0 potential contact links
+2025-03-31 17:21:52,884 - INFO - קצרין: Found 18 potential contact links
+2025-03-31 17:22:56,400 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/נגישות/ after retries
+2025-03-31 17:23:01,095 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1638 after retries
+2025-03-31 17:23:10,398 - ERROR - [FAILED] Could not fetch https://www.petah-tikva.muni.il/service/HealthService/Pages/default.aspx after retries
+2025-03-31 17:23:12,362 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1278 after retries
+2025-03-31 17:23:12,621 - ERROR - [FAILED] Could not fetch tel:04-3732099 after retries
+2025-03-31 17:23:21,151 - INFO - קרית אונו: Found 63 potential contact links
+2025-03-31 17:24:39,133 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/שירותים-חשובים/ after retries
+2025-03-31 17:24:43,829 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1508 after retries
+2025-03-31 17:24:55,080 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1254 after retries
+2025-03-31 17:25:35,195 - INFO - קרית ארבע: Found 0 potential contact links
+2025-03-31 17:25:42,010 - INFO - קרית אתא: Found 12 potential contact links
+2025-03-31 17:26:01,825 - INFO - קרית ביאליק: Found 5 potential contact links
+2025-03-31 17:26:19,665 - ERROR - [FAILED] Could not fetch https://www.kiryat-ata.org.il/wp-content/uploads/2023/02/ימים-ושעות-קבלת-קהל-ומענה-טלפוני-בעירייה-לאתרים-1-2.pdf after retries
+2025-03-31 17:26:21,821 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/מחלקות/ after retries
+2025-03-31 17:26:26,519 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1390 after retries
+2025-03-31 17:26:27,038 - INFO - קרית גת: Found 7 potential contact links
+2025-03-31 17:26:32,428 - INFO - קרית טבעון: Found 44 potential contact links
+2025-03-31 17:26:37,877 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1247 after retries
+2025-03-31 17:26:49,541 - INFO - קרית יערים: Found 24 potential contact links
+2025-03-31 17:26:50,185 - INFO - קרית ים: Found 15 potential contact links
+2025-03-31 17:27:00,876 - ERROR - [FAILED] Could not fetch https://www.ktv.org.il/uploads/n/1609830607.4718.pdf after retries
+2025-03-31 17:27:14,088 - INFO - קרית מוצקין: Found 44 potential contact links
+2025-03-31 17:27:21,147 - INFO - קרית מלאכי: Found 27 potential contact links
+2025-03-31 17:27:49,850 - INFO - קרית עקרון: Found 10 potential contact links
+2025-03-31 17:27:56,883 - INFO - קרית שמונה: Found 19 potential contact links
+2025-03-31 17:28:00,498 - ERROR - [FAILED] Could not fetch https://www.ktv.org.il/uploads/n/1609830875.9547.pdf after retries
+2025-03-31 17:28:04,758 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/אנשי-קשר-מחלקת-חינוך/ after retries
+2025-03-31 17:28:15,314 - INFO - קרני שומרון: Found 21 potential contact links
+2025-03-31 17:28:20,789 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1250 after retries
+2025-03-31 17:28:26,836 - INFO - ראמה: Found 6 potential contact links
+2025-03-31 17:28:46,055 - INFO - ראש העין: Found 10 potential contact links
+2025-03-31 17:29:04,925 - INFO - ראש פינה: Found 9 potential contact links
+2025-03-31 17:29:32,798 - ERROR - [FAILED] Could not fetch https://kiryat-ekron.muni.il/%d7%91%d7%99%d7%95%d7%9d-%d7%a8%d7%90%d7%a9%d7%95%d7%9f-%d7%94%d7%a7%d7%a8%d7%95%d7%91-16-03-25-%d7%a9%d7%95%d7%a9%d7%9f-%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%9e%d7%a9%d7%a8%d7%93%d7%99-%d7%94%d7%9e/ after retries
+2025-03-31 17:29:33,559 - INFO - ראשון לציון: Found 10 potential contact links
+2025-03-31 17:29:47,679 - ERROR - [FAILED] Could not fetch javascript:activateFun('2', 2) after retries
+2025-03-31 17:29:47,706 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/המחלקה-לשירותים-חברתיים-והשירות-הפסיכולוגי-החינוכי/ after retries
+2025-03-31 17:29:53,684 - ERROR - [FAILED] Could not fetch javascript:activateFun('2', 3) after retries
+2025-03-31 17:30:03,738 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1258 after retries
+2025-03-31 17:30:10,758 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 17:30:19,224 - INFO - רחובות: Found 17 potential contact links
+2025-03-31 17:30:21,785 - INFO - רהט: Found 7 potential contact links
+2025-03-31 17:30:35,011 - ERROR - [FAILED] Could not fetch https://rahatmuni.wpenginepowered.com/wp-content/uploads/2022/11/דוח-מבקר-העירייה-לשנת-2020-לאחר-דיון-המועצה-1.pdf after retries
+2025-03-31 17:30:41,044 - ERROR - [FAILED] Could not fetch https://rahat-muni.com/wp-content/uploads/2025/03/מכרז-14-2025-מנהל-אגף-ההון-אנושי.pdf after retries
+2025-03-31 17:30:42,772 - INFO - ריינה: Found 4 potential contact links
+2025-03-31 17:30:47,188 - ERROR - [FAILED] Could not fetch https://rahat-muni.com/wp-content/uploads/2025/03/מכרז-15-2025-מנהל-אגף-תכנון-אסטרטגי-וחדשנות-עירונית.pdf after retries
+2025-03-31 17:30:59,337 - INFO - רמלה: Found 0 potential contact links
+2025-03-31 17:31:07,929 - INFO - רמת גן: Found 3 potential contact links
+2025-03-31 17:31:15,678 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa%d7%99-%d7%95%d7%98%d7%a8%d7%99%d7%a0%d7%a8/ after retries
+2025-03-31 17:31:30,584 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/אגף-הרווחה-והשירותים-החברתיים/ after retries
+2025-03-31 17:31:46,630 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1269 after retries
+2025-03-31 17:32:29,186 - INFO - רכסים: Found 0 potential contact links
+2025-03-31 17:32:37,640 - INFO - רמת השרון: Found 15 potential contact links
+2025-03-31 17:32:54,635 - ERROR - [FAILED] Could not fetch https://www.tor4you.co.il/edstn.asp?siteid=5696&sid=8537D84B598B2B71&staffid=70030 after retries
+2025-03-31 17:32:58,874 - ERROR - [FAILED] Could not fetch https://www.mdekron.co.il/ after retries
+2025-03-31 17:33:02,691 - INFO - רמת ישי: Found 20 potential contact links
+2025-03-31 17:33:13,781 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/38/ after retries
+2025-03-31 17:33:29,948 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1236 after retries
+2025-03-31 17:33:59,214 - INFO - שבלי - אום אל - גנם: Found 13 potential contact links
+2025-03-31 17:33:59,695 - INFO - רעננה: Found 17 potential contact links
+2025-03-31 17:34:13,086 - INFO - שגב-שלום: Found 8 potential contact links
+2025-03-31 17:34:18,349 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 17:34:26,547 - INFO - שדרות: Found 5 potential contact links
+2025-03-31 17:34:35,769 - ERROR - [FAILED] Could not fetch https://www.datsderot.net/ after retries
+2025-03-31 17:34:43,907 - INFO - שוהם: Found 3 potential contact links
+2025-03-31 17:34:54,756 - INFO - שלומי: Found 44 potential contact links
+2025-03-31 17:34:57,854 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/43/ after retries
+2025-03-31 17:34:59,398 - INFO - שעב: Found 9 potential contact links
+2025-03-31 17:35:11,576 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1261 after retries
+2025-03-31 17:35:15,438 - INFO - שער שומרון: Found 26 potential contact links
+2025-03-31 17:35:23,900 - INFO - שפרעם: Found 4 potential contact links
+2025-03-31 17:35:39,373 - INFO - תל אביב-יפו: Found 20 potential contact links
+2025-03-31 17:35:51,123 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il/?p=27168 after retries
+2025-03-31 17:35:51,981 - INFO - תל מונד: Found 23 potential contact links
+2025-03-31 17:35:52,693 - ERROR - [FAILED] Could not fetch javascript:void(0); after retries
+2025-03-31 17:36:38,399 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/לשכת-מנכ-ל-המועצה/ after retries
+2025-03-31 17:36:44,564 - INFO - תל שבע: Found 10 potential contact links
+2025-03-31 17:37:34,124 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il/%D7%9C%D7%A9%D7%9B%D7%AA-%D7%A8%D7%90%D7%A9-%D7%94%D7%9E%D7%95%D7%A2%D7%A6%D7%94/ after retries
+2025-03-31 17:38:17,097 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/15/ after retries
+2025-03-31 17:39:13,214 - ERROR - [FAILED] Could not fetch https://kiryat-ekron.muni.il/%d7%94%d7%95%d7%93%d7%a2%d7%94-%d7%91%d7%93%d7%91%d7%a8-%d7%a4%d7%aa%d7%99%d7%97%d7%aa-%d7%9e%d7%a7%d7%9c%d7%98%d7%99%d7%9d-%d7%91%d7%99%d7%99%d7%a9%d7%95%d7%91/ after retries
+2025-03-31 17:39:58,070 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/עובדי-המחלקה-ותפקידם/ after retries
+2025-03-31 17:40:54,357 - ERROR - [FAILED] Could not fetch https://www.kfirpc.co.il after retries
+2025-03-31 17:41:39,429 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/פרט-ומשפחה/ after retries
+2025-03-31 17:43:20,694 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/רישום-לקבוצות-וואטצאפ-מהמועצה-לתושבים/ after retries
+2025-03-31 17:45:01,846 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/ריהוט-והצטיידות-בית-המועצה-ומוסדותיה/ after retries
+2025-03-31 17:46:43,366 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/חלופות-לשיחות-טלפון-בפנייה-אל-המועצה/ after retries
+2025-03-31 17:48:24,908 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/רשימת-אנשי-קשר-מבקר-המועצה/ after retries
+2025-03-31 17:50:05,593 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/תקציב-המועצה/ after retries
+2025-03-31 17:51:46,045 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/124-1726055972-ועדות-המועצה/ after retries
+2025-03-31 17:53:25,044 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/צוות-חינוכי-בגני-ילדים/ after retries
+2025-03-31 17:55:05,565 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/פעילות-אגף-הביטחון/ after retries
+2025-03-31 17:56:46,084 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/תחומי-אחריות-מנכ-ל-המועצה/ after retries
+2025-03-31 17:58:26,622 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/תחומי-העיסוק-של-המחלקה/ after retries
+2025-03-31 18:00:08,082 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/מבקר-המועצה/ after retries
+2025-03-31 18:01:49,879 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/מחלקת-הביטחון-והחירום/ after retries
+2025-03-31 18:03:31,941 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/חברי-המועצה/ after retries
+2025-03-31 18:05:14,980 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/news/16/ after retries
+2025-03-31 18:06:57,886 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/ועדות-המועצה/ after retries
+2025-03-31 18:08:40,597 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/דבר-ראש-המועצה-ויו-ר-מטה-הבטיחות-בדרכים/ after retries
+2025-03-31 18:10:21,710 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/המחלקה-לביטחון-קהילתי/ after retries
+2025-03-31 18:11:59,170 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/לשכת-ראש-המועצה/ after retries
+2025-03-31 18:11:59,309 - INFO - Done scraping all cities into smart_contacts.json
+2025-03-31 19:35:57,081 - INFO - [SKIP] אבן יהודה: Already scraped or no URL
+2025-03-31 19:35:57,084 - INFO - [SKIP] אופקים: Already scraped or no URL
+2025-03-31 19:35:57,086 - INFO - [SKIP] אור עקיבא: Already scraped or no URL
+2025-03-31 19:35:57,086 - INFO - [SKIP] אורנית: Already scraped or no URL
+2025-03-31 19:35:57,087 - INFO - [SKIP] אזור: Already scraped or no URL
+2025-03-31 19:35:59,682 - INFO - אילת: Found 0 potential contact links
+2025-03-31 19:36:00,086 - INFO - אור יהודה: Found 1 potential contact links
+2025-03-31 19:36:01,119 - INFO - אבו גוש: Found 6 potential contact links
+2025-03-31 19:36:02,643 - INFO - אום אל-פחם: Found 9 potential contact links
+2025-03-31 19:36:03,673 - INFO - אבו סנאן: Found 0 potential contact links
+2025-03-31 19:36:03,693 - INFO - [SKIP] אלעד: Already scraped or no URL
+2025-03-31 19:36:05,937 - INFO - אכסאל: Found 0 potential contact links
+2025-03-31 19:36:05,957 - INFO - [SKIP] אלקנה: Already scraped or no URL
+2025-03-31 19:36:09,720 - INFO - אליכין: Found 10 potential contact links
+2025-03-31 19:36:12,476 - INFO - אעבלין: Found 0 potential contact links
+2025-03-31 19:36:14,781 - INFO - [SKIP] אריאל: Already scraped or no URL
+2025-03-31 19:36:14,781 - INFO - [SKIP] אשדוד: Already scraped or no URL
+2025-03-31 19:36:14,781 - INFO - [SKIP] אשקלון: Already scraped or no URL
+2025-03-31 19:36:15,138 - INFO - [SKIP] באר יעקב: Already scraped or no URL
+2025-03-31 19:36:18,753 - INFO - אפרת: Found 0 potential contact links
+2025-03-31 19:36:20,018 - INFO - באקה אל גרבייה: Found 6 potential contact links
+2025-03-31 19:36:21,292 - INFO - באר שבע: Found 15 potential contact links
+2025-03-31 19:36:23,184 - INFO - בועיינה-נוג'ידאת: Found 0 potential contact links
+2025-03-31 19:36:26,039 - INFO - בוקעאתא: Found 16 potential contact links
+2025-03-31 19:36:28,637 - INFO - ביר אל-מכסור: Found 16 potential contact links
+2025-03-31 19:36:36,740 - INFO - [SKIP] בית אריה: Already scraped or no URL
+2025-03-31 19:36:37,815 - INFO - בית אל: Found 0 potential contact links
+2025-03-31 19:36:37,852 - INFO - [SKIP] בית דגן: Already scraped or no URL
+2025-03-31 19:36:37,852 - INFO - [SKIP] בית שאן: Already scraped or no URL
+2025-03-31 19:36:37,852 - INFO - [SKIP] בית שמש: Already scraped or no URL
+2025-03-31 19:36:37,852 - INFO - [SKIP] ביתר עילית: Already scraped or no URL
+2025-03-31 19:36:37,852 - INFO - [SKIP] בני ברק: Already scraped or no URL
+2025-03-31 19:36:37,852 - INFO - [SKIP] בני עיש: Already scraped or no URL
+2025-03-31 19:36:46,137 - INFO - בנימינה-גבעת עדה: Found 13 potential contact links
+2025-03-31 19:36:46,933 - INFO - בית ג'ן: Found 10 potential contact links
+2025-03-31 19:36:48,137 - INFO - אלפי מנשה: Found 27 potential contact links
+2025-03-31 19:36:49,520 - INFO - בסמה: Found 20 potential contact links
+2025-03-31 19:36:57,972 - ERROR - [FAILED] Could not fetch https://www.bin-ada.co.il/SystemFiles/kavirov.pdf after retries
+2025-03-31 19:37:09,282 - INFO - בסמת טבעון: Found 0 potential contact links
+2025-03-31 19:37:14,034 - INFO - בענה: Found 6 potential contact links
+2025-03-31 19:37:29,182 - INFO - בת ים: Found 23 potential contact links
+2025-03-31 19:37:51,663 - INFO - גבעת זאב: Found 0 potential contact links
+2025-03-31 19:37:51,683 - INFO - [SKIP] גבעת שמואל: Already scraped or no URL
+2025-03-31 19:37:51,683 - INFO - [SKIP] גבעתיים: Already scraped or no URL
+2025-03-31 19:37:53,960 - INFO - ג'דיידה-מכר: Found 12 potential contact links
+2025-03-31 19:38:10,010 - INFO - ג'וליס: Found 4 potential contact links
+2025-03-31 19:38:12,742 - ERROR - [FAILED] Could not fetch https://www.beer-sheva.muni.il/Services/Pages/ContactUS.aspx after retries
+2025-03-31 19:38:13,301 - INFO - גדרה: Found 21 potential contact links
+2025-03-31 19:38:16,016 - ERROR - [FAILED] Could not fetch javascript:void(0); after retries
+2025-03-31 19:38:23,161 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 19:38:29,552 - INFO - ג'לג'וליה: Found 7 potential contact links
+2025-03-31 19:38:32,665 - INFO - [SKIP] גן יבנה: Already scraped or no URL
+2025-03-31 19:38:32,665 - INFO - [SKIP] גני תקווה: Already scraped or no URL
+2025-03-31 19:38:33,546 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1353 after retries
+2025-03-31 19:38:38,882 - INFO - ג'סר א-זרקא: Found 0 potential contact links
+2025-03-31 19:38:40,332 - ERROR - [FAILED] Could not fetch http://gederamd.co.il/ after retries
+2025-03-31 19:38:41,983 - INFO - ג'ש (גוש חלב): Found 2 potential contact links
+2025-03-31 19:38:46,429 - INFO - ג'ת: Found 0 potential contact links
+2025-03-31 19:38:46,455 - INFO - [SKIP] דייר חנא: Already scraped or no URL
+2025-03-31 19:38:46,456 - INFO - [SKIP] דימונה: Already scraped or no URL
+2025-03-31 19:38:51,380 - INFO - דליית אל כרמל: Found 2 potential contact links
+2025-03-31 19:38:53,256 - INFO - דבוריה: Found 13 potential contact links
+2025-03-31 19:39:00,919 - INFO - הוד השרון: Found 16 potential contact links
+2025-03-31 19:39:01,082 - ERROR - [FAILED] Could not fetch http://gedera.mpage.co.il/RichText/GeneralPage.aspx?nodeId=976 after retries
+2025-03-31 19:39:02,089 - INFO - דיר אל אסד: Found 13 potential contact links
+2025-03-31 19:39:07,620 - INFO - הר אדר: Found 21 potential contact links
+2025-03-31 19:39:12,889 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 19:39:13,384 - INFO - [SKIP] הרצליה: Already scraped or no URL
+2025-03-31 19:39:17,367 - INFO - זכרון יעקב: Found 14 potential contact links
+2025-03-31 19:39:29,247 - INFO - זרזיר: Found 0 potential contact links
+2025-03-31 19:39:29,417 - INFO - זמר: Found 1 potential contact links
+2025-03-31 19:39:31,180 - INFO - [SKIP] חולון: Already scraped or no URL
+2025-03-31 19:39:31,180 - INFO - [SKIP] חורה: Already scraped or no URL
+2025-03-31 19:39:31,300 - ERROR - [FAILED] Could not fetch https://www.zy1882.co.il/SystemFiles/22522524.pdf after retries
+2025-03-31 19:39:33,346 - INFO - חברון: Found 0 potential contact links
+2025-03-31 19:39:33,365 - INFO - [SKIP] חיפה: Already scraped or no URL
+2025-03-31 19:39:33,365 - INFO - [SKIP] חצור הגלילית: Already scraped or no URL
+2025-03-31 19:39:34,708 - INFO - חורפיש: Found 10 potential contact links
+2025-03-31 19:39:37,560 - INFO - חדרה: Found 6 potential contact links
+2025-03-31 19:39:40,902 - INFO - חריש: Found 11 potential contact links
+2025-03-31 19:39:46,349 - INFO - טובא-זנגריה: Found 3 potential contact links
+2025-03-31 19:39:52,753 - INFO - טורעאן: Found 9 potential contact links
+2025-03-31 19:39:53,755 - INFO - טבריה: Found 3 potential contact links
+2025-03-31 19:40:00,472 - INFO - [SKIP] טירת כרמל: Already scraped or no URL
+2025-03-31 19:40:00,722 - INFO - טייבה: Found 4 potential contact links
+2025-03-31 19:40:04,516 - INFO - טירה: Found 0 potential contact links
+2025-03-31 19:40:04,536 - INFO - [SKIP] יאנוח-ג'ת: Already scraped or no URL
+2025-03-31 19:40:04,536 - INFO - [SKIP] יבנאל: Already scraped or no URL
+2025-03-31 19:40:05,653 - INFO - טמרה: Found 20 potential contact links
+2025-03-31 19:40:07,431 - INFO - יבנה: Found 0 potential contact links
+2025-03-31 19:40:12,376 - INFO - יהוד-נווה אפריים: Found 1 potential contact links
+2025-03-31 19:40:13,701 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1425 after retries
+2025-03-31 19:40:17,876 - INFO - יסוד המעלה: Found 8 potential contact links
+2025-03-31 19:40:18,798 - INFO - יפיע: Found 14 potential contact links
+2025-03-31 19:40:18,969 - INFO - [SKIP] יקנעם עילית: Already scraped or no URL
+2025-03-31 19:40:18,970 - INFO - [SKIP] ירוחם: Already scraped or no URL
+2025-03-31 19:40:19,809 - INFO - ירושלים: Found 0 potential contact links
+2025-03-31 19:40:31,924 - INFO - ירכא: Found 15 potential contact links
+2025-03-31 19:40:41,316 - INFO - כאוכב אבו אל-היג'א: Found 0 potential contact links
+2025-03-31 19:40:44,253 - INFO - כוכב יאיר: Found 0 potential contact links
+2025-03-31 19:40:44,271 - INFO - [SKIP] כסרא-סמיע: Already scraped or no URL
+2025-03-31 19:40:44,271 - INFO - [SKIP] כעביה-טבאש-חג'אג'רה: Already scraped or no URL
+2025-03-31 19:40:46,475 - INFO - כאבול: Found 14 potential contact links
+2025-03-31 19:40:46,562 - INFO - [SKIP] כפר ורדים: Already scraped or no URL
+2025-03-31 19:40:46,563 - INFO - [SKIP] כפר יאסיף: Already scraped or no URL
+2025-03-31 19:40:46,563 - INFO - [SKIP] כפר יונה: Already scraped or no URL
+2025-03-31 19:40:46,563 - INFO - [SKIP] כפר כמא: Already scraped or no URL
+2025-03-31 19:40:51,452 - INFO - כסיפה: Found 10 potential contact links
+2025-03-31 19:40:54,436 - INFO - כפר ברא: Found 10 potential contact links
+2025-03-31 19:40:56,056 - INFO - כפר כנא: Found 9 potential contact links
+2025-03-31 19:41:03,282 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 19:41:07,186 - ERROR - [FAILED] Could not fetch javascript:void(0) after retries
+2025-03-31 19:41:18,881 - INFO - [SKIP] כפר סבא: Already scraped or no URL
+2025-03-31 19:41:21,032 - INFO - כפר מנדא: Found 8 potential contact links
+2025-03-31 19:41:22,458 - INFO - כפר קאסם: Found 3 potential contact links
+2025-03-31 19:41:24,511 - INFO - [SKIP] כפר שמריהו: Already scraped or no URL
+2025-03-31 19:41:24,511 - INFO - [SKIP] כפר תבור: Already scraped or no URL
+2025-03-31 19:41:27,266 - INFO - כפר קרע: Found 8 potential contact links
+2025-03-31 19:41:30,078 - INFO - כרמיאל: Found 17 potential contact links
+2025-03-31 19:41:30,416 - INFO - [SKIP] להבים: Already scraped or no URL
+2025-03-31 19:41:39,356 - INFO - לוד: Found 20 potential contact links
+2025-03-31 19:41:42,383 - INFO - לקיה: Found 13 potential contact links
+2025-03-31 19:41:52,637 - INFO - [SKIP] מגדל: Already scraped or no URL
+2025-03-31 19:41:53,784 - INFO - מגאר: Found 13 potential contact links
+2025-03-31 19:41:54,077 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1344 after retries
+2025-03-31 19:42:06,023 - INFO - מגדל העמק: Found 7 potential contact links
+2025-03-31 19:42:14,109 - INFO - מג'דל שמס: Found 0 potential contact links
+2025-03-31 19:42:14,128 - INFO - [SKIP] מגדל תפן: Already scraped or no URL
+2025-03-31 19:42:17,234 - INFO - מודיעין עילית: Found 9 potential contact links
+2025-03-31 19:42:20,464 - INFO - [SKIP] מודיעין-מכבים-רעות: Already scraped or no URL
+2025-03-31 19:42:33,053 - INFO - מג'דל אל כרום: Found 16 potential contact links
+2025-03-31 19:42:33,519 - INFO - מזרעה: Found 0 potential contact links
+2025-03-31 19:42:33,540 - INFO - [SKIP] מטולה: Already scraped or no URL
+2025-03-31 19:42:33,540 - INFO - [SKIP] מיתר: Already scraped or no URL
+2025-03-31 19:42:41,566 - INFO - מסעדה: Found 0 potential contact links
+2025-03-31 19:42:41,584 - INFO - [SKIP] מעיליא: Already scraped or no URL
+2025-03-31 19:42:41,584 - INFO - [SKIP] מעלה אדומים: Already scraped or no URL
+2025-03-31 19:42:50,703 - INFO - מעלה אפרים: Found 12 potential contact links
+2025-03-31 19:42:58,382 - INFO - מעלה עירון: Found 0 potential contact links
+2025-03-31 19:42:58,401 - INFO - [SKIP] מעלות-תרשיחא: Already scraped or no URL
+2025-03-31 19:43:03,907 - INFO - מצפה רמון: Found 10 potential contact links
+2025-03-31 19:43:25,129 - INFO - מבשרת ציון: Found 39 potential contact links
+2025-03-31 19:43:30,117 - INFO - [SKIP] משהד: Already scraped or no URL
+2025-03-31 19:43:36,261 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1393 after retries
+2025-03-31 19:43:36,619 - INFO - נאות חובב: Found 4 potential contact links
+2025-03-31 19:43:47,229 - INFO - [SKIP] נהריה: Already scraped or no URL
+2025-03-31 19:43:47,229 - INFO - [SKIP] נוף הגליל: Already scraped or no URL
+2025-03-31 19:43:47,977 - INFO - [SKIP] נס ציונה: Already scraped or no URL
+2025-03-31 19:43:47,977 - INFO - [SKIP] נצרת: Already scraped or no URL
+2025-03-31 19:43:47,977 - INFO - [SKIP] נשר: Already scraped or no URL
+2025-03-31 19:43:52,051 - INFO - נחף: Found 1 potential contact links
+2025-03-31 19:43:52,540 - INFO - נתיבות: Found 10 potential contact links
+2025-03-31 19:43:58,834 - ERROR - [FAILED] Could not fetch https://www.nahef.muni.il/userfiles/file/NAHEF_profile_2023_07.PDF after retries
+2025-03-31 19:44:02,699 - INFO - מזכרת בתיה: Found 3 potential contact links
+2025-03-31 19:44:05,558 - INFO - נתניה: Found 7 potential contact links
+2025-03-31 19:44:26,988 - ERROR - [FAILED] Could not fetch javascript:; after retries
+2025-03-31 19:44:41,904 - INFO - סאג'ור: Found 2 potential contact links
+2025-03-31 19:44:45,059 - INFO - סביון: Found 2 potential contact links
+2025-03-31 19:44:51,191 - INFO - סח'נין: Found 7 potential contact links
+2025-03-31 19:44:59,333 - INFO - ע'ג'ר: Found 8 potential contact links
+2025-03-31 19:45:04,777 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/נגישות/ after retries
+2025-03-31 19:45:13,209 - INFO - עומר: Found 19 potential contact links
+2025-03-31 19:45:15,908 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1330 after retries
+2025-03-31 19:45:30,357 - ERROR - [FAILED] Could not fetch https://www.mdnetivot.org/interment after retries
+2025-03-31 19:45:41,035 - INFO - [SKIP] עוספיה: Already scraped or no URL
+2025-03-31 19:45:41,035 - INFO - [SKIP] עיילבון: Already scraped or no URL
+2025-03-31 19:45:41,659 - ERROR - [FAILED] Could not fetch https://mazkeret-batya.muni.il/ after retries
+2025-03-31 19:46:43,824 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/דבר-ראש-המועצה/ after retries
+2025-03-31 19:46:57,017 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1392 after retries
+2025-03-31 19:47:12,109 - ERROR - [FAILED] Could not fetch https://www.mdnetivot.org/ after retries
+2025-03-31 19:47:19,603 - INFO - עילוט: Found 14 potential contact links
+2025-03-31 19:47:24,319 - INFO - עין מאהל: Found 20 potential contact links
+2025-03-31 19:47:54,717 - ERROR - [FAILED] Could not fetch https://mazkeret-batya.muni.il/%f0%9f%8c%9f-%d7%94%d7%96%d7%9e%d7%a0%d7%94-%d7%9c%d7%9e%d7%a0%d7%97%d7%99%d7%9d-%d7%95%d7%9e%d7%a0%d7%97%d7%95%d7%aa-%d7%9e%d7%a7%d7%a6%d7%95%d7%a2%d7%99%d7%99%d7%9d-%d7%9e%d7%a4%d7%92/ after retries
+2025-03-31 19:48:02,329 - INFO - עין קנייא: Found 16 potential contact links
+2025-03-31 19:48:02,590 - INFO - עכו: Found 17 potential contact links
+2025-03-31 19:48:22,822 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/ועדת-בחינה-לקבלת-עובדים/ after retries
+2025-03-31 19:48:25,362 - INFO - [SKIP] עמנואל: Already scraped or no URL
+2025-03-31 19:48:25,362 - INFO - [SKIP] עפולה: Already scraped or no URL
+2025-03-31 19:48:28,009 - INFO - עראבה: Found 8 potential contact links
+2025-03-31 19:48:33,455 - INFO - [SKIP] ערד: Already scraped or no URL
+2025-03-31 19:48:36,017 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1391 after retries
+2025-03-31 19:48:37,005 - INFO - ערערה: Found 9 potential contact links
+2025-03-31 19:48:43,506 - INFO - [SKIP] ערערה-בנגב: Already scraped or no URL
+2025-03-31 19:48:49,742 - INFO - פוריידיס: Found 0 potential contact links
+2025-03-31 19:48:49,764 - INFO - [SKIP] פסוטה: Already scraped or no URL
+2025-03-31 19:48:49,764 - INFO - [SKIP] פקיעין (בוקייעה): Already scraped or no URL
+2025-03-31 19:48:49,764 - INFO - [SKIP] פרדס חנה-כרכור: Already scraped or no URL
+2025-03-31 19:48:49,764 - INFO - [SKIP] פרדסיה: Already scraped or no URL
+2025-03-31 19:49:00,051 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1261 after retries
+2025-03-31 19:49:00,072 - INFO - פתח תקווה: Found 10 potential contact links
+2025-03-31 19:49:10,437 - ERROR - [FAILED] Could not fetch javascript:collapseInnerMenu('22') after retries
+2025-03-31 19:49:24,202 - ERROR - [FAILED] Could not fetch javascript:collapseInnerMenu('16') after retries
+2025-03-31 19:49:37,993 - INFO - [SKIP] צורן קדימה: Already scraped or no URL
+2025-03-31 19:49:37,993 - INFO - [SKIP] צור הדסה: Already scraped or no URL
+2025-03-31 19:49:37,993 - INFO - [SKIP] צפת: Already scraped or no URL
+2025-03-31 19:49:39,978 - INFO - קדומים: Found 5 potential contact links
+2025-03-31 19:49:51,878 - INFO - קלנסווה: Found 0 potential contact links
+2025-03-31 19:49:51,897 - INFO - [SKIP] קצרין: Already scraped or no URL
+2025-03-31 19:49:51,897 - INFO - [SKIP] קרית אונו: Already scraped or no URL
+2025-03-31 19:49:58,107 - INFO - קרית ארבע: Found 0 potential contact links
+2025-03-31 19:50:03,794 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/124-1726055972-ועדות-המועצה/ after retries
+2025-03-31 19:50:12,444 - INFO - קרית אתא: Found 12 potential contact links
+2025-03-31 19:50:16,987 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1473 after retries
+2025-03-31 19:50:18,536 - ERROR - [FAILED] Could not fetch https://www.kiryat-ata.org.il/wp-content/uploads/2023/02/ימים-ושעות-קבלת-קהל-ומענה-טלפוני-בעירייה-לאתרים-1-2.pdf after retries
+2025-03-31 19:50:33,267 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 19:50:40,889 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1277 after retries
+2025-03-31 19:50:50,303 - INFO - קרית ביאליק: Found 5 potential contact links
+2025-03-31 19:51:04,749 - INFO - [SKIP] קרית גת: Already scraped or no URL
+2025-03-31 19:51:04,750 - INFO - [SKIP] קרית טבעון: Already scraped or no URL
+2025-03-31 19:51:04,750 - INFO - [SKIP] קרית ים: Already scraped or no URL
+2025-03-31 19:51:04,750 - INFO - [SKIP] קרית יערים: Already scraped or no URL
+2025-03-31 19:51:04,750 - INFO - [SKIP] קרית מוצקין: Already scraped or no URL
+2025-03-31 19:51:04,750 - INFO - [SKIP] קרית מלאכי: Already scraped or no URL
+2025-03-31 19:51:13,298 - INFO - קרית שמונה: Found 19 potential contact links
+2025-03-31 19:51:25,595 - INFO - [SKIP] קרני שומרון: Already scraped or no URL
+2025-03-31 19:51:28,381 - INFO - ראמה: Found 6 potential contact links
+2025-03-31 19:51:40,533 - INFO - קרית עקרון: Found 10 potential contact links
+2025-03-31 19:51:42,566 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/תחומי-העיסוק-של-המחלקה/ after retries
+2025-03-31 19:51:57,233 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1351 after retries
+2025-03-31 19:52:21,309 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1250 after retries
+2025-03-31 19:53:12,745 - ERROR - [FAILED] Could not fetch https://www.nagish.li/contact.html after retries
+2025-03-31 19:53:14,814 - INFO - [SKIP] ראש העין: Already scraped or no URL
+2025-03-31 19:53:14,814 - INFO - [SKIP] ראש פינה: Already scraped or no URL
+2025-03-31 19:53:18,920 - INFO - ראשון לציון: Found 10 potential contact links
+2025-03-31 19:53:21,017 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il/?p=27168 after retries
+2025-03-31 19:53:23,049 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/45/ after retries
+2025-03-31 19:53:28,907 - ERROR - [FAILED] Could not fetch javascript:activateFun('2', 2) after retries
+2025-03-31 19:53:37,771 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1390 after retries
+2025-03-31 19:54:01,772 - ERROR - [FAILED] Could not fetch javascript:activateFun('2', 3) after retries
+2025-03-31 19:54:03,534 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1245 after retries
+2025-03-31 19:54:09,606 - INFO - רהט: Found 7 potential contact links
+2025-03-31 19:54:15,758 - ERROR - [FAILED] Could not fetch https://rahatmuni.wpenginepowered.com/wp-content/uploads/2022/11/דוח-מבקר-העירייה-לשנת-2020-לאחר-דיון-המועצה-1.pdf after retries
+2025-03-31 19:54:24,129 - ERROR - [FAILED] Could not fetch https://rahat-muni.com/wp-content/uploads/2025/03/מכרז-15-2025-מנהל-אגף-תכנון-אסטרטגי-וחדשנות-עירונית.pdf after retries
+2025-03-31 19:54:30,166 - ERROR - [FAILED] Could not fetch https://rahat-muni.com/wp-content/uploads/2025/03/מכרז-14-2025-מנהל-אגף-ההון-אנושי.pdf after retries
+2025-03-31 19:54:48,272 - INFO - רחובות: Found 17 potential contact links
+2025-03-31 19:55:03,502 - ERROR - [FAILED] Could not fetch https://www.mdekron.co.il/ after retries
+2025-03-31 19:55:03,668 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/duplicated-1728906500/ after retries
+2025-03-31 19:55:15,250 - INFO - ריינה: Found 0 potential contact links
+2025-03-31 19:55:18,459 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1673 after retries
+2025-03-31 19:55:44,360 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1236 after retries
+2025-03-31 19:56:44,420 - ERROR - [FAILED] Could not fetch https://kiryat-ekron.muni.il/%d7%a4%d7%99%d7%99%d7%9c%d7%95%d7%98-%d7%99%d7%99%d7%a9%d7%95%d7%91%d7%99-%d7%91%d7%aa%d7%97%d7%95%d7%9d-%d7%94%d7%90%d7%a0%d7%a8%d7%92%d7%99%d7%94-%d7%94%d7%a1%d7%95%d7%9c%d7%90%d7%a8%d7%99%d7%aa/ after retries
+2025-03-31 19:56:44,584 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/המחלקה-לשירותים-חברתיים-והשירות-הפסיכולוגי-החינוכי/ after retries
+2025-03-31 19:56:56,511 - INFO - רכסים: Found 0 potential contact links
+2025-03-31 19:57:01,273 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1637 after retries
+2025-03-31 19:57:02,734 - INFO - רמלה: Found 0 potential contact links
+2025-03-31 19:57:14,312 - INFO - רמת גן: Found 3 potential contact links
+2025-03-31 19:57:27,179 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1269 after retries
+2025-03-31 19:58:25,851 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/פעילות-אגף-הביטחון/ after retries
+2025-03-31 19:58:36,020 - ERROR - [FAILED] Could not fetch https://kiryat-ekron.muni.il/%d7%91%d7%99%d7%95%d7%9d-%d7%a8%d7%90%d7%a9%d7%95%d7%9f-%d7%94%d7%a7%d7%a8%d7%95%d7%91-16-03-25-%d7%a9%d7%95%d7%a9%d7%9f-%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%9e%d7%a9%d7%a8%d7%93%d7%99-%d7%94%d7%9e/ after retries
+2025-03-31 19:58:40,823 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1628 after retries
+2025-03-31 19:58:57,903 - ERROR - [FAILED] Could not fetch https://www.tor4you.co.il/edstn.asp?siteid=5696&sid=8537D84B598B2B71&staffid=70030 after retries
+2025-03-31 19:58:57,934 - INFO - [SKIP] רמת השרון: Already scraped or no URL
+2025-03-31 19:58:57,935 - INFO - [SKIP] רמת ישי: Already scraped or no URL
+2025-03-31 19:58:57,935 - INFO - [SKIP] רעננה: Already scraped or no URL
+2025-03-31 19:59:00,414 - INFO - שבלי - אום אל - גנם: Found 13 potential contact links
+2025-03-31 19:59:04,952 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1270 after retries
+2025-03-31 19:59:14,405 - INFO - שגב-שלום: Found 8 potential contact links
+2025-03-31 19:59:20,696 - INFO - [SKIP] שדרות: Already scraped or no URL
+2025-03-31 19:59:25,542 - INFO - שוהם: Found 3 potential contact links
+2025-03-31 19:59:28,731 - INFO - [SKIP] שלומי: Already scraped or no URL
+2025-03-31 19:59:28,731 - INFO - [SKIP] שעב: Already scraped or no URL
+2025-03-31 19:59:28,731 - INFO - [SKIP] שער שומרון: Already scraped or no URL
+2025-03-31 19:59:32,807 - INFO - שפרעם: Found 4 potential contact links
+2025-03-31 19:59:39,835 - INFO - [SKIP] תל אביב-יפו: Already scraped or no URL
+2025-03-31 19:59:39,835 - INFO - [SKIP] תל מונד: Already scraped or no URL
+2025-03-31 19:59:39,835 - INFO - [SKIP] תל שבע: Already scraped or no URL
+2025-03-31 20:00:03,405 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/שירותים-חשובים/ after retries
+2025-03-31 20:00:15,511 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il after retries
+2025-03-31 20:00:18,295 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1507 after retries
+2025-03-31 20:00:42,428 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1278 after retries
+2025-03-31 20:01:40,868 - ERROR - [FAILED] Could not fetch https://m-zion.smarticket.co.il/ after retries
+2025-03-31 20:01:54,142 - ERROR - [FAILED] Could not fetch https://www.kiryat-ekron.muni.il/%D7%9C%D7%A9%D7%9B%D7%AA-%D7%A8%D7%90%D7%A9-%D7%94%D7%9E%D7%95%D7%A2%D7%A6%D7%94/ after retries
+2025-03-31 20:01:56,922 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=2747 after retries
+2025-03-31 20:02:21,054 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1254 after retries
+2025-03-31 20:03:21,013 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/לשכת-ראש-המועצה/ after retries
+2025-03-31 20:03:37,647 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1352 after retries
+2025-03-31 20:04:01,780 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1249 after retries
+2025-03-31 20:05:02,318 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/מחלקת-הביטחון-והחירום/ after retries
+2025-03-31 20:05:17,206 - ERROR - [FAILED] Could not fetch https://basma.muni.il/he/CmsPage/Page?pageId=1505 after retries
+2025-03-31 20:05:41,339 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1247 after retries
+2025-03-31 20:06:38,322 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/ועדות-המועצה/ after retries
+2025-03-31 20:07:18,806 - ERROR - [FAILED] Could not fetch https://ilut.muni.il/he/CmsPage/Page?pageId=1258 after retries
+2025-03-31 20:08:18,975 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/רישום-לקבוצות-וואטצאפ-מהמועצה-לתושבים/ after retries
+2025-03-31 20:09:58,338 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/43/ after retries
+2025-03-31 20:11:39,346 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/צוות-חינוכי-בגני-ילדים/ after retries
+2025-03-31 20:13:20,932 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/עובדי-המחלקה-ותפקידם/ after retries
+2025-03-31 20:15:02,053 - ERROR - [FAILED] Could not fetch https://www.m-zion.org.il/פרט-ומשפחה/ after retries

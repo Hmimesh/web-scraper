@@ -1,0 +1,20 @@
+{
+  "טבלת אנשי קשר": {
+    "phone": "03-5447590",
+    "email": "Bosmat@oranit.org.il",
+    "job_title": "בשמת ארנרייך\tמ\"מ מנהלת מחלקת רווחה\t03-5447590\t050-2035303\tBosmat@oranit.org.il",
+    "department": "מחלקת רווחה"
+  },
+  "דורית גנוז\tעו\"ס סדרי דין": {
+    "phone": "03-5447591",
+    "email": "revaha@oranit.org.il",
+    "job_title": "הדס רייק\tעו\"סית אזרחים ותיקים, מועדונית וקהילה\t03-5447590\t\tHadasr@oranit.org.il",
+    "department": "מחלקת קהילה"
+  },
+  "נרית אורים\tעו\"ס נוער צעירים": {
+    "phone": "03-5447590",
+    "email": "Nerit@oranit.org.il",
+    "job_title": "עינב תורגמן\tעו\"ס משפחות ויתד (צעירים בסיכון)\t03-5447591\t\teinavt@oranit.org.il",
+    "department": "מחלקות צעירים"
+  }
+}

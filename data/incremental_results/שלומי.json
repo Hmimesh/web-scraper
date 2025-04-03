@@ -1,0 +1,56 @@
+{
+  "טבלת אנשי קשר": {
+    "phone": "04-9950931",
+    "email": "mmhinuch@shelomi.org.il",
+    "job_title": "ד\"ר יוחאי כמיסה\tמנהל מחלקת חינוך\t04-9950931\t\tmmhinuch@shelomi.org.il",
+    "department": "מחלקת חינוך"
+  },
+  "עו\"ס נועה נריה\tעו\"ס קשישים": {
+    "phone": "04-9950927",
+    "email": "itzhak@shelomi.org.il",
+    "job_title": "עו\"ס שהם אליהו\tעו\"ס נוער\t04-99509270\t\tosnoar1@shelomi.org.il",
+    "department": "מחלקות נוער"
+  },
+  "עו\"ס סיתוונית רחמים\tעו\"ס נערות": {
+    "phone": "049950928",
+    "email": "sitv@shelomi.org.il",
+    "job_title": "לודה חצ'קלביץ\tמועדון גיל לכל גיל/ מועדון העולים\t077-4375492\t\tluda@shelomi.org.il",
+    "department": "מחלקת קליטה"
+  },
+  "עו\"ס משפחה": {
+    "phone": "049950928",
+    "email": "os@shelomi.org.il",
+    "job_title": "איתן אלקריאף\tרכז שכונות ותרבות הדיור\t04-9950920\t050-5512577\trosh@shelomi.org.il",
+    "department": "מחלקות תרבות"
+  },
+  "הפועל שלומי מכוונת גבוה": {
+    "phone": "049808487",
+    "email": null,
+    "job_title": "אנו מבינים כי מהלך זה יקדם רבות את הנוער במקום ויפתח במקביל משרות נוספות בתוך המועדון.",
+    "department": "מחלקות נוער"
+  },
+  "עו\"ד אביטל דהן\tחברת מועצה סיעת דחף": {
+    "phone": null,
+    "email": "adv.avital@gmail.com",
+    "job_title": "עו\"ד עופרי סיידה\tחבר מועצה ומשנה לראש המועצה סיעת שס\t\t052-8621770\tZedek1010@walla.com",
+    "department": "מועצה"
+  },
+  "מר מיכאל סלובדוב\tמ\"מ ראש המועצה בתואר סיעת דחף": {
+    "phone": null,
+    "email": "michael.slobodov@gmail.com",
+    "job_title": "מר שלמה סאלם\tחבר מועצה סיעת שס\t\t054-5574067\tsdsnm1980@gmail.com",
+    "department": "מועצה"
+  },
+  "מר שלמה סאלם\tחבר מועצה סיעת שס": {
+    "phone": null,
+    "email": "sdsnm1980@gmail.com",
+    "job_title": "מר דוד דר\tחבר מועצה סיעת טב\t\t054-5401210\tdudu.dar@kennametal.com",
+    "department": "מועצה"
+  },
+  "מר דוד דר\tחבר מועצה סיעת טב": {
+    "phone": null,
+    "email": "dudu.dar@kennametal.com",
+    "job_title": "מר איתן אדרעי\tחבר מועצה סיעת טב\t\t052-3685265\teitandsap@gmail.com",
+    "department": "מועצה"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "טבלת אנשי קשר": {
+    "phone": "09-9547917",
+    "email": "ykabel@herzliya.muni.il",
+    "job_title": "איציק קבל\tמנהל תרבות הדיור\t09-9547917\t\tykabel@herzliya.muni.il",
+    "department": "מחלקות תרבות"
+  },
+  "הילה דהן": {
+    "phone": null,
+    "email": "HilaD@herzliya.muni.il",
+    "job_title": "ליאת גורליק, עו\"ס\tמנהל מח' משי\"ק - משפחות וילדים בקהילה\t \tliatg@herzliya.muni.il",
+    "department": "מחלקת קהילה"
+  },
+  "ליאת גורליק": {
+    "phone": "09-9705169",
+    "email": "liatg@herzliya.muni.il",
+    "job_title": "יוכית טל, עו\"ס\tמנהלת מח' משאבי קהילה\t \tYochit@herzliya.muni.il",
+    "department": "מחלקת קהילה"
+  },
+  "יוכית טל": {
+    "phone": "09-9705169",
+    "email": "Yochit@herzliya.muni.il",
+    "job_title": "מזכירת מחלקת משפחות וילדים בקהילה\t09-9705169\t meiravk@herzliya.muni.il",
+    "department": "מחלקת קהילה"
+  },
+  "אלינור מלאך אוליאל\nמנהלת מדור תכנון אסטרטגי\nמוסדות חינוך וציבור": {
+    "phone": "09-9656121",
+    "email": null,
+    "job_title": "מוסדות חינוך וציבור",
+    "department": "מחלקת חינוך"
+  },
+  "מרכזים קהילתיים": {
+    "phone": "09-9705103",
+    "email": null,
+    "job_title": "תרבות תורנית",
+    "department": "מחלקות תרבות"
+  }
+}
