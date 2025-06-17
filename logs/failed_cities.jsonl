@@ -172,3 +172,238 @@
 {"City": "שוהם", "url": " https://www.shoham.muni.il/", "status": "empty"}
 {"City": "שפרעם", "url": " https://shefaram.muni.il/he/Home/Index", "status": "empty"}
 {"City": "תל מונד", "url": " https://www.tel-mond.muni.il/", "status": "empty"}
+{"City": "אבו סנאן", "url": " NaN", "status": "empty"}
+{"City": "אורנית", "url": " https://www.oranit.org.il/", "status": "empty"}
+{"City": "אילת", "url": " http://www.eilat.muni.il/", "status": "empty"}
+{"City": "אכסאל", "url": " NaN", "status": "empty"}
+{"City": "אזור", "url": " https://www.azor.muni.il/", "status": "empty"}
+{"City": "אעבלין", "url": " https://ibllin.muni.il/", "status": "empty"}
+{"City": "אפרת", "url": " NaN", "status": "empty"}
+{"City": "אבן יהודה", "url": " https://www.even-yehuda.muni.il/", "status": "empty"}
+{"City": "אור עקיבא", "url": " https://www.oraqiva.muni.il/", "status": "empty"}
+{"City": "בועיינה-נוג'ידאת", "url": " http://www.bueine-nujeidat.muni.il/", "status": "empty"}
+{"City": "אריאל", "url": " https://www.ariel.muni.il/", "status": "empty"}
+{"City": "באר יעקב", "url": " https://www.b-y.org.il/", "status": "empty"}
+{"City": "בוקעאתא", "url": " https://buqata.muni.il/he/", "status": "empty"}
+{"City": "באקה אל גרבייה", "url": " https://www.baqa.co.il/", "status": "empty"}
+{"City": "בית אל", "url": " NaN", "status": "empty"}
+{"City": "ביר אל-מכסור", "url": " https://www.bir-elmaksur.org.il/he/", "status": "empty"}
+{"City": "בית אריה", "url": " https://www.beit-arye.co.il/", "status": "empty"}
+{"City": "ביתר עילית", "url": " https://betar-illit.muni.il/", "status": "empty"}
+{"City": "בסמת טבעון", "url": " NaN    ", "status": "empty"}
+{"City": "בת ים", "url": " https://www.bat-yam.muni.il/he/", "status": "empty"}
+{"City": "גבעת זאב", "url": " NaN", "status": "empty"}
+{"City": "בני עיש", "url": " http://www.bney-ayish.muni.il/", "status": "empty"}
+{"City": "ג'וליס", "url": " https://julis.website/pages/julis.asp", "status": "empty"}
+{"City": "ג'סר א-זרקא", "url": " NaN", "status": "empty"}
+{"City": "ג'ש (גוש חלב)", "url": " https://www.jish.org.il/Pages/default.aspx", "status": "empty"}
+{"City": "ג'ת", "url": " https://www.jatt.muni.il/", "status": "empty"}
+{"City": "גבעת שמואל", "url": " https://www.givat-shmuel.muni.il/", "status": "empty"}
+{"City": "דליית אל כרמל", "url": " http://www.tourismdalia.com/", "status": "empty"}
+{"City": "דיר אל אסד", "url": " https://www.deiralasad.muni.il/?lang=he", "status": "empty"}
+{"City": "גני תקווה", "url": " http://www.ganeytikva.org.il/", "status": "empty"}
+{"City": "זרזיר", "url": " NaN", "status": "empty"}
+{"City": "חברון", "url": " NaN", "status": "empty"}
+{"City": "זמר", "url": " https://zemer.muni.il/", "status": "empty"}
+{"City": "חצור הגלילית", "url": " https://www.hatzorg.co.il/", "status": "empty"}
+{"City": "טובא-זנגריה", "url": " http://www.tuba-zangariyye.muni.il/hebrew/index.php", "status": "empty"}
+{"City": "טירה", "url": " NaN", "status": "empty"}
+{"City": "טורעאן", "url": " https://www.turan.muni.il/he/", "status": "empty"}
+{"City": "טמרה", "url": " https://www.tamra.muni.il/he/", "status": "empty"}
+{"City": "חריש", "url": " https://www.harish.muni.il/", "status": "empty"}
+{"City": "יבנה", "url": " https://www.yavnecity.co.il/", "status": "empty"}
+{"City": "יהוד-נווה אפריים", "url": " http://www.yehud-monosson.muni.il/", "status": "empty"}
+{"City": "טבריה", "url": " https://www.tiberias.muni.il/", "status": "empty"}
+{"City": "יבנאל", "url": " https://yavneel.muni.il/", "status": "empty"}
+{"City": "ירושלים", "url": "  https://www.jerusalem.muni.il/", "status": "empty"}
+{"City": "יפיע", "url": " https://www.yaffa.org.il/he/", "status": "empty"}
+{"City": "כאוכב אבו אל-היג'א", "url": " NaN", "status": "empty"}
+{"City": "כוכב יאיר", "url": " NaN", "status": "empty"}
+{"City": "ירכא", "url": " https://www.yirka.muni.il/he/", "status": "empty"}
+{"City": "כפר יונה", "url": " https://www.kfar-yona.muni.il/", "status": "empty"}
+{"City": "כפר קאסם", "url": " https://kfar-qasem.muni.il/he/", "status": "empty"}
+{"City": "ירוחם", "url": " https://www.yeroham.muni.il/", "status": "empty"}
+{"City": "כפר קרע", "url": " https://www.kafar-qara.muni.il/he/", "status": "empty"}
+{"City": "כפר תבור", "url": " https://www.kefar-tavor.muni.il/", "status": "empty"}
+{"City": "להבים", "url": " http://www.lehavim.muni.il/", "status": "empty"}
+{"City": "כפר שמריהו", "url": " http://www.kfar-shemaryahu.muni.il/", "status": "empty"}
+{"City": "כפר סבא", "url": " http://www.kfar-saba.muni.il/", "status": "empty"}
+{"City": "לקיה", "url": " https://www.laqye.muni.il", "status": "empty"}
+{"City": "כרמיאל", "url": " https://www.karmiel.muni.il/", "status": "empty"}
+{"City": "מג'דל שמס", "url": " NaN", "status": "empty"}
+{"City": "מג'דל אל כרום", "url": " https://majd-al-kurum.muni.il/", "status": "empty"}
+{"City": "מזרעה", "url": " https://mazraa.muni.il/he/Home/Index", "status": "empty"}
+{"City": "מסעדה", "url": " NaN", "status": "empty"}
+{"City": "מבשרת ציון", "url": " https://www.m-zion.org.il/", "status": "empty"}
+{"City": "מעלה עירון", "url": " NaN", "status": "empty"}
+{"City": "מגדל", "url": " http://www.m-migdal.co.il/", "status": "empty"}
+{"City": "נאות חובב", "url": " https://neot-hovav.org.il/", "status": "empty"}
+{"City": "מעלות-תרשיחא", "url": " https://www.maltar.org.il/", "status": "empty"}
+{"City": "נחף", "url": " https://www.nahef.muni.il/inner.asp?root=145&RecordID=371&lang=ar", "status": "empty"}
+{"City": "נהריה", "url": " https://www.nahariya.muni.il/", "status": "empty"}
+{"City": "נס ציונה", "url": " https://www.nzc.org.il/", "status": "empty"}
+{"City": "מעלה אדומים", "url": " https://www.maale-adummim.muni.il/", "status": "empty"}
+{"City": "נשר", "url": " https://www.nesher.muni.il/", "status": "empty"}
+{"City": "סאג'ור", "url": " https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "סביון", "url": " https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "נתניה", "url": " https://www.netanya.muni.il/", "status": "empty"}
+{"City": "סח'נין", "url": " https://www.sakhnin.muni.il/he/", "status": "empty"}
+{"City": "ע'ג'ר", "url": " https://ghajarlc.org.il/", "status": "empty"}
+{"City": "עילוט", "url": " https://ilut.muni.il/he/CmsPage/Page?pageId=1234", "status": "empty"}
+{"City": "עוספיה", "url": " https://www.isifya.co.il/he/", "status": "empty"}
+{"City": "עכו", "url": " https://www.akko.muni.il/he/", "status": "empty"}
+{"City": "עראבה", "url": " https://arraba.muni.il/he/", "status": "empty"}
+{"City": "מזכרת בתיה", "url": " https://mazkeret-batya.muni.il/", "status": "empty"}
+{"City": "עמנואל", "url": " https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "ערד", "url": " http://www.arad.muni.il/", "status": "empty"}
+{"City": "פוריידיס", "url": " NaN", "status": "empty"}
+{"City": "עין קנייא", "url": " http://einknia.com/", "status": "empty"}
+{"City": "עפולה", "url": " https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "פתח תקווה", "url": " http://www.petah-tikva.muni.il/", "status": "empty"}
+{"City": "פרדסיה", "url": " https://www.pardesia.muni.il/", "status": "empty"}
+{"City": "ערערה", "url": " http://www.arara-ara.muni.il/", "status": "empty"}
+{"City": "קלנסווה", "url": " NaN", "status": "empty"}
+{"City": "קדומים", "url": " https://www.kedumim.org.il/", "status": "empty"}
+{"City": "פרדס חנה-כרכור", "url": " https://www.pardes-hanna-karkur.muni.il/", "status": "empty"}
+{"City": "קרית ארבע", "url": " NaN", "status": "empty"}
+{"City": "צפת", "url": " https://www.zefat.muni.il/", "status": "empty"}
+{"City": "קרית אונו", "url": " https://www.kiryatono.muni.il/", "status": "empty"}
+{"City": "קצרין", "url": " https://www.golan.org.il/ramathagolan/", "status": "empty"}
+{"City": "קרית ים", "url": " https://www.kiryat-yam.muni.il/", "status": "empty"}
+{"City": "קרית יערים", "url": " https://kiryatyearim.muni.il/", "status": "empty"}
+{"City": "קרית אתא", "url": " http://www.kiryat-ata.org.il/", "status": "empty"}
+{"City": "קרית טבעון", "url": " https://www.ktv.org.il/", "status": "empty"}
+{"City": "קרית עקרון", "url": " http://www.kiryat-ekron.muni.il/", "status": "empty"}
+{"City": "קרית מוצקין", "url": " http://www.motzkin.co.il/", "status": "empty"}
+{"City": "ראש העין", "url": " https://www.rosh-haayin.muni.il/", "status": "empty"}
+{"City": "ריינה", "url": " https://reine.muni.il/he/Home/Index", "status": "empty"}
+{"City": "רמלה", "url": " NaN", "status": "empty"}
+{"City": "קרית שמונה", "url": " http://www.k-8.co.il/", "status": "empty"}
+{"City": "ראשון לציון", "url": " https://www.rishonlezion.muni.il/Pages/default.aspx", "status": "empty"}
+{"City": "רכסים", "url": " http://www.rekhasim.muni.il/", "status": "empty"}
+{"City": "שוהם", "url": " https://www.shoham.muni.il/", "status": "empty"}
+{"City": "רמת ישי", "url": " http://www.ramat-yishay.com/", "status": "empty"}
+{"City": "שער שומרון", "url": " https://www.shaar-s.org.il/", "status": "empty"}
+{"City": "שבלי - אום אל - גנם", "url": " https://www.shibli-umm-al-ghanam.muni.il/he/departments", "status": "empty"}
+{"City": "תל מונד", "url": " https://www.tel-mond.muni.il/", "status": "empty"}
+{"City": "שגב-שלום", "url": " https://www.segev-shalom.muni.il/", "status": "empty"}
+{"City": "שלומי", "url": " https://www.shelomi.org.il/", "status": "empty"}
+{"City": "אבו סנאן", "url": "NaN", "status": "empty"}
+{"City": "אורנית", "url": "https://www.oranit.org.il/", "status": "empty"}
+{"City": "אילת", "url": "http://www.eilat.muni.il/", "status": "empty"}
+{"City": "אכסאל", "url": "NaN", "status": "empty"}
+{"City": "אבן יהודה", "url": "https://www.even-yehuda.muni.il/", "status": "empty"}
+{"City": "אזור", "url": "https://www.azor.muni.il/", "status": "empty"}
+{"City": "אעבלין", "url": "https://ibllin.muni.il/", "status": "empty"}
+{"City": "אפרת", "url": "NaN", "status": "empty"}
+{"City": "אשדוד", "url": "http://www.ashdod.muni.il/", "status": "empty"}
+{"City": "אור עקיבא", "url": "https://www.oraqiva.muni.il/", "status": "empty"}
+{"City": "בועיינה-נוג'ידאת", "url": "http://www.bueine-nujeidat.muni.il/", "status": "empty"}
+{"City": "בוקעאתא", "url": "https://buqata.muni.il/he/", "status": "empty"}
+{"City": "באר יעקב", "url": "https://www.b-y.org.il/", "status": "empty"}
+{"City": "בית אל", "url": "NaN", "status": "empty"}
+{"City": "ביר אל-מכסור", "url": "https://www.bir-elmaksur.org.il/he/", "status": "empty"}
+{"City": "באקה אל גרבייה", "url": "https://www.baqa.co.il/", "status": "empty"}
+{"City": "אריאל", "url": "https://www.ariel.muni.il/", "status": "empty"}
+{"City": "בית שאן", "url": "http://www.bet-shean.org.il/", "status": "empty"}
+{"City": "בית אריה", "url": "https://www.beit-arye.co.il/", "status": "empty"}
+{"City": "ביתר עילית", "url": "https://betar-illit.muni.il/", "status": "empty"}
+{"City": "בני עיש", "url": "http://www.bney-ayish.muni.il/", "status": "empty"}
+{"City": "בסמת טבעון", "url": "NaN", "status": "empty"}
+{"City": "בת ים", "url": "https://www.bat-yam.muni.il/he/", "status": "empty"}
+{"City": "גבעת זאב", "url": "NaN", "status": "empty"}
+{"City": "ג'וליס", "url": "https://julis.website/pages/julis.asp", "status": "empty"}
+{"City": "גבעת שמואל", "url": "https://www.givat-shmuel.muni.il/", "status": "empty"}
+{"City": "ג'סר א-זרקא", "url": "NaN", "status": "empty"}
+{"City": "גני תקווה", "url": "http://www.ganeytikva.org.il/", "status": "empty"}
+{"City": "ג'ת", "url": "https://www.jatt.muni.il/", "status": "empty"}
+{"City": "ג'ש (גוש חלב)", "url": "https://www.jish.org.il/Pages/default.aspx", "status": "empty"}
+{"City": "דיר אל אסד", "url": "https://www.deiralasad.muni.il/?lang=he", "status": "empty"}
+{"City": "דליית אל כרמל", "url": "http://www.tourismdalia.com/", "status": "empty"}
+{"City": "דבוריה", "url": "https://daburiyya.muni.il/he/home", "status": "empty"}
+{"City": "זמר", "url": "https://zemer.muni.il/", "status": "empty"}
+{"City": "זרזיר", "url": "NaN", "status": "empty"}
+{"City": "חברון", "url": "NaN", "status": "empty"}
+{"City": "חדרה", "url": "http://www.hadera.muni.il/", "status": "empty"}
+{"City": "חצור הגלילית", "url": "https://www.hatzorg.co.il/", "status": "empty"}
+{"City": "טובא-זנגריה", "url": "http://www.tuba-zangariyye.muni.il/hebrew/index.php", "status": "empty"}
+{"City": "טורעאן", "url": "https://www.turan.muni.il/he/", "status": "empty"}
+{"City": "טירה", "url": "NaN", "status": "empty"}
+{"City": "טמרה", "url": "https://www.tamra.muni.il/he/", "status": "empty"}
+{"City": "יבנה", "url": "https://www.yavnecity.co.il/", "status": "empty"}
+{"City": "יבנאל", "url": "https://yavneel.muni.il/", "status": "empty"}
+{"City": "יהוד-נווה אפריים", "url": "http://www.yehud-monosson.muni.il/", "status": "empty"}
+{"City": "חריש", "url": "https://www.harish.muni.il/", "status": "empty"}
+{"City": "טבריה", "url": "https://www.tiberias.muni.il/", "status": "empty"}
+{"City": "ירושלים", "url": "https://www.jerusalem.muni.il/", "status": "empty"}
+{"City": "יפיע", "url": "https://www.yaffa.org.il/he/", "status": "empty"}
+{"City": "ירכא", "url": "https://www.yirka.muni.il/he/", "status": "empty"}
+{"City": "כאוכב אבו אל-היג'א", "url": "NaN", "status": "empty"}
+{"City": "כוכב יאיר", "url": "NaN", "status": "empty"}
+{"City": "ירוחם", "url": "https://www.yeroham.muni.il/", "status": "empty"}
+{"City": "כסרא-סמיע", "url": "https://www.kisra-sumei.muni.il/he/home", "status": "empty"}
+{"City": "כפר יונה", "url": "https://www.kfar-yona.muni.il/", "status": "empty"}
+{"City": "כפר קאסם", "url": "https://kfar-qasem.muni.il/he/", "status": "empty"}
+{"City": "כפר קרע", "url": "https://www.kafar-qara.muni.il/he/", "status": "empty"}
+{"City": "כפר תבור", "url": "https://www.kefar-tavor.muni.il/", "status": "empty"}
+{"City": "להבים", "url": "http://www.lehavim.muni.il/", "status": "empty"}
+{"City": "כפר שמריהו", "url": "http://www.kfar-shemaryahu.muni.il/", "status": "empty"}
+{"City": "כפר סבא", "url": "http://www.kfar-saba.muni.il/", "status": "empty"}
+{"City": "כרמיאל", "url": "https://www.karmiel.muni.il/", "status": "empty"}
+{"City": "לקיה", "url": "https://www.laqye.muni.il", "status": "empty"}
+{"City": "מג'דל אל כרום", "url": "https://majd-al-kurum.muni.il/", "status": "empty"}
+{"City": "מג'דל שמס", "url": "NaN", "status": "empty"}
+{"City": "מבשרת ציון", "url": "https://www.m-zion.org.il/", "status": "empty"}
+{"City": "מגדל", "url": "http://www.m-migdal.co.il/", "status": "empty"}
+{"City": "מזרעה", "url": "https://mazraa.muni.il/he/Home/Index", "status": "empty"}
+{"City": "מסעדה", "url": "NaN", "status": "empty"}
+{"City": "מזכרת בתיה", "url": "https://mazkeret-batya.muni.il/", "status": "empty"}
+{"City": "מעלה עירון", "url": "NaN", "status": "empty"}
+{"City": "מעלות-תרשיחא", "url": "https://www.maltar.org.il/", "status": "empty"}
+{"City": "מעלה אדומים", "url": "https://www.maale-adummim.muni.il/", "status": "empty"}
+{"City": "נאות חובב", "url": "https://neot-hovav.org.il/", "status": "empty"}
+{"City": "נחף", "url": "https://www.nahef.muni.il/inner.asp?root=145&RecordID=371&lang=ar", "status": "empty"}
+{"City": "נהריה", "url": "https://www.nahariya.muni.il/", "status": "empty"}
+{"City": "נס ציונה", "url": "https://www.nzc.org.il/", "status": "empty"}
+{"City": "נשר", "url": "https://www.nesher.muni.il/", "status": "empty"}
+{"City": "סאג'ור", "url": "https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "סביון", "url": "https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "סח'נין", "url": "https://www.sakhnin.muni.il/he/", "status": "empty"}
+{"City": "נתניה", "url": "https://www.netanya.muni.il/", "status": "empty"}
+{"City": "ע'ג'ר", "url": "https://ghajarlc.org.il/", "status": "empty"}
+{"City": "עוספיה", "url": "https://www.isifya.co.il/he/", "status": "empty"}
+{"City": "עכו", "url": "https://www.akko.muni.il/he/", "status": "empty"}
+{"City": "עילוט", "url": "https://ilut.muni.il/he/CmsPage/Page?pageId=1234", "status": "empty"}
+{"City": "עראבה", "url": "https://arraba.muni.il/he/", "status": "empty"}
+{"City": "עמנואל", "url": "https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "עפולה", "url": "https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "פוריידיס", "url": "NaN", "status": "empty"}
+{"City": "ערד", "url": "http://www.arad.muni.il/", "status": "empty"}
+{"City": "ערערה", "url": "http://www.arara-ara.muni.il/", "status": "empty"}
+{"City": "פתח תקווה", "url": "http://www.petah-tikva.muni.il/", "status": "empty"}
+{"City": "פרדסיה", "url": "https://www.pardesia.muni.il/", "status": "empty"}
+{"City": "פרדס חנה-כרכור", "url": "https://www.pardes-hanna-karkur.muni.il/", "status": "empty"}
+{"City": "קדומים", "url": "https://www.kedumim.org.il/", "status": "empty"}
+{"City": "קלנסווה", "url": "NaN", "status": "empty"}
+{"City": "צפת", "url": "https://www.zefat.muni.il/", "status": "empty"}
+{"City": "קרית ארבע", "url": "NaN", "status": "empty"}
+{"City": "קרית אונו", "url": "https://www.kiryatono.muni.il/", "status": "empty"}
+{"City": "קרית ים", "url": "https://www.kiryat-yam.muni.il/", "status": "empty"}
+{"City": "קרית אתא", "url": "http://www.kiryat-ata.org.il/", "status": "empty"}
+{"City": "קרית יערים", "url": "https://kiryatyearim.muni.il/", "status": "empty"}
+{"City": "קרית טבעון", "url": "https://www.ktv.org.il/", "status": "empty"}
+{"City": "קרית מוצקין", "url": "http://www.motzkin.co.il/", "status": "empty"}
+{"City": "קרית שמונה", "url": "http://www.k-8.co.il/", "status": "empty"}
+{"City": "קרית עקרון", "url": "http://www.kiryat-ekron.muni.il/", "status": "empty"}
+{"City": "ראש העין", "url": "https://www.rosh-haayin.muni.il/", "status": "empty"}
+{"City": "ריינה", "url": "https://reine.muni.il/he/Home/Index", "status": "empty"}
+{"City": "רמלה", "url": "NaN", "status": "empty"}
+{"City": "ראשון לציון", "url": "https://www.rishonlezion.muni.il/Pages/default.aspx", "status": "empty"}
+{"City": "רכסים", "url": "http://www.rekhasim.muni.il/", "status": "empty"}
+{"City": "רמת ישי", "url": "http://www.ramat-yishay.com/", "status": "empty"}
+{"City": "שוהם", "url": "https://www.shoham.muni.il/", "status": "empty"}
+{"City": "שבלי - אום אל - גנם", "url": "https://www.shibli-umm-al-ghanam.muni.il/he/departments", "status": "empty"}
+{"City": "שגב-שלום", "url": "https://www.segev-shalom.muni.il/", "status": "empty"}
+{"City": "שער שומרון", "url": "https://www.shaar-s.org.il/", "status": "empty"}
+{"City": "שלומי", "url": "https://www.shelomi.org.il/", "status": "empty"}
+{"City": "תל מונד", "url": "https://www.tel-mond.muni.il/", "status": "empty"}

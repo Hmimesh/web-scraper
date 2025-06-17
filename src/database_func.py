@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 from jobs import Contacts
 from nameparser import HumanName
+import time
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -128,6 +129,9 @@ def extract_relevant_contacts_from_text(text, city_name):
 def process_city(row, existing_data):
     city = row["עיר"]
     url = row["קישור"]
+    #במקרה שיש רווח כי הוכנס בטעות זה יטפל בזה לא למחוק!
+    if url.startswith(" "):
+        url = url.strip()
 
     if pd.isna(url) or city in existing_data and existing_data[city]:
         logging.info(f"[SKIP] {city}: Already scraped or no URL")
@@ -202,11 +206,17 @@ def process_city(row, existing_data):
             return city, {}
         finally:
             browser.close()
-file_name = "six_test.json"
+
 def scrape_with_browser():
+    
+    file_name = input ("Enter the name of the output file (e.g., 'contacts.json'): ")
+    if not file_name.endswith(".json"):
+        file_name += ".json"
+    start_time = time.time()
+    print('--- %s seconds ---' % (time.time() - start_time))
     df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"))
     results = {}
-#name the file the name you want.
+#name the file the name you want. 
     dict_path = os.path.join(base_dir, file_name)
     if not os.path.exists(dict_path):
         with open(dict_path, "w", encoding="utf-8") as f:
