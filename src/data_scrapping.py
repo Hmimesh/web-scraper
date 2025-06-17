@@ -20,7 +20,7 @@ def main():
             start = onclick.find("'") + 1
             end = onclick.rfind("'")
             url = onclick[start:end]
-            full_url = f'https://www.maham.org.il{url}'
+            full_url = f'https://www.masham.org.il{url}'
         
         else:
             full_url = None
