@@ -1,0 +1,72 @@
+{"city": "אור יהודה", "url": " https://www.oryehuda.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אליכין", "url": " https://www.elyakhin.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אלעד", "url": " https://www.elad.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אריאל", "url": " https://www.ariel.muni.il/", "error": "Page.query_selector_all: Target page, context or browser has been closed", "status": "exception"}
+{"city": "אשדוד", "url": " http://www.ashdod.muni.il/", "error": "Page.query_selector_all: Target page, context or browser has been closed", "status": "exception"}
+{"city": "אור יהודה", "url": " https://www.oryehuda.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אליכין", "url": " https://www.elyakhin.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אלעד", "url": " https://www.elad.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אריאל", "url": " https://www.ariel.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אשדוד", "url": " http://www.ashdod.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אשקלון", "url": " http://www.ashkelon.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "באר שבע", "url": " https://www.beer-sheva.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בועיינה-נוג'ידאת", "url": " http://www.bueine-nujeidat.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בית דגן", "url": " https://www.beitdagan.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בית שאן", "url": " http://www.bet-shean.org.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בני ברק", "url": " http://www.bnei-brak.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "גבעתיים", "url": " https://www.givatayim.muni.il/", "error": "Page.query_selector_all: Target page, context or browser has been closed", "status": "exception"}
+{"city": "אור יהודה", "url": " https://www.oryehuda.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אליכין", "url": " https://www.elyakhin.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אלעד", "url": " https://www.elad.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אשדוד", "url": " http://www.ashdod.muni.il/", "error": "Page.query_selector_all: Target page, context or browser has been closed", "status": "exception"}
+{"city": "אריאל", "url": " https://www.ariel.muni.il/", "error": "Page.query_selector_all: Target page, context or browser has been closed", "status": "exception"}
+{"city": "אור יהודה", "url": " https://www.oryehuda.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אליכין", "url": " https://www.elyakhin.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אלעד", "url": " https://www.elad.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אריאל", "url": " https://www.ariel.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אשדוד", "url": " http://www.ashdod.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "אשקלון", "url": " http://www.ashkelon.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "באר שבע", "url": " https://www.beer-sheva.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בועיינה-נוג'ידאת", "url": " http://www.bueine-nujeidat.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בית דגן", "url": " https://www.beitdagan.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בית שאן", "url": " http://www.bet-shean.org.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בני ברק", "url": " http://www.bnei-brak.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "בסמה", "url": " https://basma.muni.il/he/Home/Index", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "גבעתיים", "url": " https://www.givatayim.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "גדרה", "url": " https://gedera.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ג'לג'וליה", "url": " https://www.jaljulye.muni.il/Hebrew/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "גן יבנה", "url": " http://www.ganyavne.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ג'ש (גוש חלב)", "url": " https://www.jish.org.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "דייר חנא", "url": " https://www.deir-hanna.muni.il/Hebrew/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "חדרה", "url": " http://www.hadera.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "חולון", "url": " https://www.holon.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "חורה", "url": " https://www.huranet.org/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "טירת כרמל", "url": " https://www.tirat-carmel.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "יאנוח-ג'ת", "url": " https://www.yanuh-jat.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "יקנעם עילית", "url": " https://www.yoqneam.org.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "כסיפה", "url": " https://www.kuseife.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "כעביה-טבאש-חג'אג'רה", "url": " https://www.kaabiyye-tabbash-hajajre.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "כפר יאסיף", "url": " https://www.kafr-yasif.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "כפר כנא", "url": " https://www.kfarcana.muni.il/Heb/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "לוד", "url": " http://www.lod.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "מג'דל אל כרום", "url": " https://majd-al-kurum.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "מגדל העמק", "url": " http://www.migdal-haemeq.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "מיתר", "url": " http://www.metar.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "מעיליא", "url": " https://www.mielya.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "משהד", "url": " https://www.mashhad.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "נהריה", "url": " https://www.nahariya.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "נצרת", "url": " https://www.nazareth.muni.il/Hebrew/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "עומר", "url": " https://www.omer.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "עיילבון", "url": " https://www.eilaboun.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "עין מאהל", "url": " https://www.ein-mahel.muni.il/Hebrew/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "עראבה", "url": " https://arraba.muni.il/he/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ערערה-בנגב", "url": " https://www.arara-banegev.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "פתח תקווה", "url": " http://www.petah-tikva.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "קרית ביאליק", "url": " http://www.qbialik.org.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "קרני שומרון", "url": " http://www.karneishomron.co.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ראש העין", "url": " https://www.rosh-haayin.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ראש פינה", "url": " http://www.rosh-pinna.muni.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "ראשון לציון", "url": " https://www.rishonlezion.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "רמת ישי", "url": " http://www.ramat-yishay.com/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "רעננה", "url": " https://www.raanana.muni.il/Pages/default.aspx", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
+{"city": "שדרות", "url": " http://www.e-sderot.org.il/", "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation", "status": "exception"}
