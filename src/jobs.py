@@ -50,13 +50,6 @@ class Contacts:
                 self.department = dept
                 break
 
-        # Try to extract full Hebrew name
-        name_candidates = re.findall(r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text)
-        if name_candidates:
-            self.name = name_candidates[0]
-        else:
-            self.name = f"לא נמצא שם ({self.role})"
-
         # Try to guess role from line
         possible_roles = [
             "רכז", "רכזת", "מנהל", "מנהלת", "יועץ", "יועצת", "מפקח", "מפקחת",
@@ -66,6 +59,13 @@ class Contacts:
             if any(role in word for role in possible_roles):
                 self.role = word
                 break
+
+        # Try to extract full Hebrew name
+        name_candidates = re.findall(r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text)
+        if name_candidates:
+            self.name = name_candidates[0]
+        else:
+            self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
 
     def to_dict(self):
         return {
