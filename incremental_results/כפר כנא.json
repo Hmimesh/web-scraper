@@ -1,6 +1,564 @@
 {
+  "local.cana": {
+    "שם": "local.cana",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "local.cana@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "לא נמצא שם": {
     "שם": "לא נמצא שם",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": null,
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838635"
+  },
+  "ezz": {
+    "שם": "ezz",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "ezz@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "thakeem": {
+    "שם": "thakeem",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "thakeem@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "atarek": {
+    "שם": "atarek",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "atarek@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ahmadzreeky": {
+    "שם": "ahmadzreeky",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "ahmadzreeky@walla.co.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "a-d-n-nabil": {
+    "שם": "a-d-n-nabil",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "a-d-n-nabil@bezeqint.net",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "wasem.ligalive": {
+    "שם": "wasem.ligalive",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "wasem.ligalive@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "arfan_kh": {
+    "שם": "arfan_kh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "arfan_kh@walla.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "טלפו": {
+    "שם": "טלפו",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": null,
+    "טלפון פרטי": null,
+    "טלפון משרד": "046516251"
+  },
+  "Local.cana": {
+    "שם": "Local.cana",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "Local.cana@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": "048847605"
+  },
+  "gezbarotkana": {
+    "שם": "gezbarotkana",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "gezbarotkana@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838541"
+  },
+  "adel": {
+    "שם": "adel",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "adel@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838516"
+  },
+  "fawaz13.adv": {
+    "שם": "fawaz13.adv",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "fawaz13.adv@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mancal": {
+    "שם": "mancal",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "mancal@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838621"
+  },
+  "tzahi": {
+    "שם": "tzahi",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "tzahi@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838639"
+  },
+  "kmahmoud": {
+    "שם": "kmahmoud",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "kmahmoud@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mtaha": {
+    "שם": "mtaha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "mtaha@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hfarid": {
+    "שם": "hfarid",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hfarid@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "gezbarot": {
+    "שם": "gezbarot",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "gezbarot@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hsawsan": {
+    "שם": "hsawsan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hsawsan@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "bgassan": {
+    "שם": "bgassan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "bgassan@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "073737481"
+  },
+  "amajed": {
+    "שם": "amajed",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "amajed@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "handassa": {
+    "שם": "handassa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "handassa@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "emajd": {
+    "שם": "emajd",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "emajd@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "aref": {
+    "שם": "aref",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "aref@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "education": {
+    "שם": "education",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "education@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hwael": {
+    "שם": "hwael",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hwael@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "rhesham": {
+    "שם": "rhesham",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "rhesham@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amarwan": {
+    "שם": "amarwan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "amarwan@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ayassmin": {
+    "שם": "ayassmin",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "ayassmin@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "snisreen": {
+    "שם": "snisreen",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "snisreen@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amaisa": {
+    "שם": "amaisa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "amaisa@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "dgamal": {
+    "שם": "dgamal",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "dgamal@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046519870"
+  },
+  "aaynman": {
+    "שם": "aaynman",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "aaynman@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046519870"
+  },
+  "dayman": {
+    "שם": "dayman",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "dayman@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046519870"
+  },
+  "kmohammad": {
+    "שם": "kmohammad",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "kmohammad@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046519870"
+  },
+  "yrabea": {
+    "שם": "yrabea",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "yrabea@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046519870"
+  },
+  "aragihb": {
+    "שם": "aragihb",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "aragihb@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838520"
+  },
+  "atahreer": {
+    "שם": "atahreer",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "atahreer@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838523"
+  },
+  "narmeen": {
+    "שם": "narmeen",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "narmeen@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838522"
+  },
+  "tmuhammad": {
+    "שם": "tmuhammad",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "tmuhammad@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838524"
+  },
+  "bnael": {
+    "שם": "bnael",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "bnael@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046411652"
+  },
+  "abadera": {
+    "שם": "abadera",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "abadera@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838534"
+  },
+  "mdoaa": {
+    "שם": "mdoaa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "mdoaa@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838532"
+  },
+  "slama": {
+    "שם": "slama",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "slama@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838533"
+  },
+  "dsalha": {
+    "שם": "dsalha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "dsalha@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838527"
+  },
+  "abian": {
+    "שם": "abian",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "abian@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838528"
+  },
+  "yfaida": {
+    "שם": "yfaida",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "yfaida@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838531"
+  },
+  "hmonai": {
+    "שם": "hmonai",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hmonai@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838525"
+  },
+  "hanwar": {
+    "שם": "hanwar",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hanwar@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hsafaa": {
+    "שם": "hsafaa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hsafaa@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mnajla": {
+    "שם": "mnajla",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "mnajla@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amaha": {
+    "שם": "amaha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "amaha@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838637"
+  },
+  "dsaleh": {
+    "שם": "dsaleh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "dsaleh@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "thassan": {
+    "שם": "thassan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "thassan@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "abasel": {
+    "שם": "abasel",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "abasel@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "bessam": {
+    "שם": "bessam",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "bessam@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "orana": {
+    "שם": "orana",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "orana@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838513"
+  },
+  "zdiab": {
+    "שם": "zdiab",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "zdiab@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046838573"
+  },
+  "areem": {
+    "שם": "areem",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "areem@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hzynat": {
+    "שם": "hzynat",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר כנא",
+    "מייל": "hzynat@kfarcana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "fmahmod": {
+    "שם": "fmahmod",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "כפר כנא",

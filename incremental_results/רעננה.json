@@ -1,12 +1,21 @@
 {
+  "haimm": {
+    "שם": "haimm",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "haimm@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "לא נמצא שם": {
     "שם": "לא נמצא שם",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "רעננה",
-    "מייל": "tamik@raanana.muni.il",
+    "מייל": null,
     "טלפון פרטי": null,
-    "טלפון משרד": null
+    "טלפון משרד": "097610403"
   },
   "חגית סתוי\tמזכירת מהנדס העיר": {
     "שם": "חגית סתוי\tמזכירת מהנדס העיר",
@@ -700,5 +709,212 @@
     "מייל": "shaypr@raanana.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": "097610332"
+  },
+  "guyaf": {
+    "שם": "guyaf",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "guyaf@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ofrali": {
+    "שם": "ofrali",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "ofrali@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "michalfr": {
+    "שם": "michalfr",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "michalfr@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "liatb": {
+    "שם": "liatb",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "liatb@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "iscai": {
+    "שם": "iscai",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "iscai@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "michalgu": {
+    "שם": "michalgu",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "michalgu@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "moshesh": {
+    "שם": "moshesh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "moshesh@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "iditm": {
+    "שם": "iditm",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "iditm@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "lihidl": {
+    "שם": "lihidl",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "lihidl@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "talyahi": {
+    "שם": "talyahi",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "talyahi@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "revitalsh": {
+    "שם": "revitalsh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "revitalsh@RAANANA.MUNI.IL",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "davidzi": {
+    "שם": "davidzi",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "davidzi@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mikia": {
+    "שם": "mikia",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "mikia@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "talima": {
+    "שם": "talima",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "talima@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "asafd": {
+    "שם": "asafd",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "asafd@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "EllaA": {
+    "שם": "EllaA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "EllaA@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "anatc": {
+    "שם": "anatc",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "anatc@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "inbark": {
+    "שם": "inbark",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "inbark@RAANANA.MUNI.IL",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amaliam": {
+    "שם": "amaliam",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "amaliam@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ShaniA": {
+    "שם": "ShaniA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "ShaniA@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "shlomil": {
+    "שם": "shlomil",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "shlomil@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "oritmo": {
+    "שם": "oritmo",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "oritmo@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "tamik": {
+    "שם": "tamik",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רעננה",
+    "מייל": "tamik@raanana.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
   }
 }
