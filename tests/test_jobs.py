@@ -61,3 +61,17 @@ def test_non_personal_email_ignored():
     text = "info@example.org"
     c = Contacts(text, "אשקלון")
     assert c.name == "לא נמצא שם"
+
+
+def test_lishka_email_ignored():
+    text = "lishka@tel-aviv.gov.il"
+    c = Contacts(text, "תל אביב")
+    assert c.name == "לא נמצא שם"
+
+
+def test_invalid_name_digits():
+    assert not Contacts.is_valid_name("user123")
+
+
+def test_hebrew_name_not_in_db():
+    assert not Contacts.is_valid_name("שםשאינובמאגר")
