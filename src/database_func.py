@@ -65,11 +65,13 @@ def find_deep_contact_links(page, base_url, depth=2, visited=None):
                     "צור_קשר", "צור-קשר", "צור קשר",
                     "מחלקות", "אנשי קשר", "טלפונים",
                     "הנהלה", "עובדים", "צוות",
-                    "staff", "contacts", "directory",
+                    "staff", "contacts", "directory", "contact",
+                    "dept", "department", "office",
                     "אגפים", "אגף", "אגפיה", "שירותים",
                     "שירותי", "דברו איתנו", "דברו",
                     "מחלקה", "מועצה", "חברי מועצה", "תפקידי מועצה",
-                    "טלפון", "טלפונים", "פניית ציבור", "רשימת"]):
+                    "טלפון", "טלפונים", "פניית ציבור", "רשימת",
+                    "קשרי ציבור", "מזכירות", "לשכה"]):
                     links_to_visit.append(full_url)
                     links_to_visit.extend(find_deep_contact_links(page, full_url, depth - 1, visited))
             except:
