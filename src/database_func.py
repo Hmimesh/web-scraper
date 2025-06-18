@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 from jobs import Contacts
 from nameparser import HumanName
+from collect_names import collect_names
 import time
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -252,6 +253,7 @@ def scrape_with_browser():
     Contacts.contacts = len(results)
     with open(os.path.join(base_dir, "incremental_results", "contacts.json"), "w", encoding="utf-8") as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
+    collect_names()
 #dont 
     logging.info(f"Done scraping all cities into {file_name}, there were {Contacts.contacts}")
     print(" File saved:", dict_path)
