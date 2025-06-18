@@ -249,11 +249,11 @@ def scrape_with_browser():
     with open(dict_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    Contacts.contacts = len(results)
     with open(os.path.join(base_dir, "incremental_results", "contacts.json"), "w", encoding="utf-8") as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
-#dont 
-    logging.info(f"Done scraping all cities into {file_name}, there were {Contacts.contacts}")
+#dont
+    logging.info(
+        f"Done scraping all cities into {file_name}, found {Contacts.contacts} contacts")
     print(" File saved:", dict_path)
 
 if __name__ == "__main__":
