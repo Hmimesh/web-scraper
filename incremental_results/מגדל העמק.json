@@ -1,6 +1,168 @@
 {
+  "momiben": {
+    "שם": "momiben",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "momiben@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "efrata": {
+    "שם": "efrata",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "efrata@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "pniot": {
+    "שם": "pniot",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "pniot@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ayeletp": {
+    "שם": "ayeletp",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "ayeletp@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "marinapa": {
+    "שם": "marinapa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "marinapa@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "oraha": {
+    "שם": "oraha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "oraha@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "talyzv": {
+    "שם": "talyzv",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "talyzv@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "rutiha": {
+    "שם": "rutiha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "rutiha@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "rinato": {
+    "שם": "rinato",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "rinato@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "לא נמצא שם": {
     "שם": "לא נמצא שם",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": null,
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "keliaz": {
+    "שם": "keliaz",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "keliaz@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": "046507761"
+  },
+  "yuliah": {
+    "שם": "yuliah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "yuliah@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "viki": {
+    "שם": "viki",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "viki@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "silviama": {
+    "שם": "silviama",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "silviama@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "kobi": {
+    "שם": "kobi",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "kobi@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "dariao": {
+    "שם": "dariao",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "dariao@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "bikoret.mig": {
+    "שם": "bikoret.mig",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "bikoret.mig@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "olgara": {
+    "שם": "olgara",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מגדל העמק",
+    "מייל": "olgara@migdal-haemeq.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mimipo": {
+    "שם": "mimipo",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "מגדל העמק",

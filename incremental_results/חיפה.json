@@ -8,12 +8,39 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
-  "לא נמצא שם": {
-    "שם": "לא נמצא שם",
+  "DimitriP": {
+    "שם": "DimitriP",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "חיפה",
-    "מייל": "LG.HR@haifa.muni.il",
+    "מייל": "DimitriP@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "LimorBar": {
+    "שם": "LimorBar",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "LimorBar@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "AnatAd": {
+    "שם": "AnatAd",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "AnatAd@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "MariaSh": {
+    "שם": "MariaSh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "MariaSh@haifa.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
@@ -44,6 +71,231 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "dany": {
+    "שם": "dany",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "dany@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "tmicharishuy": {
+    "שם": "tmicharishuy",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "tmicharishuy@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "RacheliA": {
+    "שם": "RacheliA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "RacheliA@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Rimah": {
+    "שם": "Rimah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Rimah@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ShakedD": {
+    "שם": "ShakedD",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "ShakedD@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "HenA": {
+    "שם": "HenA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "HenA@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hanaba": {
+    "שם": "hanaba",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "hanaba@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Chensh": {
+    "שם": "Chensh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Chensh@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "inbalha": {
+    "שם": "inbalha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "inbalha@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Dinap": {
+    "שם": "Dinap",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Dinap@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "YaelK": {
+    "שם": "YaelK",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "YaelK@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "SivanI": {
+    "שם": "SivanI",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "SivanI@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "adif": {
+    "שם": "adif",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "adif@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Nofarmz": {
+    "שם": "Nofarmz",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Nofarmz@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "OrtalA": {
+    "שם": "OrtalA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "OrtalA@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "moransah": {
+    "שם": "moransah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "moransah@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "KeshetR": {
+    "שם": "KeshetR",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "KeshetR@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "batyad": {
+    "שם": "batyad",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "batyad@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "RulaSa": {
+    "שם": "RulaSa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "RulaSa@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "YaronBR": {
+    "שם": "YaronBR",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "YaronBR@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "AchiadL": {
+    "שם": "AchiadL",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "AchiadL@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "YaelYa": {
+    "שם": "YaelYa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "YaelYa@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Anatshc": {
+    "שם": "Anatshc",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Anatshc@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "לא נמצא שם": {
+    "שם": "לא נמצא שם",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "IritL2@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "מייל": {
+    "שם": "מייל",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "shlatim@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "מייל להגשת התנגדויות": {
     "שם": "מייל להגשת התנגדויות",
     "תפקיד": null,
@@ -53,12 +305,237 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "LemorS": {
+    "שם": "LemorS",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "LemorS@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ElviraB": {
+    "שם": "ElviraB",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "ElviraB@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "NitzanMa": {
+    "שם": "NitzanMa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "NitzanMa@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "HadilJa": {
+    "שם": "HadilJa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "HadilJa@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "FainaT": {
+    "שם": "FainaT",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "FainaT@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Yaelan": {
+    "שם": "Yaelan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Yaelan@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "MoranO": {
+    "שם": "MoranO",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "MoranO@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Shlomitb": {
+    "שם": "Shlomitb",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Shlomitb@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Ornamr": {
+    "שם": "Ornamr",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Ornamr@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "RezakAbo": {
+    "שם": "RezakAbo",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "RezakAbo@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "SharonEA": {
+    "שם": "SharonEA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "SharonEA@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "RotemA": {
+    "שם": "RotemA",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "RotemA@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Hellenav": {
+    "שם": "Hellenav",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Hellenav@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ShifraFe": {
+    "שם": "ShifraFe",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "ShifraFe@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "OshratOW": {
+    "שם": "OshratOW",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "OshratOW@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "lolamor": {
+    "שם": "lolamor",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "lolamor@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Fatenkh": {
+    "שם": "Fatenkh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Fatenkh@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "MaayanBZ": {
+    "שם": "MaayanBZ",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "MaayanBZ@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "SuzanMa": {
+    "שם": "SuzanMa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "SuzanMa@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Shikum": {
+    "שם": "Shikum",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Shikum@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "AnatBZ": {
+    "שם": "AnatBZ",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "AnatBZ@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "Miryamat": {
+    "שם": "Miryamat",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "Miryamat@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "RomiaHaj": {
+    "שם": "RomiaHaj",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "RomiaHaj@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "ניתן להגיש פניה למחלקת הביטוח של העירייה בדוא\"ל": {
     "שם": "ניתן להגיש פניה למחלקת הביטוח של העירייה בדוא\"ל",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "חיפה",
     "מייל": "BITUACH@HAIFA.MUNI.IL",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "bituach": {
+    "שם": "bituach",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "bituach@haifa.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "LG.HR": {
+    "שם": "LG.HR",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "חיפה",
+    "מייל": "LG.HR@haifa.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   }
