@@ -32,6 +32,7 @@ def test_collect_names_from_log(tmp_path):
 def test_transliterate_short_vowel():
     assert transliterate_to_hebrew("Ben") == "בן"
     assert transliterate_to_hebrew("Dan") == "דן"
+    assert transliterate_to_hebrew("Noam") == "נועם"
 
 
 def test_extract_name_from_email():

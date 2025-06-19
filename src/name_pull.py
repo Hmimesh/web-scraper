@@ -7,7 +7,8 @@ import os
 import re
 from pathlib import Path
 
-from jobs import Contacts
+from jobs import Contacts, ISRAELI_NAME_DB
+from difflib import get_close_matches
 
 
 LATIN_TO_HEBREW = {
@@ -52,7 +53,11 @@ FINAL_FORMS = {
 
 
 def transliterate_to_hebrew(name: str) -> str:
-    """Transliterate a simple English name into Hebrew letters."""
+    """Transliterate a simple English name into Hebrew letters.
+
+    The resulting name is cross-checked against a list of Hebrew names fetched
+    from data.gov.il to catch common transliteration errors.
+    """
     result: list[str] = []
     clean = name.strip().lower()
 
@@ -80,7 +85,16 @@ def transliterate_to_hebrew(name: str) -> str:
 
         result.append(heb)
 
-    return "".join(result)
+    hebrew = "".join(result)
+
+    if hebrew in ISRAELI_NAME_DB:
+        return hebrew
+
+    match = get_close_matches(hebrew, ISRAELI_NAME_DB, n=1, cutoff=0.7)
+    if match:
+        return match[0]
+
+    return hebrew
 
 
 def extract_name_from_email(email: str) -> str | None:

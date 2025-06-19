@@ -54,7 +54,7 @@ def test_non_name_phrase_email_address():
 def test_name_from_email():
     text = "noa_adari@example.org"
     c = Contacts(text, "אשקלון")
-    assert c.name == "Noa Adari"
+    assert c.name == "נוא דרי"
 
 
 def test_non_personal_email_ignored():
@@ -81,10 +81,16 @@ def test_hebrew_name_not_in_db():
 def test_trailing_char_single_segment():
     text = "noamk@example.com"
     c = Contacts(text, "תל אביב")
-    assert c.name == "Noam"
+    assert c.name == "נועם"
 
 def test_english_department_keyword():
     text = "education john@example.com"
     c = Contacts(text, "תל אביב")
     assert c.department == "מחלקת חינוך"
+
+
+def test_department_from_email():
+    text = "john@youngdept.org"
+    c = Contacts(text, "תל אביב")
+    assert c.department == "מחלקת צעירים"
 
