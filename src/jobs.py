@@ -42,8 +42,6 @@ FINAL_FORMS = {
     "n": "ן",
     "p": "ף",
     "f": "ף",
-    "k": "ך",
-    "c": "ך",
     "t": "ת",
 }
 
@@ -55,12 +53,34 @@ def transliterate_to_hebrew(name: str) -> str:
     database loaded from data.gov.il. If a close match is found, that spelling
     is used to avoid common transliteration mistakes (e.g. "Noam" -> "נועם").
     """
+
+    DIGRAPHS = {"ts": "צ", "tz": "צ"}
+
     result: list[str] = []
     clean = name.strip().lower()
+    i = 0
+    while i < len(clean):
+        ch = clean[i]
 
-    for i, ch in enumerate(clean):
         if ch == " ":
             result.append(" ")
+            i += 1
+            continue
+
+        pair = clean[i : i + 2]
+        if pair in DIGRAPHS:
+            heb = "ץ" if i + 2 == len(clean) else DIGRAPHS[pair]
+            result.append(heb)
+            i += 2
+            continue
+
+        if (
+            (i == 0 or clean[i - 1] == " ")
+            and ch in {"e", "i"}
+            and (i + 1 == len(clean) or clean[i + 1] not in "aeiou")
+        ):
+            result.append("אי")
+            i += 1
             continue
 
         if (
@@ -69,16 +89,19 @@ def transliterate_to_hebrew(name: str) -> str:
             and clean[i - 1] not in "aeiou"
             and clean[i + 1] not in "aeiou"
         ):
+            i += 1
             continue
 
         heb = LATIN_TO_HEBREW.get(ch)
         if not heb:
+            i += 1
             continue
 
         if i == len(clean) - 1 and ch in FINAL_FORMS:
             heb = FINAL_FORMS[ch]
 
         result.append(heb)
+        i += 1
 
     hebrew = "".join(result)
 
@@ -95,9 +118,7 @@ def transliterate_to_hebrew(name: str) -> str:
 def _load_name_db() -> set[str]:
     """Load known Israeli first names from local file or the gov.il API."""
     names = set()
-    data_path = (
-        Path(__file__).resolve().parent.parent / "data/israeli_names.txt"
-    )
+    data_path = Path(__file__).resolve().parent.parent / "data/israeli_names.txt"
 
     if data_path.exists():
         try:
@@ -343,8 +364,7 @@ class Contacts:
                     parts = re.split(r"[._-]+", local)
                     parts = [p for p in parts if p.isalpha()]
                     if parts and all(
-                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES
-                        for p in parts
+                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts
                     ):
                         if len(parts) == 1 and parts[0][-1].isalpha():
                             parts[0] = parts[0][:-1]
@@ -357,9 +377,7 @@ class Contacts:
             if guess:
                 self.name = guess
             else:
-                self.name = (
-                    f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
-                )
+                self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
 
         if self.name and not re.search(r"[א-ת]", self.name):
             heb = transliterate_to_hebrew(self.name)
