@@ -93,47 +93,32 @@ def transliterate_to_hebrew(name: str) -> str:
 
 
 def _load_name_db() -> set[str]:
-    """Load known Israeli first names from local file or the gov.il API."""
+    """Fetch Israeli first names from data.gov.il."""
     names = set()
-    data_path = (
-        Path(__file__).resolve().parent.parent / "data/israeli_names.txt"
-    )
 
-    if data_path.exists():
-        try:
-            with open(data_path, encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        names.add(line)
-        except Exception:
-            pass
-
-    # If the file wasn't found or was empty, try to fetch from the API
-    if not names:
-        try:
-            offset = 0
-            while True:
-                url = (
-                    "https://data.gov.il/api/3/action/datastore_search?"
-                    "resource_id=c4fb2685-381f-4e99-a88e-b9b7ed703117"
-                    f"&limit=1000&offset={offset}"
-                )
-                with urllib.request.urlopen(url, timeout=10) as resp:
-                    data = json.load(resp)
-                records = data.get("result", {}).get("records", [])
-                for rec in records:
-                    for key in ("שם פרטי", "first_name", "name"):
-                        if key in rec and rec[key]:
-                            names.add(str(rec[key]).strip())
-                            break
-                total = data.get("result", {}).get("total", 0)
-                offset += 1000
-                if offset >= total:
-                    break
-        except Exception:
-            # Network or parsing errors are ignored; best-effort only
-            pass
+    try:
+        offset = 0
+        while True:
+            url = (
+                "https://data.gov.il/api/3/action/datastore_search?"
+                "resource_id=c4fb2685-381f-4e99-a88e-b9b7ed703117"
+                f"&limit=1000&offset={offset}"
+            )
+            with urllib.request.urlopen(url, timeout=10) as resp:
+                data = json.load(resp)
+            records = data.get("result", {}).get("records", [])
+            for rec in records:
+                for key in ("שם פרטי", "first_name", "name"):
+                    if key in rec and rec[key]:
+                        names.add(str(rec[key]).strip())
+                        break
+            total = data.get("result", {}).get("total", 0)
+            offset += 1000
+            if offset >= total:
+                break
+    except Exception:
+        # Network or parsing errors are ignored; best-effort only
+        pass
 
     return names
 
@@ -343,8 +328,7 @@ class Contacts:
                     parts = re.split(r"[._-]+", local)
                     parts = [p for p in parts if p.isalpha()]
                     if parts and all(
-                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES
-                        for p in parts
+                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts
                     ):
                         if len(parts) == 1 and parts[0][-1].isalpha():
                             parts[0] = parts[0][:-1]
@@ -357,9 +341,7 @@ class Contacts:
             if guess:
                 self.name = guess
             else:
-                self.name = (
-                    f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
-                )
+                self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
 
         if self.name and not re.search(r"[א-ת]", self.name):
             heb = transliterate_to_hebrew(self.name)

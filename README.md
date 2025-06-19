@@ -6,7 +6,7 @@ This project scrapes municipal contact information from Israeli websites. It ext
 
 - Crawls contact pages listed in `data/cities_links.csv` using Playwright
 - Parses free text with heuristics to find personal names, emails and phone numbers
-- Transliterates English names to Hebrew using a local database of Israeli names
+- Transliterates English names to Hebrew using names fetched from data.gov.il
 - Optional ChatGPT integration for guessing Hebrew names when heuristics fail
 - Produces logs and incremental JSON files under `logs/` and `data/incremental_results`
 
