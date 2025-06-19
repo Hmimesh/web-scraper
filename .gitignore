@@ -2,3 +2,5 @@ iframe_page.html
 __Pycach__/
 logs/
 incremental_results/
+__pycache__/
+*.pyc

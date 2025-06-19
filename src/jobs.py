@@ -1,7 +1,93 @@
 import re
 import json
 import urllib.request
+import urllib.parse
 from pathlib import Path
+from difflib import get_close_matches
+
+
+LATIN_TO_HEBREW = {
+    "a": "א",
+    "b": "ב",
+    "c": "ק",
+    "d": "ד",
+    "e": "י",
+    "f": "פ",
+    "g": "ג",
+    "h": "ה",
+    "i": "י",
+    "j": "ג",
+    "k": "ק",
+    "l": "ל",
+    "m": "מ",
+    "n": "נ",
+    "o": "ו",
+    "p": "פ",
+    "q": "ק",
+    "r": "ר",
+    "s": "ס",
+    "t": "ט",
+    "u": "ו",
+    "v": "ו",
+    "w": "ו",
+    "x": "קס",
+    "y": "י",
+    "z": "ז",
+}
+
+FINAL_FORMS = {
+    "m": "ם",
+    "n": "ן",
+    "p": "ף",
+    "f": "ף",
+    "k": "ך",
+    "c": "ך",
+    "t": "ת",
+}
+
+
+def transliterate_to_hebrew(name: str) -> str:
+    """Transliterate a simple English name into Hebrew letters.
+
+    The resulting name is cross-referenced against the official Israeli name
+    database loaded from data.gov.il. If a close match is found, that spelling
+    is used to avoid common transliteration mistakes (e.g. "Noam" -> "נועם").
+    """
+    result: list[str] = []
+    clean = name.strip().lower()
+
+    for i, ch in enumerate(clean):
+        if ch == " ":
+            result.append(" ")
+            continue
+
+        if (
+            ch in {"e", "a"}
+            and 0 < i < len(clean) - 1
+            and clean[i - 1] not in "aeiou"
+            and clean[i + 1] not in "aeiou"
+        ):
+            continue
+
+        heb = LATIN_TO_HEBREW.get(ch)
+        if not heb:
+            continue
+
+        if i == len(clean) - 1 and ch in FINAL_FORMS:
+            heb = FINAL_FORMS[ch]
+
+        result.append(heb)
+
+    hebrew = "".join(result)
+
+    if hebrew in ISRAELI_NAME_DB:
+        return hebrew
+
+    match = get_close_matches(hebrew, ISRAELI_NAME_DB, n=1, cutoff=0.7)
+    if match:
+        return match[0]
+
+    return hebrew
 
 
 def _load_name_db() -> set[str]:
@@ -64,6 +150,15 @@ ENGLISH_DEPT_KEYWORDS = {
     "environment": "מחלקת איכות סביבה",
     "veterans": "מחלקת אזרחים וותיקים",
 }
+
+
+def _dept_from_email(email: str) -> str | None:
+    """Guess department from email address using ENGLISH_DEPT_KEYWORDS."""
+    lower = email.lower()
+    for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
+        if keyword in lower:
+            return dept
+    return None
 
 class Contacts:
     contacts = 0
@@ -170,6 +265,11 @@ class Contacts:
                     self.department = dept
                     break
 
+        if not self.department and self.email:
+            guessed = _dept_from_email(self.email)
+            if guessed:
+                self.department = guessed
+
         # Try to guess role from line
         possible_roles = [
             "רכז", "רכזת", "מנהל", "מנהלת", "יועץ", "יועצת", "מפקח", "מפקחת",
@@ -211,6 +311,11 @@ class Contacts:
 
         if not self.name:
             self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+
+        if self.name and not re.search(r"[א-ת]", self.name):
+            heb = transliterate_to_hebrew(self.name)
+            if heb:
+                self.name = heb
 
     def to_dict(self):
         return {
