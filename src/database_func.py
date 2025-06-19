@@ -8,6 +8,7 @@ from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 from jobs import Contacts
+from datafunc import apply_hebrew_transliteration
 from nameparser import HumanName
 from collect_names import collect_names
 import time
@@ -184,8 +185,10 @@ def process_city(row, existing_data):
                     }, ensure_ascii=False))
 
             os.makedirs(os.path.join(base_dir, "incremental_results"), exist_ok=True)
-            with open(os.path.join(base_dir, "incremental_results", f"{city}.json"), "w", encoding="utf-8") as f:
+            city_file = os.path.join(base_dir, "incremental_results", f"{city}.json")
+            with open(city_file, "w", encoding="utf-8") as f:
                 json.dump(city_data, f, ensure_ascii=False, indent=2)
+            apply_hebrew_transliteration(city_file)
 
             if not city_data:
                 failed_logger.info(json.dumps({
@@ -246,6 +249,7 @@ def scrape_with_browser():
 
     with open(dict_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
+    apply_hebrew_transliteration(dict_path)
 
     with open(os.path.join(base_dir, "incremental_results", "contacts.json"), "w", encoding="utf-8") as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
