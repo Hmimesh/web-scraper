@@ -203,6 +203,8 @@ class Contacts:
                 parts = re.split(r'[._-]+', local)
                 parts = [p for p in parts if p.isalpha()]
                 if parts and all(p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts):
+                    if len(parts) == 1 and parts[0][-1].isalpha():
+                        parts[0] = parts[0][:-1]
                     name_guess = " ".join(p.capitalize() for p in parts)
                     if Contacts.is_valid_name(name_guess):
                         self.name = name_guess
