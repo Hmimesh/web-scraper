@@ -1,4 +1,22 @@
 {
+  "לא נמצא שם": {
+    "שם": "לא נמצא שם",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "rayananwar927@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mahmoodr": {
+    "שם": "mahmoodr",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "mahmoodr@kafar-bara.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "ruwayday": {
     "שם": "ruwayday",
     "תפקיד": null,
@@ -8,13 +26,85 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
-  "לא נמצא שם": {
-    "שם": "לא נמצא שם",
+  "darawshe.gh": {
+    "שם": "darawshe.gh",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "כפר ברא",
-    "מייל": null,
+    "מייל": "darawshe.gh@gmail.com",
     "טלפון פרטי": null,
-    "טלפון משרד": "073264111"
+    "טלפון משרד": null
+  },
+  "georger": {
+    "שם": "georger",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "georger@kafar-bara.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "adaan": {
+    "שם": "adaan",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "adaan@walla.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hatemasi": {
+    "שם": "hatemasi",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "hatemasi@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "nizara": {
+    "שם": "nizara",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "nizara@kafar-bara.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "danielh": {
+    "שם": "danielh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "danielh@kafar-bara.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "salama.z.cpa": {
+    "שם": "salama.z.cpa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "salama.z.cpa@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "adam.aboal3bed": {
+    "שם": "adam.aboal3bed",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "adam.aboal3bed@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "linaa": {
+    "שם": "linaa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כפר ברא",
+    "מייל": "linaa@kafar-bara.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
   }
 }
