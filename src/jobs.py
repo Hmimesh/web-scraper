@@ -310,41 +310,47 @@ class Contacts:
                 self.role = word
                 break
 
-        # Try to extract full Hebrew name first
-        candidate = None
-        name_candidates = re.findall(
-            r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text
-        )
-        if name_candidates:
-            candidate = name_candidates[0].strip()
+        # Ask ChatGPT for a name guess before running heuristic extraction
+        guess = guess_hebrew_name(self.raw_text)
+        if guess:
+            self.name = guess
 
-        # If no full name found, fall back to a single Hebrew word (first name)
-        if not candidate:
-            first_match = re.search(r"\b[א-ת]{2,}\b", self.raw_text)
-            if first_match:
-                candidate = first_match.group(0).strip()
+        if self.name is None:
+            candidate = None
+            # Try to extract full Hebrew name first
+            name_candidates = re.findall(
+                r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text
+            )
+            if name_candidates:
+                candidate = name_candidates[0].strip()
 
-        if candidate and Contacts.is_valid_name(candidate):
-            self.name = candidate
+            # If no full name found, fall back to a single Hebrew word (first name)
+            if not candidate:
+                first_match = re.search(r"\b[א-ת]{2,}\b", self.raw_text)
+                if first_match:
+                    candidate = first_match.group(0).strip()
 
-        # Fall back to email-derived name if no Hebrew name detected
-        if not self.name and self.email:
-            # Skip when text contains known non-name phrases
-            if not any(
-                phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES
-            ):
-                local = self.email.split("@")[0]
-                parts = re.split(r"[._-]+", local)
-                parts = [p for p in parts if p.isalpha()]
-                if parts and all(
-                    p.lower() not in Contacts.NON_PERSONAL_USERNAMES
-                    for p in parts
+            if candidate and Contacts.is_valid_name(candidate):
+                self.name = candidate
+
+            # Fall back to email-derived name if no Hebrew name detected
+            if not self.name and self.email:
+                # Skip when text contains known non-name phrases
+                if not any(
+                    phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES
                 ):
-                    if len(parts) == 1 and parts[0][-1].isalpha():
-                        parts[0] = parts[0][:-1]
-                    name_guess = " ".join(p.capitalize() for p in parts)
-                    if Contacts.is_valid_name(name_guess):
-                        self.name = name_guess
+                    local = self.email.split("@")[0]
+                    parts = re.split(r"[._-]+", local)
+                    parts = [p for p in parts if p.isalpha()]
+                    if parts and all(
+                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES
+                        for p in parts
+                    ):
+                        if len(parts) == 1 and parts[0][-1].isalpha():
+                            parts[0] = parts[0][:-1]
+                        name_guess = " ".join(p.capitalize() for p in parts)
+                        if Contacts.is_valid_name(name_guess):
+                            self.name = name_guess
 
         if not self.name:
             guess = guess_hebrew_name(self.raw_text)
