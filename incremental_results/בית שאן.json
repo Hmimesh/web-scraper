@@ -233,6 +233,15 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "tservice": {
+    "שם": "tservice",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "בית שאן",
+    "מייל": "tservice@102.gov.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "rishuytsafon": {
     "שם": "rishuytsafon",
     "תפקיד": null,
