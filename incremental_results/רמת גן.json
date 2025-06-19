@@ -1,10 +1,154 @@
 {
+  "לא נמצא שם": {
+    "שם": "לא נמצא שם",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "hitnadvut1@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "maayan-d": {
+    "שם": "maayan-d",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "maayan-d@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "tuvia-ta": {
+    "שם": "tuvia-ta",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "tuvia-ta@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "irit-ar": {
+    "שם": "irit-ar",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "irit-ar@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "gal-ho": {
+    "שם": "gal-ho",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "gal-ho@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mayor": {
+    "שם": "mayor",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "mayor@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amalia": {
+    "שם": "amalia",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "amalia@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "esti-d": {
+    "שם": "esti-d",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "esti-d@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "eden-bo": {
+    "שם": "eden-bo",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "eden-bo@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "orel-t": {
+    "שם": "orel-t",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "orel-t@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "avivit-z": {
     "שם": "avivit-z",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "רמת גן",
     "מייל": "avivit-z@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "yael-d": {
+    "שם": "yael-d",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "yael-d@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "irit-ga": {
+    "שם": "irit-ga",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "irit-ga@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "sharona-m": {
+    "שם": "sharona-m",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "sharona-m@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "inbar-b": {
+    "שם": "inbar-b",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "inbar-b@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "arie-y": {
+    "שם": "arie-y",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "arie-y@ramat-gan.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "ruti-c": {
+    "שם": "ruti-c",
+    "תפקיד": "למנהלת",
+    "מחלקה": null,
+    "רשות": "רמת גן",
+    "מייל": "ruti-c@ramat-gan.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   }

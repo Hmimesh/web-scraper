@@ -8,12 +8,102 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "fatmeh": {
+    "שם": "fatmeh",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "fatmeh@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "youssef": {
+    "שם": "youssef",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "youssef@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "nizar": {
+    "שם": "nizar",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "nizar@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "maha": {
+    "שם": "maha",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "maha@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "salahr": {
+    "שם": "salahr",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "salahr@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "anwarkb": {
+    "שם": "anwarkb",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "anwarkb@ladpc.gov.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "mouafak": {
+    "שם": "mouafak",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "mouafak@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "ziad": {
     "שם": "ziad",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "כאבול",
     "מייל": "ziad@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "samer": {
+    "שם": "samer",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "samer@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "kayed": {
+    "שם": "kayed",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "kayed@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "yaser": {
+    "שם": "yaser",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "yaser@kabul.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
@@ -35,6 +125,15 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "iyada": {
+    "שם": "iyada",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "iyada@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "mahmoud": {
     "שם": "mahmoud",
     "תפקיד": null,
@@ -44,12 +143,102 @@
     "טלפון פרטי": null,
     "טלפון משרד": null
   },
+  "mahmoudt": {
+    "שם": "mahmoudt",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "mahmoudt@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "moustafa": {
     "שם": "moustafa",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "כאבול",
     "מייל": "moustafa@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "khawlah": {
+    "שם": "khawlah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "khawlah@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "wafa": {
+    "שם": "wafa",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "wafa@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "amira": {
+    "שם": "amira",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "amira@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "nahida": {
+    "שם": "nahida",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "nahida@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "haneen": {
+    "שם": "haneen",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "haneen@kabul.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "negmatah": {
+    "שם": "negmatah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "negmatah@hinuchm.k12.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "hat-kabul": {
+    "שם": "hat-kabul",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "hat-kabul@adm.kishurim-k12.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "salahray": {
+    "שם": "salahray",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "salahray@hinuchm.k12.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "rajaatah": {
+    "שם": "rajaatah",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "כאבול",
+    "מייל": "rajaatah@hinuchm.k12.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   }
