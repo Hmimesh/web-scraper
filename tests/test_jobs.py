@@ -77,7 +77,14 @@ def test_hebrew_name_not_in_db():
     assert not Contacts.is_valid_name("שםשאינובמאגר")
 
 
+
 def test_trailing_char_single_segment():
     text = "noamk@example.com"
     c = Contacts(text, "תל אביב")
     assert c.name == "Noam"
+
+def test_english_department_keyword():
+    text = "education john@example.com"
+    c = Contacts(text, "תל אביב")
+    assert c.department == "מחלקת חינוך"
+

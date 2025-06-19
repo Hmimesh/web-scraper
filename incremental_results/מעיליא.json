@@ -8,12 +8,48 @@
     "טלפון פרטי": "052615559",
     "טלפון משרד": null
   },
+  "firas.arraf": {
+    "שם": "firas.arraf",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מעיליא",
+    "מייל": "firas.arraf@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "majedmorany": {
+    "שם": "majedmorany",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מעיליא",
+    "מייל": "majedmorany@gmail.com",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "adel": {
+    "שם": "adel",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מעיליא",
+    "מייל": "adel@mielya.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
   "mofeed": {
     "שם": "mofeed",
     "תפקיד": null,
     "מחלקה": null,
     "רשות": "מעיליא",
     "מייל": "mofeed@mielya.muni.il",
+    "טלפון פרטי": null,
+    "טלפון משרד": null
+  },
+  "sleman": {
+    "שם": "sleman",
+    "תפקיד": null,
+    "מחלקה": null,
+    "רשות": "מעיליא",
+    "מייל": "sleman@mielya.muni.il",
     "טלפון פרטי": null,
     "טלפון משרד": null
   }
