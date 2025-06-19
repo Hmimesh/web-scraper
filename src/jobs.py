@@ -50,6 +50,21 @@ def _load_name_db() -> set[str]:
 
 ISRAELI_NAME_DB = _load_name_db()
 
+# Mapping of English keywords to their Hebrew department names. This allows
+# detecting the department from contact lines that use English terms.
+ENGLISH_DEPT_KEYWORDS = {
+    "youth": "מחלקת נוער",
+    "young": "מחלקת צעירים",
+    "culture": "מחלקת תרבות",
+    "events": "מחלקת אירועים",
+    "education": "מחלקת חינוך",
+    "community": "מחלקת קהילה",
+    "welfare": "מחלקת רווחה",
+    "absorption": "מחלקת קליטה",
+    "environment": "מחלקת איכות סביבה",
+    "veterans": "מחלקת אזרחים וותיקים",
+}
+
 class Contacts:
     contacts = 0
     # Common phrases that might look like names but aren't
@@ -130,12 +145,30 @@ class Contacts:
             "קליטה": "מחלקת קליטה",
             "סביבה": "מחלקת איכות סביבה",
             "וותיקים": "מחלקת אזרחים וותיקים",
+            "אגף נוער": "אגף נוער",
+            "אגף צעירים": "אגף צעירים",
+            "אגף תרבות": "אגף תרבות",
+            "אגף אירועים": "אגף אירועים",
+            "אגף חינוך": "אגף חינוך",
+            "אגף קהילה": "אגף קהילה",
+            "אגף רווחה": "אגף רווחה",
+            "אגף קליטה": "אגף קליטה",
+            "אגף סביבה": "אגף איכות סביבה",
+            "אגף ותיקים": "אגף אזרחים וותיקים",
         }
 
         for keyword, dept in department_keywords.items():
             if keyword in self.raw_text:
                 self.department = dept
                 break
+
+        # If no Hebrew keyword matched, look for English department keywords
+        if not self.department:
+            lower_text = self.raw_text.lower()
+            for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
+                if keyword in lower_text:
+                    self.department = dept
+                    break
 
         # Try to guess role from line
         possible_roles = [

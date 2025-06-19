@@ -14,26 +14,23 @@ import time
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Main logger
+
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
                     filename=os.path.join(base_dir, 'logs', 'scraper.log'))
 
-# Dedicated IO logger
 input_output_logger = logging.getLogger("io_logger")
 input_output_logger.setLevel(logging.INFO)
 io_handler = logging.FileHandler(os.path.join(base_dir, "logs", "scraper_io.jsonl"), encoding="utf-8")
 io_handler.setFormatter(logging.Formatter('%(message)s'))
 input_output_logger.addHandler(io_handler)
 
-# Dedicated logger for failed or empty cities
 failed_logger = logging.getLogger("failed_logger")
 failed_logger.setLevel(logging.INFO)
 failed_handler = logging.FileHandler(os.path.join(base_dir, "logs", "failed_cities.jsonl"), encoding="utf-8")
 failed_handler.setFormatter(logging.Formatter('%(message)s'))
 failed_logger.addHandler(failed_handler)
 
-# Optional: load site profiles if available
 site_profiles_path = os.path.join(base_dir, "data", "site_profiles.json")
 site_profiles = {}
 if os.path.exists(site_profiles_path):
@@ -250,7 +247,6 @@ def scrape_with_browser():
     with open(dict_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    Contacts.contacts = len(results)
     with open(os.path.join(base_dir, "incremental_results", "contacts.json"), "w", encoding="utf-8") as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
     collect_names()
