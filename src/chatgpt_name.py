@@ -1,0 +1,45 @@
+import os
+import logging
+
+# Attempt to import openai when available
+try:
+    import openai  # type: ignore
+except Exception:  # pragma: no cover - openai may not be installed
+    openai = None
+
+
+def guess_hebrew_name(text: str) -> str | None:
+    """Return the best Hebrew personal name for the given text using ChatGPT.
+
+    The OpenAI API key is read from the ``OPENAI_API_KEY`` environment
+    variable. If the key or the ``openai`` package is missing, ``None`` is
+    returned.
+    """
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key or not text or openai is None:
+        return None
+
+    openai.api_key = api_key
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "Return the best Hebrew personal name for the provided text.",
+                },
+                {"role": "user", "content": text},
+            ],
+            max_tokens=4,
+            temperature=0,
+        )
+    except Exception:
+        logging.exception("OpenAI request failed")
+        return None
+
+    try:
+        result = response["choices"][0]["message"]["content"].strip()
+    except Exception:
+        return None
+
+    return result or None
