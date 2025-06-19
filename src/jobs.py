@@ -5,6 +5,8 @@ import urllib.parse
 from pathlib import Path
 from difflib import get_close_matches
 
+from chatgpt_name import guess_hebrew_name
+
 
 LATIN_TO_HEBREW = {
     "a": "א",
@@ -93,7 +95,9 @@ def transliterate_to_hebrew(name: str) -> str:
 def _load_name_db() -> set[str]:
     """Load known Israeli first names from local file or the gov.il API."""
     names = set()
-    data_path = Path(__file__).resolve().parent.parent / "data/israeli_names.txt"
+    data_path = (
+        Path(__file__).resolve().parent.parent / "data/israeli_names.txt"
+    )
 
     if data_path.exists():
         try:
@@ -160,6 +164,7 @@ def _dept_from_email(email: str) -> str | None:
             return dept
     return None
 
+
 class Contacts:
     contacts = 0
     # Common phrases that might look like names but aren't
@@ -172,8 +177,19 @@ class Contacts:
 
     # Non-personal words often used in departmental email addresses
     NON_PERSONAL_USERNAMES = {
-        "info", "contact", "office", "admin", "support", "service",
-        "team", "mail", "email", "example", "lishka", "agaf", "department"
+        "info",
+        "contact",
+        "office",
+        "admin",
+        "support",
+        "service",
+        "team",
+        "mail",
+        "email",
+        "example",
+        "lishka",
+        "agaf",
+        "department",
     }
 
     @staticmethod
@@ -215,14 +231,14 @@ class Contacts:
 
     def parse(self):
         # Match email
-        email_match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', self.raw_text)
+        email_match = re.search(r"[\w\.-]+@[\w\.-]+\.\w+", self.raw_text)
         if email_match:
             self.email = email_match.group(0)
 
         # Find all phone numbers with or without dash/space
-        phones = re.findall(r'0[2-9][-\s]?\d{7}', self.raw_text)
+        phones = re.findall(r"0[2-9][-\s]?\d{7}", self.raw_text)
         for phone in phones:
-            clean_phone = re.sub(r'[^\d]', '', phone)
+            clean_phone = re.sub(r"[^\d]", "", phone)
             if clean_phone.startswith("05") or clean_phone.startswith("+972"):
                 self.phone_mobile = clean_phone
             else:
@@ -272,8 +288,22 @@ class Contacts:
 
         # Try to guess role from line
         possible_roles = [
-            "רכז", "רכזת", "מנהל", "מנהלת", "יועץ", "יועצת", "מפקח", "מפקחת",
-            "אחראי", "אחראית", "יו\"ר", "עובד", "עובדת", "סגן", "ראש", "מנכ\"ל"
+            "רכז",
+            "רכזת",
+            "מנהל",
+            "מנהלת",
+            "יועץ",
+            "יועצת",
+            "מפקח",
+            "מפקחת",
+            "אחראי",
+            "אחראית",
+            'יו"ר',
+            "עובד",
+            "עובדת",
+            "סגן",
+            "ראש",
+            'מנכ"ל',
         ]
         for word in self.raw_text.split():
             if any(role in word for role in possible_roles):
@@ -282,7 +312,9 @@ class Contacts:
 
         # Try to extract full Hebrew name first
         candidate = None
-        name_candidates = re.findall(r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text)
+        name_candidates = re.findall(
+            r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text
+        )
         if name_candidates:
             candidate = name_candidates[0].strip()
 
@@ -298,11 +330,16 @@ class Contacts:
         # Fall back to email-derived name if no Hebrew name detected
         if not self.name and self.email:
             # Skip when text contains known non-name phrases
-            if not any(phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES):
-                local = self.email.split('@')[0]
-                parts = re.split(r'[._-]+', local)
+            if not any(
+                phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES
+            ):
+                local = self.email.split("@")[0]
+                parts = re.split(r"[._-]+", local)
                 parts = [p for p in parts if p.isalpha()]
-                if parts and all(p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts):
+                if parts and all(
+                    p.lower() not in Contacts.NON_PERSONAL_USERNAMES
+                    for p in parts
+                ):
                     if len(parts) == 1 and parts[0][-1].isalpha():
                         parts[0] = parts[0][:-1]
                     name_guess = " ".join(p.capitalize() for p in parts)
@@ -310,12 +347,22 @@ class Contacts:
                         self.name = name_guess
 
         if not self.name:
-            self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+            guess = guess_hebrew_name(self.raw_text)
+            if guess:
+                self.name = guess
+            else:
+                self.name = (
+                    f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+                )
 
         if self.name and not re.search(r"[א-ת]", self.name):
             heb = transliterate_to_hebrew(self.name)
             if heb:
                 self.name = heb
+            else:
+                guess = guess_hebrew_name(self.name)
+                if guess:
+                    self.name = guess
 
     def to_dict(self):
         return {
@@ -325,5 +372,5 @@ class Contacts:
             "רשות": self.city,
             "מייל": self.email,
             "טלפון פרטי": self.phone_mobile,
-            "טלפון משרד": self.phone_office
+            "טלפון משרד": self.phone_office,
         }

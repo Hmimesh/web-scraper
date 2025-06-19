@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 
 from jobs import Contacts, ISRAELI_NAME_DB
+from chatgpt_name import guess_hebrew_name
 from difflib import get_close_matches
 
 
@@ -111,7 +112,10 @@ def extract_name_from_email(email: str) -> str | None:
     return guess if Contacts.is_valid_name(guess) else None
 
 
-def collect_names(log_file: str = "logs/scraper_io.jsonl", output_file: str = "logs/name_pull.txt") -> set[str]:
+def collect_names(
+    log_file: str = "logs/scraper_io.jsonl",
+    output_file: str = "logs/name_pull.txt",
+) -> set[str]:
     """Collect names from the JSONL log file and write them to a text file."""
     names: set[str] = set()
 
@@ -141,11 +145,17 @@ def collect_names(log_file: str = "logs/scraper_io.jsonl", output_file: str = "l
                 if email:
                     name = extract_name_from_email(email)
             if not name:
-                continue
+                name = guess_hebrew_name(data.get("raw_text", ""))
+                if not name:
+                    continue
             if not re.search(r"[א-ת]", name):
                 heb = transliterate_to_hebrew(name)
                 if heb:
                     name = heb
+                else:
+                    gpt_guess = guess_hebrew_name(name)
+                    if gpt_guess:
+                        name = gpt_guess
             names.add(name)
 
     with open(output_file, "w", encoding="utf-8") as f:
