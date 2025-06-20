@@ -29,11 +29,13 @@ playwright install
 
 ## Usage
 
-Run the main scraper which fetches contact pages and stores results:
+Run the main scraper which fetches contact pages and stores results. You can
+optionally provide the path of the output JSON file:
 
 ```bash
-python src/database_func.py
+python src/database_func.py output/contacts.json
 ```
+If no path is supplied the script will prompt for a filename interactively.
 
 After scraping, create consolidated output files:
 
