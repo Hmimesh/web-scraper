@@ -158,7 +158,7 @@ def extract_relevant_contacts_from_text(text, city_name, source_url=None):
                 if contact_obj.email:
                     name_guess = contact_obj.email.split("@")[0]
                     parsed_name = HumanName(name_guess)
-                    contact_obj.title = contact_obj.name
+                    contact_obj.role = contact_obj.name
                     contact_obj.name = str(parsed_name)
 
             if (
