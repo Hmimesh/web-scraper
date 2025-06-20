@@ -225,3 +225,190 @@
 {"City": "שער שומרון", "url": "https://www.shaar-s.org.il/", "status": "empty"}
 {"City": "תל מונד", "url": "https://www.tel-mond.muni.il/", "status": "empty"}
 {"City": "תל שבע", "url": "https://tel-sheva.muni.il/?lang=he", "status": "empty"}
+{"City": "אום אל-פחם", "url": "https://he.umelfahem.org/", "status": "empty"}
+{"City": "אור יהודה", "url": "https://www.oryehuda.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אבו גוש", "url": "https://abugosh.muni.il/he/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אורנית", "url": "https://www.oranit.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אבן יהודה", "url": "https://www.even-yehuda.muni.il/", "status": "empty"}
+{"City": "אילת", "url": "http://www.eilat.muni.il/", "status": "empty"}
+{"City": "אופקים", "url": "https://www.ofaqim.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אור עקיבא", "url": "https://www.oraqiva.muni.il/", "status": "empty"}
+{"City": "אלעד", "url": "https://www.elad.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אלקנה", "url": "https://www.elkana.org.il/index.php", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אליכין", "url": "https://www.elyakhin.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אעבלין", "url": "https://ibllin.muni.il/", "status": "empty"}
+{"City": "אשדוד", "url": "http://www.ashdod.muni.il/", "status": "empty"}
+{"City": "אזור", "url": "https://www.azor.muni.il/", "status": "empty"}
+{"City": "אלפי מנשה", "url": "https://www.alfe-menashe.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "אשקלון", "url": "http://www.ashkelon.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בועיינה-נוג'ידאת", "url": "http://www.bueine-nujeidat.muni.il/", "status": "empty"}
+{"City": "בוקעאתא", "url": "https://buqata.muni.il/he/", "status": "empty"}
+{"City": "אריאל", "url": "https://www.ariel.muni.il/", "status": "empty"}
+{"City": "באקה אל גרבייה", "url": "https://www.baqa.co.il/", "status": "empty"}
+{"City": "באר יעקב", "url": "https://www.b-y.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ביר אל-מכסור", "url": "https://www.bir-elmaksur.org.il/he/", "status": "empty"}
+{"City": "בית אריה", "url": "https://www.beit-arye.co.il/", "status": "empty"}
+{"City": "בית דגן", "url": "https://www.beitdagan.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בית שאן", "url": "http://www.bet-shean.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ביתר עילית", "url": "https://betar-illit.muni.il/", "status": "empty"}
+{"City": "בית שמש", "url": "https://betshemesh.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בית ג'ן", "url": "http://www.beit-jann.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בני ברק", "url": "http://www.bnei-brak.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בנימינה-גבעת עדה", "url": "https://www.bin-ada.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בענה", "url": "https://www.bine.muni.il/index.asp?lang=he", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "בת ים", "url": "https://www.bat-yam.muni.il/he/", "status": "empty"}
+{"City": "בני עיש", "url": "http://www.bney-ayish.muni.il/", "status": "empty"}
+{"City": "ג'דיידה-מכר", "url": "https://judeidemaker.muni.il/he", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "גדרה", "url": "https://gedera.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "גבעתיים", "url": "https://www.givatayim.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ג'וליס", "url": "https://julis.website/pages/julis.asp", "status": "empty"}
+{"City": "ג'לג'וליה", "url": "https://www.jaljulye.muni.il/Hebrew/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "גבעת שמואל", "url": "https://www.givat-shmuel.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ג'ש (גוש חלב)", "url": "https://www.jish.org.il/Pages/default.aspx", "status": "empty"}
+{"City": "גן יבנה", "url": "http://www.ganyavne.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "גני תקווה", "url": "http://www.ganeytikva.org.il/", "status": "empty"}
+{"City": "דבוריה", "url": "https://daburiyya.muni.il/he/home", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "דייר חנא", "url": "https://www.deir-hanna.muni.il/Hebrew/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "דיר אל אסד", "url": "https://www.deiralasad.muni.il/?lang=he", "status": "empty"}
+{"City": "דימונה", "url": "https://www.dimona.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "דליית אל כרמל", "url": "http://www.tourismdalia.com/", "status": "empty"}
+{"City": "הוד השרון", "url": "https://www.hod-hasharon.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "באר שבע", "url": "https://www.beer-sheva.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "זכרון יעקב", "url": "https://www.zy1882.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "זמר", "url": "https://zemer.muni.il/", "status": "empty"}
+{"City": "הר אדר", "url": "http://www.har-adar.muni.il/", "status": "empty"}
+{"City": "ג'ת", "url": "https://www.jatt.muni.il/", "status": "empty"}
+{"City": "חדרה", "url": "http://www.hadera.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "חולון", "url": "https://www.holon.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "חורה", "url": "https://www.huranet.org/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "חורפיש", "url": "http://lch.org.il/", "status": "empty"}
+{"City": "הרצליה", "url": "https://www.herzliya.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "חצור הגלילית", "url": "https://www.hatzorg.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "חריש", "url": "https://www.harish.muni.il/", "status": "empty"}
+{"City": "חיפה", "url": "https://www.haifa.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "טורעאן", "url": "https://www.turan.muni.il/he/", "status": "empty"}
+{"City": "טבריה", "url": "https://www.tiberias.muni.il/", "status": "empty"}
+{"City": "טמרה", "url": "https://www.tamra.muni.il/he/", "status": "empty"}
+{"City": "טירת כרמל", "url": "https://www.tirat-carmel.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "יאנוח-ג'ת", "url": "https://www.yanuh-jat.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "יבנה", "url": "https://www.yavnecity.co.il/", "status": "empty"}
+{"City": "יהוד-נווה אפריים", "url": "http://www.yehud-monosson.muni.il/", "status": "empty"}
+{"City": "יסוד המעלה", "url": "https://www.yesud-hamaala.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "יפיע", "url": "https://www.yaffa.org.il/he/", "status": "empty"}
+{"City": "יבנאל", "url": "https://yavneel.muni.il/", "status": "empty"}
+{"City": "טייבה", "url": "https://taibeh.muni.il/index/he", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ירושלים", "url": "https://www.jerusalem.muni.il/", "status": "empty"}
+{"City": "יקנעם עילית", "url": "https://www.yoqneam.org.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ירכא", "url": "https://www.yirka.muni.il/he/", "status": "empty"}
+{"City": "ירוחם", "url": "https://www.yeroham.muni.il/", "status": "empty"}
+{"City": "כסיפה", "url": "https://www.kuseife.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כאבול", "url": "https://kabul.muni.il/he/home", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כעביה-טבאש-חג'אג'רה", "url": "https://www.kaabiyye-tabbash-hajajre.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר ברא", "url": "https://www.kafar-bara.muni.il/he/about/53", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר יאסיף", "url": "https://www.kafr-yasif.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר ורדים", "url": "http://kfarvradim.com/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר יונה", "url": "https://www.kfar-yona.muni.il/", "status": "empty"}
+{"City": "כפר כמא", "url": "http://www.kfarkama.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כסרא-סמיע", "url": "https://www.kisra-sumei.muni.il/he/home", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר מנדא", "url": "https://kafar-manda.muni.il/he/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר כנא", "url": "https://www.kfarcana.muni.il/Heb/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "כפר קאסם", "url": "https://kfar-qasem.muni.il/he/", "status": "empty"}
+{"City": "כפר קרע", "url": "https://www.kafar-qara.muni.il/he/", "status": "empty"}
+{"City": "כפר תבור", "url": "https://www.kefar-tavor.muni.il/", "status": "empty"}
+{"City": "כפר שמריהו", "url": "http://www.kfar-shemaryahu.muni.il/", "status": "empty"}
+{"City": "כפר סבא", "url": "http://www.kfar-saba.muni.il/", "status": "empty"}
+{"City": "כרמיאל", "url": "https://www.karmiel.muni.il/", "status": "empty"}
+{"City": "לקיה", "url": "https://www.laqye.muni.il", "status": "empty"}
+{"City": "להבים", "url": "http://www.lehavim.muni.il/", "status": "empty"}
+{"City": "מגאר", "url": "https://al-maghar.co.il/he/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "לוד", "url": "http://www.lod.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מג'דל אל כרום", "url": "https://majd-al-kurum.muni.il/", "status": "empty"}
+{"City": "מבשרת ציון", "url": "https://www.m-zion.org.il/", "status": "empty"}
+{"City": "מגדל", "url": "http://www.m-migdal.co.il/", "status": "empty"}
+{"City": "בסמה", "url": "https://basma.muni.il/he/Home/Index", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מגדל העמק", "url": "http://www.migdal-haemeq.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מודיעין עילית", "url": "https://www.modil.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מזרעה", "url": "https://mazraa.muni.il/he/Home/Index", "status": "empty"}
+{"City": "מודיעין-מכבים-רעות", "url": "https://www.modiin.muni.il/ModiinWebSite/MainPage.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מטולה", "url": "http://www.metulla.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מזכרת בתיה", "url": "https://mazkeret-batya.muni.il/", "status": "empty"}
+{"City": "מיתר", "url": "http://www.metar.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מעיליא", "url": "https://www.mielya.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מעלות-תרשיחא", "url": "https://www.maltar.org.il/", "status": "empty"}
+{"City": "מעלה אפרים", "url": "http://maaleefraim.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "משהד", "url": "https://www.mashhad.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "מעלה אדומים", "url": "https://www.maale-adummim.muni.il/", "status": "empty"}
+{"City": "נאות חובב", "url": "https://neot-hovav.org.il/", "status": "empty"}
+{"City": "נהריה", "url": "https://www.nahariya.muni.il/", "status": "empty"}
+{"City": "מצפה רמון", "url": "http://www.mitzpe-ramon.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "נס ציונה", "url": "https://www.nzc.org.il/", "status": "empty"}
+{"City": "נחף", "url": "https://www.nahef.muni.il/inner.asp?root=145&RecordID=371&lang=ar", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "נשר", "url": "https://www.nesher.muni.il/", "status": "empty"}
+{"City": "נצרת", "url": "https://www.nazareth.muni.il/Hebrew/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "נתיבות", "url": "http://www.netivot.muni.il/", "status": "empty"}
+{"City": "טובא-זנגריה", "url": "http://www.tuba-zangariyye.muni.il/hebrew/index.php", "status": "empty"}
+{"City": "נוף הגליל", "url": "https://www.nof-hagalil.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "סביון", "url": "https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "סאג'ור", "url": "https://www.sajur.muni.il/he/", "status": "empty"}
+{"City": "סח'נין", "url": "https://www.sakhnin.muni.il/he/", "status": "empty"}
+{"City": "עומר", "url": "https://www.omer.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ע'ג'ר", "url": "https://ghajarlc.org.il/", "status": "empty"}
+{"City": "עוספיה", "url": "https://www.isifya.co.il/he/", "status": "empty"}
+{"City": "עיילבון", "url": "https://www.eilaboun.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "עילוט", "url": "https://ilut.muni.il/he/CmsPage/Page?pageId=1234", "status": "empty"}
+{"City": "נתניה", "url": "https://www.netanya.muni.il/", "status": "empty"}
+{"City": "עין קנייא", "url": "http://einknia.com/", "status": "empty"}
+{"City": "עין מאהל", "url": "https://www.ein-mahel.muni.il/Hebrew/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "עראבה", "url": "https://arraba.muni.il/he/", "status": "empty"}
+{"City": "עמנואל", "url": "https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "עכו", "url": "https://www.akko.muni.il/he/", "status": "empty"}
+{"City": "עפולה", "url": "https://www.emanuel.muni.il/", "status": "empty"}
+{"City": "פסוטה", "url": "https://fassuta.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ערערה", "url": "http://www.arara-ara.muni.il/", "status": "empty"}
+{"City": "ערד", "url": "http://www.arad.muni.il/", "status": "empty"}
+{"City": "ערערה-בנגב", "url": "https://www.arara-banegev.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "פרדסיה", "url": "https://www.pardesia.muni.il/", "status": "empty"}
+{"City": "מגדל תפן", "url": "https://www.tefen.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "פתח תקווה", "url": "http://www.petah-tikva.muni.il/", "status": "empty"}
+{"City": "פרדס חנה-כרכור", "url": "https://www.pardes-hanna-karkur.muni.il/", "status": "empty"}
+{"City": "קדומים", "url": "https://www.kedumim.org.il/", "status": "empty"}
+{"City": "צורן קדימה", "url": "https://www.kadima-zoran.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "צפת", "url": "https://www.zefat.muni.il/", "status": "empty"}
+{"City": "פקיעין (בוקייעה)", "url": "https://peqiin.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "צור הדסה", "url": "https://www.tzur-hadassa.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קרית גת", "url": "https://www.qiryat-gat.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קרית אתא", "url": "http://www.kiryat-ata.org.il/", "status": "empty"}
+{"City": "קרית ביאליק", "url": "http://www.qbialik.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קצרין", "url": "https://www.golan.org.il/ramathagolan/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קרית אונו", "url": "https://www.kiryatono.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קרית יערים", "url": "https://kiryatyearim.muni.il/", "status": "empty"}
+{"City": "קרית מוצקין", "url": "http://www.motzkin.co.il/", "status": "empty"}
+{"City": "קרית ים", "url": "https://www.kiryat-yam.muni.il/", "status": "empty"}
+{"City": "קרית עקרון", "url": "http://www.kiryat-ekron.muni.il/", "status": "empty"}
+{"City": "קרית טבעון", "url": "https://www.ktv.org.il/", "status": "empty"}
+{"City": "קרני שומרון", "url": "http://www.karneishomron.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ראש העין", "url": "https://www.rosh-haayin.muni.il/", "status": "empty"}
+{"City": "ראמה", "url": "https://rame.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ראש פינה", "url": "http://www.rosh-pinna.muni.il/", "status": "empty"}
+{"City": "ראשון לציון", "url": "https://www.rishonlezion.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "ריינה", "url": "https://reine.muni.il/he/Home/Index", "status": "empty"}
+{"City": "קרית מלאכי", "url": "http://k-m.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "רהט", "url": "https://rahat-muni.com/?lang=he", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "רחובות", "url": "https://www.rehovot.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "קרית שמונה", "url": "http://www.k-8.co.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "רכסים", "url": "http://www.rekhasim.muni.il/", "status": "empty"}
+{"City": "רמת ישי", "url": "http://www.ramat-yishay.com/", "status": "empty"}
+{"City": "רעננה", "url": "https://www.raanana.muni.il/Pages/default.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "רמת גן", "url": "http://www.ramat-gan.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "רמת השרון", "url": "http://ramat-hasharon.muni.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "שבלי - אום אל - גנם", "url": "https://www.shibli-umm-al-ghanam.muni.il/he/departments", "status": "empty"}
+{"City": "שדרות", "url": "http://www.e-sderot.org.il/", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "שוהם", "url": "https://www.shoham.muni.il/", "status": "empty"}
+{"City": "שגב-שלום", "url": "https://www.segev-shalom.muni.il/", "status": "empty"}
+{"City": "שפרעם", "url": "https://shefaram.muni.il/he/Home/Index", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "תל מונד", "url": "https://www.tel-mond.muni.il/", "status": "empty"}
+{"City": "תל שבע", "url": "https://tel-sheva.muni.il/?lang=he", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "שער שומרון", "url": "https://www.shaar-s.org.il/", "status": "empty"}
+{"City": "תל אביב-יפו", "url": "https://www.tel-aviv.gov.il/Pages/HomePage.aspx", "error": "'str' object has no attribute 'get'", "status": "exception"}
+{"City": "שלומי", "url": "https://www.shelomi.org.il/", "status": "empty"}
+{"City": "שעב", "url": "https://shaab.muni.il/he/home", "error": "'str' object has no attribute 'get'", "status": "exception"}

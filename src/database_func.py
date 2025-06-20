@@ -345,7 +345,6 @@ def scrape_with_browser(file_path: str | None = None):
     ) as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
     collect_names()
-    # dont
     logging.info(
         f"Done scraping all cities into {file_name}, there were {Contacts.contacts}"
     )
