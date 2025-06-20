@@ -19,9 +19,9 @@ def guess_hebrew_name(text: str) -> str | None:
     if not api_key or not text or openai is None:
         return None
 
-    openai.api_key = api_key
     try:
-        response = openai.ChatCompletion.create(
+        client = openai.OpenAI(api_key=api_key)
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {
@@ -38,7 +38,10 @@ def guess_hebrew_name(text: str) -> str | None:
         return None
 
     try:
-        result = response["choices"][0]["message"]["content"].strip()
+        if isinstance(response, dict):
+            result = response["choices"][0]["message"]["content"].strip()
+        else:
+            result = response.choices[0].message.content.strip()
     except Exception:
         return None
 
@@ -69,9 +72,9 @@ def guess_hebrew_department(
 
     prompt = "\n".join(prompt_parts)
 
-    openai.api_key = api_key
     try:
-        response = openai.ChatCompletion.create(
+        client = openai.OpenAI(api_key=api_key)
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {
@@ -90,7 +93,10 @@ def guess_hebrew_department(
         return None
 
     try:
-        result = response["choices"][0]["message"]["content"].strip()
+        if isinstance(response, dict):
+            result = response["choices"][0]["message"]["content"].strip()
+        else:
+            result = response.choices[0].message.content.strip()
     except Exception:
         return None
 
