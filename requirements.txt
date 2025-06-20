@@ -1,0 +1,7 @@
+pandas
+playwright
+beautifulsoup4
+requests
+openpyxl
+nameparser
+openai==0.28
