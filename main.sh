@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 ./src/database_func.py
+# Save contacts to output/contacts.json by default
+python3 ./src/database_func.py output/contacts.json
