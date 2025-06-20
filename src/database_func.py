@@ -290,7 +290,9 @@ def scrape_with_browser(file_path: str | None = None):
         file_name = os.path.basename(dict_path)
 
     start_time = time.time()
-    df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"))
+    df = pd.read_csv(
+        os.path.join(base_dir, "data", "cities_links.csv"), encoding="utf-8-sig"
+    )
     total_items = len(df)
     results = {}
     if not os.path.exists(dict_path):
