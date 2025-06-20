@@ -1,10 +1,12 @@
 import json
 from pathlib import Path
 
+import jobs
 from datafunc import apply_hebrew_transliteration
 
 
-def test_transliteration_updates_file(tmp_path):
+def test_transliteration_updates_file(tmp_path, monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "יוחנן")
     data = {
         "אלעד": {
             "john": {"שם": "john", "מייל": "john@example.com"}
@@ -17,4 +19,4 @@ def test_transliteration_updates_file(tmp_path):
 
     loaded = json.loads(file.read_text(encoding="utf-8"))
     assert "john" not in loaded["אלעד"]
-    assert "גוהן" in loaded["אלעד"]
+    assert "יוחנן" in loaded["אלעד"]

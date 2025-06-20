@@ -4,6 +4,7 @@ from pathlib import Path
 # Ensure src directory is on sys.path
 sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 
+import jobs
 from jobs import Contacts
 
 
@@ -51,7 +52,8 @@ def test_non_name_phrase_email_address():
     assert c.name == "לא נמצא שם"
 
 
-def test_name_from_email():
+def test_name_from_email(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "נוא דרי")
     text = "noa_adari@example.org"
     c = Contacts(text, "אשקלון")
     assert c.name == "נוא דרי"
@@ -78,7 +80,8 @@ def test_hebrew_name_not_in_db():
     assert Contacts.is_valid_name("שםשאינובמאגר")
 
 
-def test_trailing_char_single_segment():
+def test_trailing_char_single_segment(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "נואם")
     text = "noamk@example.com"
     c = Contacts(text, "תל אביב")
     assert c.name == "נואם"
