@@ -47,6 +47,22 @@ Unique names can be extracted from the logs with:
 python src/name_pull.py
 ```
 
+## Output
+
+`database_func.py` saves the results in the repository root under the name you
+provide. If you simply enter `contacts.json` the file will be created as
+`./contacts.json`. You can include a relative path to change the location, e.g.
+`output/contacts.json` will place the file inside an `output` folder.
+
+Example:
+
+```bash
+python src/database_func.py
+# Enter the name of the output file (e.g., 'contacts.json'): output/contacts.json
+```
+
+The JSON will then be available at `./output/contacts.json`.
+
 ## ChatGPT Integration
 
 Set the `OPENAI_API_KEY` environment variable to allow the scraper to query ChatGPT when it cannot determine a Hebrew name. This step is optional; without the variable the code falls back to built‑in heuristics.
