@@ -175,10 +175,14 @@ def extract_relevant_contacts_from_text(text, city_name):
 
 def process_city(row, existing_data):
     city = row["עיר"]
+
     url = row["קישור"]
     # במקרה שיש רווח כי הוכנס בטעות זה יטפל בזה לא למחוק!
-    if url.startswith(" "):
+    if isinstance(url, str) and url.startswith(" "):
         url = url.strip()
+
+    if str(url).lower() == "nan":
+        url = None
 
     if pd.isna(url) or city in existing_data and existing_data[city]:
         logging.info(f"[SKIP] {city}: Already scraped or no URL")
