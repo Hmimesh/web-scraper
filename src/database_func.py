@@ -12,7 +12,6 @@ from jobs import Contacts
 from datafunc import apply_hebrew_transliteration
 from nameparser import HumanName
 from collect_names import collect_names
-import time
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

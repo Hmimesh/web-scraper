@@ -3,93 +3,18 @@ import json
 import urllib.request
 import urllib.parse
 from pathlib import Path
-from difflib import get_close_matches
 
 from chatgpt_name import guess_hebrew_name, guess_hebrew_department
 
 
-LATIN_TO_HEBREW = {
-    "a": "א",
-    "b": "ב",
-    "c": "ק",
-    "d": "ד",
-    "e": "י",
-    "f": "פ",
-    "g": "ג",
-    "h": "ה",
-    "i": "י",
-    "j": "ג",
-    "k": "ק",
-    "l": "ל",
-    "m": "מ",
-    "n": "נ",
-    "o": "ו",
-    "p": "פ",
-    "q": "ק",
-    "r": "ר",
-    "s": "ס",
-    "t": "ט",
-    "u": "ו",
-    "v": "ו",
-    "w": "ו",
-    "x": "קס",
-    "y": "י",
-    "z": "ז",
-}
+def _clean_text(text: str) -> str:
+    """Return ``text`` without tabs or duplicate whitespace."""
+    return re.sub(r"\s+", " ", text.replace("\t", " ")).strip()
 
-FINAL_FORMS = {
-    "m": "ם",
-    "n": "ן",
-    "p": "ף",
-    "f": "ף",
-    "k": "ך",
-    "c": "ך",
-    "t": "ת",
-}
+def transliterate_to_hebrew(name: str) -> str | None:
+    """Return a Hebrew version of ``name`` using ChatGPT only."""
 
-
-def transliterate_to_hebrew(name: str) -> str:
-    """Transliterate a simple English name into Hebrew letters.
-
-    The resulting name is cross-referenced against the official Israeli name
-    database loaded from data.gov.il. If a close match is found, that spelling
-    is used to avoid common transliteration mistakes (e.g. "Noam" -> "נועם").
-    """
-    result: list[str] = []
-    clean = name.strip().lower()
-
-    for i, ch in enumerate(clean):
-        if ch == " ":
-            result.append(" ")
-            continue
-
-        if (
-            ch in {"e", "a"}
-            and 0 < i < len(clean) - 1
-            and clean[i - 1] not in "aeiou"
-            and clean[i + 1] not in "aeiou"
-        ):
-            continue
-
-        heb = LATIN_TO_HEBREW.get(ch)
-        if not heb:
-            continue
-
-        if i == len(clean) - 1 and ch in FINAL_FORMS:
-            heb = FINAL_FORMS[ch]
-
-        result.append(heb)
-
-    hebrew = "".join(result)
-
-    if hebrew in ISRAELI_NAME_DB:
-        return hebrew
-
-    match = get_close_matches(hebrew, ISRAELI_NAME_DB, n=1, cutoff=0.7)
-    if match:
-        return match[0]
-
-    return hebrew
+    return guess_hebrew_name(name)
 
 
 def _load_name_db() -> set[str]:
@@ -364,13 +289,16 @@ class Contacts:
                 self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
 
         if self.name and not re.search(r"[א-ת]", self.name):
-            heb = transliterate_to_hebrew(self.name)
-            if heb:
-                self.name = heb
-            else:
-                guess = guess_hebrew_name(self.name)
-                if guess:
-                    self.name = guess
+            guess = guess_hebrew_name(self.name)
+            if guess:
+                self.name = guess
+
+        if self.name:
+            self.name = _clean_text(self.name)
+        if self.role:
+            self.role = _clean_text(self.role)
+        if self.department:
+            self.department = _clean_text(self.department)
 
     def to_dict(self):
         return {

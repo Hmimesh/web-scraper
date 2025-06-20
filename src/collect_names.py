@@ -1,6 +1,5 @@
 from __future__ import annotations
 import json
-import os
 from pathlib import Path
 
 
@@ -34,4 +33,3 @@ def collect_names(base_dir: Path | str | None = None) -> None:
     with output_file.open("w", encoding="utf-8") as f:
         for name in sorted(names):
             f.write(f"{name}\n")
-
