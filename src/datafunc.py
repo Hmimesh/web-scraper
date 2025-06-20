@@ -6,7 +6,13 @@ from jobs import transliterate_to_hebrew
 
 
 def apply_hebrew_transliteration(json_path: str | Path) -> None:
-    """Load the contact JSON file and transliterate English names to Hebrew."""
+    """Transliterate English contact names in ``json_path`` to Hebrew.
+
+    The function originally expected files structured as ``{city: {name: {...}}}``.
+    Some intermediate files contain a flat ``{name: {...}}`` mapping instead.
+    This helper now supports both layouts by detecting whether the top-level
+    values are contact dictionaries or nested dictionaries of contacts.
+    """
     path = Path(json_path)
     if not path.exists():
         raise FileNotFoundError(json_path)
@@ -15,9 +21,13 @@ def apply_hebrew_transliteration(json_path: str | Path) -> None:
         data = json.load(f)
 
     updated = False
-    for city, people in data.items():
+
+    def transliterate_dict(people: dict) -> None:
+        nonlocal updated
         for orig_key in list(people.keys()):
             info = people[orig_key]
+            if not isinstance(info, dict):
+                continue
             name = info.get("שם")
             if not name or re.search(r"[א-ת]", name):
                 continue
@@ -29,6 +39,16 @@ def apply_hebrew_transliteration(json_path: str | Path) -> None:
             info["שם"] = heb
             people[heb] = info
             updated = True
+
+    # Determine whether this is a flat mapping {name: info} or
+    # a nested mapping {city: {name: info}}
+    if data and all(isinstance(v, dict) and ("שם" in v) for v in data.values()):
+        # flat structure
+        transliterate_dict(data)
+    else:
+        for city, people in data.items():
+            if isinstance(people, dict):
+                transliterate_dict(people)
 
     if updated:
         with path.open("w", encoding="utf-8") as f:
