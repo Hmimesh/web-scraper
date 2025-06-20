@@ -5,7 +5,7 @@ import urllib.parse
 from pathlib import Path
 from difflib import get_close_matches
 
-from chatgpt_name import guess_hebrew_name
+from chatgpt_name import guess_hebrew_name, guess_hebrew_department
 
 
 LATIN_TO_HEBREW = {
@@ -150,6 +150,15 @@ def _dept_from_email(email: str) -> str | None:
     return None
 
 
+def _dept_from_url(url: str) -> str | None:
+    """Guess department from a URL using ENGLISH_DEPT_KEYWORDS."""
+    lower = url.lower()
+    for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
+        if keyword in lower:
+            return dept
+    return None
+
+
 class Contacts:
     contacts = 0
     # Common phrases that might look like names but aren't
@@ -201,9 +210,10 @@ class Contacts:
                 return False
         return True
 
-    def __init__(self, raw_text, city):
+    def __init__(self, raw_text, city, url: str | None = None):
         self.raw_text = raw_text
         self.city = city
+        self.url = url
         self.name = None
         self.role = None
         self.department = None
@@ -268,6 +278,16 @@ class Contacts:
 
         if not self.department and self.email:
             guessed = _dept_from_email(self.email)
+            if guessed:
+                self.department = guessed
+
+        if not self.department and self.url:
+            guessed = _dept_from_url(self.url)
+            if guessed:
+                self.department = guessed
+
+        if not self.department:
+            guessed = guess_hebrew_department(self.raw_text, self.url)
             if guessed:
                 self.department = guessed
 
