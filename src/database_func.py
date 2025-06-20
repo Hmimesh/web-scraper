@@ -7,6 +7,7 @@ import logging
 from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+import sys
 from jobs import Contacts
 from datafunc import apply_hebrew_transliteration
 from nameparser import HumanName
@@ -270,17 +271,28 @@ def process_city(row, existing_data):
             browser.close()
 
 
-def scrape_with_browser():
+def scrape_with_browser(file_path: str | None = None):
+    """Scrape all cities and store results in ``file_path``.
 
-    file_name = input("Enter the name of the output file (e.g., 'contacts.json'): ")
-    if not file_name.endswith(".json"):
-        file_name += ".json"
+    If ``file_path`` is ``None`` the user will be prompted to provide a
+    filename, preserving the previous interactive behaviour.
+    """
+
+    if file_path is None:
+        file_name = input("Enter the name of the output file (e.g., 'contacts.json'): ")
+        if not file_name.endswith(".json"):
+            file_name += ".json"
+        dict_path = os.path.join(base_dir, file_name)
+    else:
+        dict_path = file_path
+        if not dict_path.endswith(".json"):
+            dict_path += ".json"
+        file_name = os.path.basename(dict_path)
+
     start_time = time.time()
     df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"))
     total_items = len(df)
     results = {}
-    # name the file the name you want.
-    dict_path = os.path.join(base_dir, file_name)
     if not os.path.exists(dict_path):
         with open(dict_path, "w", encoding="utf-8") as f:
             json.dump({}, f, ensure_ascii=False, indent=2)
@@ -339,4 +351,5 @@ def scrape_with_browser():
 
 
 if __name__ == "__main__":
-    scrape_with_browser()
+    path_arg = sys.argv[1] if len(sys.argv) > 1 else None
+    scrape_with_browser(path_arg)
