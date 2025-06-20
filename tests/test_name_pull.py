@@ -46,3 +46,8 @@ def test_transliterate_short_vowel(monkeypatch):
 
 def test_extract_name_from_email():
     assert extract_name_from_email("danz@example.com") == "Dan"
+
+
+def test_extract_name_from_email_short_name():
+    """Ensure short usernames aren't truncated."""
+    assert extract_name_from_email("dan@example.com") == "Dan"
