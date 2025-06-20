@@ -135,7 +135,7 @@ def extract_text_from_url(page, url):
         return ""
 
 
-def extract_relevant_contacts_from_text(text, city_name):
+def extract_relevant_contacts_from_text(text, city_name, source_url=None):
     people = {}
     lines = text.split("\n")
 
@@ -145,7 +145,7 @@ def extract_relevant_contacts_from_text(text, city_name):
             continue
 
         if "@" in line or re.search(r"0[2-9]\d{7}", line):
-            contact_obj = Contacts(line, city_name)
+            contact_obj = Contacts(line, city_name, url=source_url)
 
             if not contact_obj.name and contact_obj.email:
                 name_guess = contact_obj.email.split("@")[0]
@@ -226,7 +226,7 @@ def process_city(row, existing_data):
                 ) as f:
                     f.write(text)
 
-                contact_info = extract_relevant_contacts_from_text(text, city)
+                contact_info = extract_relevant_contacts_from_text(text, city, link)
                 extracted_data = contact_info.get(city, {})
                 city_data.update(extracted_data)
 
