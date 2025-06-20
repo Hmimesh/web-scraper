@@ -18,12 +18,12 @@ This project scrapes municipal contact information from Israeli websites. It ext
 - `beautifulsoup4` and `requests` for page parsing
 - `openpyxl` to export Excel files
 - `nameparser` for name parsing helpers
-- `openai` (optional) if using ChatGPT
+- `openai` (optional) if using ChatGPT; **version `0.28` is required**
 
 Install dependencies with:
 
 ```bash
-pip install pandas playwright beautifulsoup4 requests openpyxl nameparser openai
+pip install -r requirements.txt
 playwright install
 ```
 
