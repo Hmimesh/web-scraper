@@ -14,9 +14,12 @@ def test_guess_hebrew_name(monkeypatch):
     def fake_create(**kwargs):
         return {"choices": [{"message": {"content": "דן"}}]}
 
-    dummy = types.SimpleNamespace(
-        ChatCompletion=types.SimpleNamespace(create=fake_create)
+    client = types.SimpleNamespace(
+        chat=types.SimpleNamespace(
+            completions=types.SimpleNamespace(create=fake_create)
+        )
     )
+    dummy = types.SimpleNamespace(OpenAI=lambda **kwargs: client)
     monkeypatch.setattr(chatgpt_name, "openai", dummy)
 
     assert chatgpt_name.guess_hebrew_name("Dan") == "דן"
@@ -28,9 +31,12 @@ def test_contacts_chatgpt_fallback(monkeypatch):
     def fake_create(**kwargs):
         return {"choices": [{"message": {"content": "דן"}}]}
 
-    dummy = types.SimpleNamespace(
-        ChatCompletion=types.SimpleNamespace(create=fake_create)
+    client = types.SimpleNamespace(
+        chat=types.SimpleNamespace(
+            completions=types.SimpleNamespace(create=fake_create)
+        )
     )
+    dummy = types.SimpleNamespace(OpenAI=lambda **kwargs: client)
     monkeypatch.setattr(chatgpt_name, "openai", dummy)
 
     c = Contacts("some text without name", "תל אביב")
@@ -43,9 +49,12 @@ def test_guess_hebrew_department(monkeypatch):
     def fake_create(**kwargs):
         return {"choices": [{"message": {"content": "מחלקת תרבות"}}]}
 
-    dummy = types.SimpleNamespace(
-        ChatCompletion=types.SimpleNamespace(create=fake_create)
+    client = types.SimpleNamespace(
+        chat=types.SimpleNamespace(
+            completions=types.SimpleNamespace(create=fake_create)
+        )
     )
+    dummy = types.SimpleNamespace(OpenAI=lambda **kwargs: client)
     monkeypatch.setattr(chatgpt_name, "openai", dummy)
 
     result = chatgpt_name.guess_hebrew_department(
@@ -63,9 +72,12 @@ def test_contacts_chatgpt_department_fallback(monkeypatch):
             return {"choices": [{"message": {"content": "מחלקת חינוך"}}]}
         return {"choices": [{"message": {"content": "דן"}}]}
 
-    dummy = types.SimpleNamespace(
-        ChatCompletion=types.SimpleNamespace(create=fake_create)
+    client = types.SimpleNamespace(
+        chat=types.SimpleNamespace(
+            completions=types.SimpleNamespace(create=fake_create)
+        )
     )
+    dummy = types.SimpleNamespace(OpenAI=lambda **kwargs: client)
     monkeypatch.setattr(chatgpt_name, "openai", dummy)
 
     c = Contacts("no department text", "תל אביב", url="http://ex.com/edu")
