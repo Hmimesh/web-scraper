@@ -268,7 +268,9 @@ def scrape_with_browser():
     if not file_name.endswith(".json"):
         file_name += ".json"
     start_time = time.time()
-    df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"))
+    df = pd.read_csv(
+        os.path.join(base_dir, "data", "cities_links.csv"), encoding="utf-8-sig"
+    )
     total_items = len(df)
     results = {}
     # name the file the name you want.
