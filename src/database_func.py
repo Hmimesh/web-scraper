@@ -190,6 +190,10 @@ def process_city(row, existing_data):
 
     hostname = urlparse(url).hostname
     profile = site_profiles.get(hostname, {})
+    if isinstance(profile, str):
+        profile = {"skip": True, "reason": profile}
+        site_profiles[hostname] = profile
+
     if profile.get("skip"):
         logging.info(
             f"[SKIP] {city}: marked to skip ({profile.get('reason', 'no reason')})"
