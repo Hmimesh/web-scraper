@@ -49,6 +49,12 @@ Unique names can be extracted from the logs with:
 python src/name_pull.py
 ```
 
+The entire workflow can be triggered with one command using `main.sh`:
+
+```bash
+./main.sh
+```
+
 ## Output
 
 `database_func.py` saves the results in the repository root under the name you
@@ -67,7 +73,7 @@ The JSON will then be available at `./output/contacts.json`.
 
 ## ChatGPT Integration
 
-Set the `OPENAI_API_KEY` environment variable to allow the scraper to query ChatGPT when it cannot determine a Hebrew name. This step is optional; without the variable the code falls back to built‑in heuristics.
+Set the `OPENAI_API_KEY` environment variable to allow the scraper to query ChatGPT when it cannot determine a Hebrew name or department. This key is used by the scraping code and by `name_pull.py` when refining names from the log file. Without the variable the code falls back to built‑in heuristics.
 
 ## Testing
 

@@ -2,10 +2,12 @@ import json
 import re
 from pathlib import Path
 
+import name_pull
 from name_pull import collect_names, transliterate_to_hebrew, extract_name_from_email
 
 
-def test_collect_names_from_log(tmp_path):
+def test_collect_names_from_log(tmp_path, monkeypatch):
+    monkeypatch.setattr(name_pull, "guess_hebrew_name", lambda text: "דן")
     log = tmp_path / "io.jsonl"
     entries = [
         {"Name": "Dan", "Email": "dan@example.com"},
@@ -29,7 +31,14 @@ def test_collect_names_from_log(tmp_path):
     assert lines == sorted(names)
 
 
-def test_transliterate_short_vowel():
+def test_transliterate_short_vowel(monkeypatch):
+    mapping = {"Ben": "בן", "Dan": "דן", "Noam": "נואם"}
+
+    def fake_guess(name):
+        return mapping.get(name)
+
+    monkeypatch.setattr(name_pull, "guess_hebrew_name", fake_guess)
+
     assert transliterate_to_hebrew("Ben") == "בן"
     assert transliterate_to_hebrew("Dan") == "דן"
     assert transliterate_to_hebrew("Noam") == "נואם"

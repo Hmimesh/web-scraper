@@ -7,95 +7,14 @@ import os
 import re
 from pathlib import Path
 
-from jobs import Contacts, ISRAELI_NAME_DB
+from jobs import Contacts
 from chatgpt_name import guess_hebrew_name
-from difflib import get_close_matches
 
 
-LATIN_TO_HEBREW = {
-    "a": "א",
-    "b": "ב",
-    "c": "ק",
-    "d": "ד",
-    "e": "י",
-    "f": "פ",
-    "g": "ג",
-    "h": "ה",
-    "i": "י",
-    "j": "ג",
-    "k": "ק",
-    "l": "ל",
-    "m": "מ",
-    "n": "נ",
-    "o": "ו",
-    "p": "פ",
-    "q": "ק",
-    "r": "ר",
-    "s": "ס",
-    "t": "ט",
-    "u": "ו",
-    "v": "ו",
-    "w": "ו",
-    "x": "קס",
-    "y": "י",
-    "z": "ז",
-}
+def transliterate_to_hebrew(name: str) -> str | None:
+    """Return a Hebrew version of ``name`` using ChatGPT only."""
 
-# Final forms for certain Hebrew letters when they appear at the end of a word
-FINAL_FORMS = {
-    "m": "ם",
-    "n": "ן",
-    "p": "ף",
-    "f": "ף",
-    "k": "ך",
-    "c": "ך",
-    "t": "ת",  # no special final form but kept for completeness
-}
-
-
-def transliterate_to_hebrew(name: str) -> str:
-    """Transliterate a simple English name into Hebrew letters.
-
-    The resulting name is cross-checked against a list of Hebrew names fetched
-    from data.gov.il to catch common transliteration errors.
-    """
-    result: list[str] = []
-    clean = name.strip().lower()
-
-    for i, ch in enumerate(clean):
-        if ch == " ":
-            result.append(" ")
-            continue
-
-        # Skip a short vowel between two consonants
-        if (
-            ch in {"e", "a"}
-            and 0 < i < len(clean) - 1
-            and clean[i - 1] not in "aeiou"
-            and clean[i + 1] not in "aeiou"
-        ):
-            continue
-
-        heb = LATIN_TO_HEBREW.get(ch)
-        if not heb:
-            continue
-
-        # Use final form if this is the last letter of the word
-        if i == len(clean) - 1 and ch in FINAL_FORMS:
-            heb = FINAL_FORMS[ch]
-
-        result.append(heb)
-
-    hebrew = "".join(result)
-
-    if hebrew in ISRAELI_NAME_DB:
-        return hebrew
-
-    match = get_close_matches(hebrew, ISRAELI_NAME_DB, n=1, cutoff=0.7)
-    if match:
-        return match[0]
-
-    return hebrew
+    return guess_hebrew_name(name)
 
 
 def extract_name_from_email(email: str) -> str | None:
@@ -152,10 +71,6 @@ def collect_names(
                 heb = transliterate_to_hebrew(name)
                 if heb:
                     name = heb
-                else:
-                    gpt_guess = guess_hebrew_name(name)
-                    if gpt_guess:
-                        name = gpt_guess
             names.add(name)
 
     with open(output_file, "w", encoding="utf-8") as f:
