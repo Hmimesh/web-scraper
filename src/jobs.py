@@ -1,8 +1,5 @@
 import re
-import json
-import urllib.request
-import urllib.parse
-from pathlib import Path
+
 
 from chatgpt_name import guess_hebrew_name, guess_hebrew_department
 
@@ -11,44 +8,12 @@ def _clean_text(text: str) -> str:
     """Return ``text`` without tabs or duplicate whitespace."""
     return re.sub(r"\s+", " ", text.replace("\t", " ")).strip()
 
+
 def transliterate_to_hebrew(name: str) -> str | None:
     """Return a Hebrew version of ``name`` using ChatGPT only."""
 
     return guess_hebrew_name(name)
 
-
-def _load_name_db() -> set[str]:
-    """Fetch Israeli first names from data.gov.il."""
-    names = set()
-
-    try:
-        offset = 0
-        while True:
-            url = (
-                "https://data.gov.il/api/3/action/datastore_search?"
-                "resource_id=c4fb2685-381f-4e99-a88e-b9b7ed703117"
-                f"&limit=1000&offset={offset}"
-            )
-            with urllib.request.urlopen(url, timeout=10) as resp:
-                data = json.load(resp)
-            records = data.get("result", {}).get("records", [])
-            for rec in records:
-                for key in ("שם פרטי", "first_name", "name"):
-                    if key in rec and rec[key]:
-                        names.add(str(rec[key]).strip())
-                        break
-            total = data.get("result", {}).get("total", 0)
-            offset += 1000
-            if offset >= total:
-                break
-    except Exception:
-        # Network or parsing errors are ignored; best-effort only
-        pass
-
-    return names
-
-
-ISRAELI_NAME_DB = _load_name_db()
 
 # Mapping of English keywords to their Hebrew department names. This allows
 # detecting the department from contact lines that use English terms.
@@ -127,12 +92,6 @@ class Contacts:
         if len(letters) < 2:
             return False
 
-        # If the name appears to be Hebrew and we have a database, ensure the
-        # first name is part of the official list
-        if ISRAELI_NAME_DB and re.search(r"[א-ת]", name):
-            first = name.split()[0]
-            if first not in ISRAELI_NAME_DB:
-                return False
         return True
 
     def __init__(self, raw_text, city, url: str | None = None):
@@ -240,11 +199,6 @@ class Contacts:
                 self.role = word
                 break
 
-        # Ask ChatGPT for a name guess before running heuristic extraction
-        guess = guess_hebrew_name(self.raw_text)
-        if guess:
-            self.name = guess
-
         if self.name is None:
             candidate = None
             # Try to extract full Hebrew name first
@@ -260,10 +214,23 @@ class Contacts:
                 if first_match:
                     candidate = first_match.group(0).strip()
 
+            # If still none, try to extract an English name
+            if not candidate:
+                eng_candidates = [
+                    m.group(1)
+                    for m in re.finditer(
+                        r"(?=([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+))", self.raw_text
+                    )
+                ]
+                for cand in eng_candidates:
+                    if Contacts.is_valid_name(cand):
+                        candidate = cand.strip()
+                        break
+
             if candidate and Contacts.is_valid_name(candidate):
                 self.name = candidate
 
-            # Fall back to email-derived name if no Hebrew name detected
+            # Fall back to email-derived name if no name detected
             if not self.name and self.email:
                 # Skip when text contains known non-name phrases
                 if not any(
@@ -282,13 +249,8 @@ class Contacts:
                             self.name = name_guess
 
         if not self.name:
-            guess = guess_hebrew_name(self.raw_text)
-            if guess:
-                self.name = guess
-            else:
-                self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
-
-        if self.name and not re.search(r"[א-ת]", self.name):
+            self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+        else:
             guess = guess_hebrew_name(self.name)
             if guess:
                 self.name = guess
