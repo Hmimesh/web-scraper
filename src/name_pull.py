@@ -24,7 +24,7 @@ def extract_name_from_email(email: str) -> str | None:
     parts = [p for p in parts if p.isalpha()]
     if not parts:
         return None
-    if len(parts) == 1 and len(parts[0]) > 2 and len(parts[0][-1]) == 1:
+    if len(parts) == 1 and len(parts[0]) > 3 and parts[0][-1].isalpha():
         # Drop single trailing letter (likely a last-name initial)
         parts[0] = parts[0][:-1]
     guess = " ".join(p.capitalize() for p in parts)
