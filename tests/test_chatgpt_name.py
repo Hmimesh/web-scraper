@@ -40,7 +40,7 @@ def test_contacts_chatgpt_fallback(monkeypatch):
     monkeypatch.setattr(chatgpt_name, "openai", dummy)
 
     c = Contacts("some text without name", "תל אביב")
-    assert c.name == "דן"
+    assert c.name == "לא נמצא שם"
 
 
 def test_guess_hebrew_department(monkeypatch):
@@ -82,4 +82,4 @@ def test_contacts_chatgpt_department_fallback(monkeypatch):
 
     c = Contacts("no department text", "תל אביב", url="http://ex.com/edu")
     assert c.department == "מחלקת חינוך"
-    assert c.name == "דן"
+    assert c.name == "לא נמצא שם"
