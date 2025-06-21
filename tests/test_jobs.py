@@ -87,6 +87,13 @@ def test_trailing_char_single_segment(monkeypatch):
     assert c.name == "נואם"
 
 
+def test_english_name_from_text(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "יוחנן דו")
+    text = "Contact John Doe for info"
+    c = Contacts(text, "תל אביב")
+    assert c.name == "יוחנן דו"
+
+
 def test_english_department_keyword():
     text = "education john@example.com"
     c = Contacts(text, "תל אביב")
