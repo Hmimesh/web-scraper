@@ -5,3 +5,4 @@ incremental_results/
 __pycache__/
 *.pyc
 *.log
+data/translation_cache.json
