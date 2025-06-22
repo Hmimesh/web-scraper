@@ -104,3 +104,23 @@ def test_department_from_email():
     text = "john@youngdept.org"
     c = Contacts(text, "תל אביב")
     assert c.department == "מחלקת צעירים"
+
+
+def test_clean_text_punctuation():
+    assert jobs._clean_text(" שלום,  עולם ; ") == "שלום עולם"
+
+
+def test_combined_hyphen(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: n)
+    text = "משה כהן-מנהל מחלקת תרבות moshe@ex.com"
+    c = Contacts(text, "תל אביב")
+    assert c.name == "משה כהן"
+    assert c.role.startswith("מנהל")
+
+
+def test_combined_parentheses(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: n)
+    text = "יפעת לוי (רכזת צעירים) 050-1111111"
+    c = Contacts(text, "תל אביב")
+    assert c.name == "יפעת לוי"
+    assert c.role.startswith("רכזת")

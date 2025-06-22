@@ -5,8 +5,11 @@ from chatgpt_name import guess_hebrew_name, guess_hebrew_department
 
 
 def _clean_text(text: str) -> str:
-    """Return ``text`` without tabs or duplicate whitespace."""
-    return re.sub(r"\s+", " ", text.replace("\t", " ")).strip()
+    """Return ``text`` without tabs, stray punctuation or duplicate whitespace."""
+    text = text.replace("\t", " ")
+    text = re.sub(r"[,:;]+", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip(" -_,;:")
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
@@ -113,6 +116,7 @@ class Contacts:
         email_match = re.search(r"[\w\.-]+@[\w\.-]+\.\w+", self.raw_text)
         if email_match:
             self.email = email_match.group(0)
+        sanitized_text = re.sub(r"[\w\.-]+@[\w\.-]+\.\w+", "", self.raw_text)
 
         # Find all phone numbers with or without dash/space
         phones = re.findall(r"0[2-9][-\s]?\d{7}", self.raw_text)
@@ -198,6 +202,31 @@ class Contacts:
             if any(role in word for role in possible_roles):
                 self.role = word
                 break
+
+        # Split patterns like "Name-Role" or "Name (Role)"
+        combined = re.search(
+            r"([A-Za-zא-ת ]{2,})\s*[-–]\s*([A-Za-zא-ת\"׳ ]{2,})",
+            sanitized_text,
+        )
+        if (
+            combined
+            and "@" not in combined.group(0)
+            and Contacts.is_valid_name(combined.group(1).strip())
+        ):
+            self.name = combined.group(1).strip()
+            self.role = combined.group(2).strip()
+        else:
+            paren = re.search(
+                r"([A-Za-zא-ת ]{2,})\(([^)]+)\)",
+                sanitized_text,
+            )
+            if (
+                paren
+                and "@" not in paren.group(0)
+                and Contacts.is_valid_name(paren.group(1).strip())
+            ):
+                self.name = paren.group(1).strip()
+                self.role = paren.group(2).strip()
 
         if self.name is None:
             candidate = None
