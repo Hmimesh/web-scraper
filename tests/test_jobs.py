@@ -104,3 +104,21 @@ def test_department_from_email():
     text = "john@youngdept.org"
     c = Contacts(text, "תל אביב")
     assert c.department == "מחלקת צעירים"
+
+
+def test_english_department_keyword_sports():
+    text = "sports jane@example.com"
+    c = Contacts(text, "תל אביב")
+    assert c.department == "מחלקת ספורט"
+
+
+def test_department_from_email_engineering():
+    text = "bob@engineering-city.org"
+    c = Contacts(text, "תל אביב")
+    assert c.department == "מחלקת הנדסה"
+
+
+def test_department_from_url_finance():
+    text = "bob@example.com"
+    c = Contacts(text, "תל אביב", url="https://city.gov.il/finance/team")
+    assert c.department == "מחלקת כספים"
