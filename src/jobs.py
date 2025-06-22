@@ -28,12 +28,20 @@ ENGLISH_DEPT_KEYWORDS = {
     "absorption": "מחלקת קליטה",
     "environment": "מחלקת איכות סביבה",
     "veterans": "מחלקת אזרחים וותיקים",
+    "sport": "מחלקת ספורט",
+    "sports": "מחלקת ספורט",
+    "finance": "מחלקת כספים",
+    "finances": "מחלקת כספים",
+    "engineering": "מחלקת הנדסה",
+    "transport": "מחלקת תחבורה",
+    "traffic": "מחלקת תחבורה",
+    "security": "מחלקת ביטחון",
 }
 
 
 def _dept_from_email(email: str) -> str | None:
     """Guess department from email address using ENGLISH_DEPT_KEYWORDS."""
-    lower = email.lower()
+    lower = re.sub(r"[-_.]+", " ", email.lower())
     for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
         if keyword in lower:
             return dept
@@ -42,7 +50,7 @@ def _dept_from_email(email: str) -> str | None:
 
 def _dept_from_url(url: str) -> str | None:
     """Guess department from a URL using ENGLISH_DEPT_KEYWORDS."""
-    lower = url.lower()
+    lower = re.sub(r"[-_.]+", " ", url.lower())
     for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
         if keyword in lower:
             return dept
