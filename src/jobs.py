@@ -1,7 +1,36 @@
+import json
 import re
-
+from pathlib import Path
 
 from chatgpt_name import guess_hebrew_name, guess_hebrew_department
+
+
+CACHE_FILE = Path(__file__).resolve().parents[1] / "data" / "translation_cache.json"
+_translation_cache: dict[str, str] | None = None
+
+
+def _load_cache() -> dict[str, str]:
+    """Load the transliteration cache from ``CACHE_FILE``."""
+    global _translation_cache
+    if _translation_cache is None:
+        if CACHE_FILE.exists():
+            try:
+                with open(CACHE_FILE, encoding="utf-8") as f:
+                    _translation_cache = json.load(f)
+            except Exception:
+                _translation_cache = {}
+        else:
+            _translation_cache = {}
+    return _translation_cache
+
+
+def _save_cache(cache: dict[str, str]) -> None:
+    """Persist ``cache`` to ``CACHE_FILE``."""
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
 
 
 def _clean_text(text: str) -> str:
@@ -10,9 +39,18 @@ def _clean_text(text: str) -> str:
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
-    """Return a Hebrew version of ``name`` using ChatGPT only."""
+    """Return a Hebrew version of ``name`` using ChatGPT with caching."""
 
-    return guess_hebrew_name(name)
+    cache = _load_cache()
+    cached = cache.get(name)
+    if cached:
+        return cached
+
+    result = guess_hebrew_name(name)
+    if result:
+        cache[name] = result
+        _save_cache(cache)
+    return result
 
 
 # Mapping of English keywords to their Hebrew department names. This allows
