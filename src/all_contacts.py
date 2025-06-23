@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
+import jobs
+
 BASE_DIR = Path(__file__).resolve().parents[1]
 
 
@@ -14,6 +16,7 @@ def load_contacts(path: Path | None = None) -> dict:
         path = BASE_DIR / "data" / "smart_contacts.json"
     with path.open(encoding="utf-8") as f:
         return json.load(f)
+
 
 def save_outputs(df: pd.DataFrame) -> None:
     df.to_csv("all_contacts.csv", index=False, encoding="utf-8-sig")
@@ -31,12 +34,14 @@ def main(json_path: str | None = None) -> None:
         for name, info in people.items():
             rows.append(
                 {
-                    "עיר": city,
-                    "שם": name,
-                    "טלפון": info.get("phone"),
-                    "אימייל": info.get("email"),
-                    "תפקיד": info.get("job_title"),
-                    "מחלקה": info.get("department"),
+                    "עיר": jobs._clean_text(city),
+                    "שם": jobs._clean_text(name),
+                    "טלפון": jobs._clean_text(
+                        str(info.get("phone")) if info.get("phone") is not None else ""
+                    ),
+                    "אימייל": jobs._clean_text(info.get("email") or ""),
+                    "תפקיד": jobs._clean_text(info.get("job_title") or ""),
+                    "מחלקה": jobs._clean_text(info.get("department") or ""),
                 }
             )
 
