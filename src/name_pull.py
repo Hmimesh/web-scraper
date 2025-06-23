@@ -8,13 +8,66 @@ import re
 from pathlib import Path
 
 from jobs import Contacts
+from gov_names import load_names
 from chatgpt_name import guess_hebrew_name
+
+CACHE_FILE = Path(__file__).resolve().parents[1] / "data" / "translation_cache.json"
+_translation_cache: dict[str, str] | None = None
+_gov_names: dict[str, str] | None = None
+
+
+def _load_cache() -> dict[str, str]:
+    global _translation_cache
+    if _translation_cache is None:
+        if CACHE_FILE.exists():
+            try:
+                with open(CACHE_FILE, encoding="utf-8") as f:
+                    _translation_cache = json.load(f)
+            except Exception:
+                _translation_cache = {}
+        else:
+            _translation_cache = {}
+    return _translation_cache
+
+
+def _save_cache(cache: dict[str, str]) -> None:
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+
+def _load_gov_names() -> dict[str, str]:
+    global _gov_names
+    if _gov_names is None:
+        try:
+            _gov_names = {k.lower(): v for k, v in load_names().items()}
+        except Exception:
+            _gov_names = {}
+    return _gov_names
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
-    """Return a Hebrew version of ``name`` using ChatGPT only."""
+    """Return a Hebrew version of ``name`` using dataset lookup and ChatGPT."""
 
-    return guess_hebrew_name(name)
+    cache = _load_cache()
+    cached = cache.get(name)
+    if cached:
+        return cached
+
+    gov_names = _load_gov_names()
+    match = gov_names.get(name.lower())
+    if match:
+        cache[name] = match
+        _save_cache(cache)
+        return match
+
+    result = guess_hebrew_name(name)
+    if result:
+        cache[name] = result
+        _save_cache(cache)
+    return result
 
 
 def extract_name_from_email(email: str) -> str | None:
