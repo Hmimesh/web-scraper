@@ -52,6 +52,18 @@ def test_non_name_phrase_email_address():
     assert c.name == "לא נמצא שם"
 
 
+def test_non_name_phrase_short_email():
+    text = "דואר אלקטרוני info@test.com"
+    c = Contacts(text, "באר שבע")
+    assert c.name == "לא נמצא שם"
+
+
+def test_non_name_phrase_dual_email():
+    text = 'דוא"ל info@test.com'
+    c = Contacts(text, "באר שבע")
+    assert c.name == "לא נמצא שם"
+
+
 def test_name_from_email(monkeypatch):
     monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "נוא דרי")
     text = "noa_adari@example.org"
