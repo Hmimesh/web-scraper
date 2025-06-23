@@ -6,7 +6,6 @@ import json
 import os
 import re
 from pathlib import Path
-
 import jobs
 from jobs import Contacts
 from gov_names import load_names
