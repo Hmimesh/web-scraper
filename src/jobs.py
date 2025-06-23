@@ -3,10 +3,12 @@ import re
 from pathlib import Path
 
 from chatgpt_name import guess_hebrew_name, guess_hebrew_department
+from gov_names import load_names
 
 
 CACHE_FILE = Path(__file__).resolve().parents[1] / "data" / "translation_cache.json"
 _translation_cache: dict[str, str] | None = None
+_gov_names: dict[str, str] | None = None
 
 
 def _load_cache() -> dict[str, str]:
@@ -33,18 +35,36 @@ def _save_cache(cache: dict[str, str]) -> None:
         pass
 
 
+def _load_gov_names() -> dict[str, str]:
+    """Load the government names list or return an empty mapping."""
+    global _gov_names
+    if _gov_names is None:
+        try:
+            _gov_names = {k.lower(): v for k, v in load_names().items()}
+        except Exception:
+            _gov_names = {}
+    return _gov_names
+
+
 def _clean_text(text: str) -> str:
     """Return ``text`` without tabs or duplicate whitespace."""
     return re.sub(r"\s+", " ", text.replace("\t", " ")).strip()
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
-    """Return a Hebrew version of ``name`` using ChatGPT with caching."""
+    """Return a Hebrew version of ``name`` using dataset lookup and ChatGPT."""
 
     cache = _load_cache()
     cached = cache.get(name)
     if cached:
         return cached
+
+    gov_names = _load_gov_names()
+    match = gov_names.get(name.lower())
+    if match:
+        cache[name] = match
+        _save_cache(cache)
+        return match
 
     result = guess_hebrew_name(name)
     if result:
