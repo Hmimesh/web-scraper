@@ -55,6 +55,14 @@ The entire workflow can be triggered with one command using `main.sh`:
 ./main.sh
 ```
 
+`main.sh` saves the contacts to `all_contacts.csv`. You can further
+normalize this file using OpenAI by running `After_main.sh` which invokes
+`extraction.py` and writes `extracted_contacts_fillter.csv`:
+
+```bash
+./After_main.sh
+```
+
 ## Output
 
 `database_func.py` saves the results in the repository root under the name you
