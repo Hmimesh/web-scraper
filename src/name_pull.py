@@ -6,7 +6,7 @@ import json
 import os
 import re
 from pathlib import Path
-
+import jobs
 from jobs import Contacts
 from gov_names import load_names
 from chatgpt_name import guess_hebrew_name
@@ -63,7 +63,7 @@ def transliterate_to_hebrew(name: str) -> str | None:
         _save_cache(cache)
         return match
 
-    result = guess_hebrew_name(name)
+    result = jobs.transliterate_to_hebrew(name)
     if result:
         cache[name] = result
         _save_cache(cache)
