@@ -49,25 +49,18 @@ def _load_gov_names() -> dict[str, str]:
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
-    """Return a Hebrew version of ``name`` using dataset lookup and ChatGPT."""
+    """Return a Hebrew version of ``name`` using the shared ``jobs`` helper."""
 
-    cache = _load_cache()
-    cached = cache.get(name)
-    if cached:
-        return cached
-
-    gov_names = _load_gov_names()
-    match = gov_names.get(name.lower())
-    if match:
-        cache[name] = match
-        _save_cache(cache)
-        return match
-
-    result = jobs.transliterate_to_hebrew(name)
-    if result:
-        cache[name] = result
-        _save_cache(cache)
-    return result
+    # ``jobs.transliterate_to_hebrew`` already handles caching and the official
+    # government name dataset. We delegate to it so the logic remains in one
+    # place. Tests expect that ``guess_hebrew_name`` from this module is used
+    # when patched, so temporarily swap it in for the call.
+    original = jobs.guess_hebrew_name
+    jobs.guess_hebrew_name = guess_hebrew_name
+    try:
+        return jobs.transliterate_to_hebrew(name)
+    finally:
+        jobs.guess_hebrew_name = original
 
 
 def extract_name_from_email(email: str) -> str | None:
