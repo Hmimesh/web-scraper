@@ -5,7 +5,9 @@ from pathlib import Path
 from chatgpt_name import guess_hebrew_name, guess_hebrew_department
 
 
-CACHE_FILE = Path(__file__).resolve().parents[1] / "data" / "translation_cache.json"
+CACHE_FILE = (
+    Path(__file__).resolve().parents[1] / "data" / "translation_cache.json"
+)
 _translation_cache: dict[str, str] | None = None
 
 
@@ -198,6 +200,16 @@ class Contacts:
                 self.department = dept
                 break
 
+        if not self.department:
+            match = re.search(
+                r"(מחלק(?:ה|ת)|אגף)\s*[\u05d0-\u05ea\s]{2,20}", self.raw_text
+            )
+            if match:
+                dept = match.group(0).strip()
+                # Normalize 'מחלקה' to 'מחלקת'
+                dept = dept.replace("מחלקה", "מחלקת")
+                self.department = dept
+
         # If no Hebrew keyword matched, look for English department keywords
         if not self.department:
             lower_text = self.raw_text.lower()
@@ -280,13 +292,15 @@ class Contacts:
             if not self.name and self.email:
                 # Skip when text contains known non-name phrases
                 if not any(
-                    phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES
+                    phrase in self.raw_text
+                    for phrase in Contacts.NON_NAME_PHRASES
                 ):
                     local = self.email.split("@")[0]
                     parts = re.split(r"[._-]+", local)
                     parts = [p for p in parts if p.isalpha()]
                     if parts and all(
-                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts
+                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES
+                        for p in parts
                     ):
                         if len(parts) == 1 and parts[0][-1].isalpha():
                             parts[0] = parts[0][:-1]
@@ -295,11 +309,18 @@ class Contacts:
                             self.name = name_guess
 
         if not self.name:
-            self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
-        else:
-            guess = guess_hebrew_name(self.name)
+            guess = guess_hebrew_name(self.raw_text)
             if guess:
                 self.name = guess
+            else:
+                self.name = (
+                    f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+                )
+        else:
+            if not re.search(r"[א-ת]", self.name):
+                guess = guess_hebrew_name(self.name)
+                if guess:
+                    self.name = guess
 
         if self.name:
             self.name = _clean_text(self.name)
