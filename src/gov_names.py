@@ -19,6 +19,7 @@ _names_cache: dict[str, str] | None = None
 def _download_names() -> dict[str, str]:
     """Download the names dataset from data.gov.il if possible."""
     if requests is None:
+        print("request module is not installed, please install it pip install -r requirements.txt")
         return {}
 
     resp = requests.get(DATA_URL, timeout=30)
