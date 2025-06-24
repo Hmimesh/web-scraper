@@ -1,18 +1,10 @@
 import json
 import re
 from pathlib import Path
-
 from jobs import transliterate_to_hebrew
 
-
 def apply_hebrew_transliteration(json_path: str | Path) -> None:
-    """Transliterate English contact names in ``json_path`` to Hebrew.
-
-    The function originally expected files structured as ``{city: {name: {...}}}``.
-    Some intermediate files contain a flat ``{name: {...}}`` mapping instead.
-    This helper now supports both layouts by detecting whether the top-level
-    values are contact dictionaries or nested dictionaries of contacts.
-    """
+    """Transliterate English contact names in `json_path` to Hebrew, with safeguards."""
     path = Path(json_path)
     if not path.exists():
         raise FileNotFoundError(json_path)
@@ -28,23 +20,31 @@ def apply_hebrew_transliteration(json_path: str | Path) -> None:
             info = people[orig_key]
             if not isinstance(info, dict):
                 continue
+
             name = info.get("שם")
-            if not name or re.search(r"[א-ת]", name):
+            if not name:
                 continue
+
+            # Skip if already in Hebrew or fallback/invalid
+            if re.search(r"[א-ת]", name) or name.startswith("לא נמצא"):
+                continue
+
             heb = transliterate_to_hebrew(name)
-            if not heb:
+            if not heb or heb in people:
                 continue
-            # update both key and name field
+
+            # Log change (optional)
+            print(f"Transliterated: '{orig_key}' → '{heb}'")
+
+            # Update safely
             people.pop(orig_key)
             info["שם"] = heb
             people[heb] = info
             updated = True
 
-    # Determine whether this is a flat mapping {name: info} or
-    # a nested mapping {city: {name: info}}
-    if data and all(isinstance(v, dict) and ("שם" in v) for v in data.values()):
-        # flat structure
-        transliterate_dict(data)
+    # Detect structure: flat {name: {...}} vs nested {city: {name: {...}}}
+    if data and all(isinstance(v, dict) and "שם" in v for v in data.values()):
+        transliterate_dict(data)  # flat structure
     else:
         for city, people in data.items():
             if isinstance(people, dict):
@@ -53,12 +53,15 @@ def apply_hebrew_transliteration(json_path: str | Path) -> None:
     if updated:
         with path.open("w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"✅ Hebrew transliteration applied and saved to: {json_path}")
+    else:
+        print(f"ℹ️ No transliteration changes made to: {json_path}")
 
 
 if __name__ == "__main__":
     import sys
-
     if len(sys.argv) < 2:
         print("Usage: datafunc.py path/to/contacts.json")
         raise SystemExit(1)
+
     apply_hebrew_transliteration(sys.argv[1])

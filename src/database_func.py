@@ -137,15 +137,22 @@ def extract_text_from_url(page, url):
 
 def extract_relevant_contacts_from_text(text, city_name, source_url=None):
     people = {}
-    lines = text.split("\n")
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    blocks = []
 
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
+    # Group lines into blocks (sliding window of 2–5 lines)
+    i = 0
+    while i < len(lines):
+        block = lines[i]
+        for j in range(1, 5):  # try to join 2–5 lines together
+            if i + j < len(lines):
+                block += " " + lines[i + j]
+        blocks.append(block)
+        i += 1
 
-        if "@" in line or re.search(r"0[2-9]\d{7}", line):
-            contact_obj = Contacts(line, city_name, url=source_url)
+    for block in blocks:
+        if "@" in block or re.search(r"0[2-9][-\s]?\d{7}", block):
+            contact_obj = Contacts(block, city_name, url=source_url)
 
             if not contact_obj.name and contact_obj.email:
                 name_guess = contact_obj.email.split("@")[0]
