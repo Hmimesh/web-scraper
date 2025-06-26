@@ -15,7 +15,6 @@ from collect_names import collect_names
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -67,49 +66,15 @@ def find_deep_contact_links(page, base_url, depth=2, visited=None):
                 full_url = urljoin(base_url, href)
                 if full_url in visited:
                     continue
-                if any(
-                    kw in text or kw in href
-                    for kw in [
-                        "צור_קשר",
-                        "צור-קשר",
-                        "צור קשר",
-                        "מחלקות",
-                        "אנשי קשר",
-                        "טלפונים",
-                        "הנהלה",
-                        "עובדים",
-                        "צוות",
-                        "staff",
-                        "contacts",
-                        "directory",
-                        "contact",
-                        "dept",
-                        "department",
-                        "office",
-                        "אגפים",
-                        "אגף",
-                        "אגפיה",
-                        "שירותים",
-                        "שירותי",
-                        "דברו איתנו",
-                        "דברו",
-                        "מחלקה",
-                        "מועצה",
-                        "חברי מועצה",
-                        "תפקידי מועצה",
-                        "טלפון",
-                        "טלפונים",
-                        "פניית ציבור",
-                        "רשימת",
-                        "קשרי ציבור",
-                        "מזכירות",
-                        "לשכה",
-                    ]
-                ):
+                if any(kw in text or kw in href for kw in [
+                    "צור_קשר", "צור-קשר", "צור קשר", "מחלקות", "אנשי קשר", "טלפונים",
+                    "הנהלה", "עובדים", "צוות", "staff", "contacts", "directory",
+                    "contact", "dept", "department", "office", "אגפים", "אגף",
+                    "אגפיה", "שירותים", "שירותי", "דברו איתנו", "דברו", "מחלקה",
+                    "מועצה", "חברי מועצה", "תפקידי מועצה", "טלפון", "טלפונים",
+                    "פניית ציבור", "רשימת", "קשרי ציבור", "מזכירות", "לשכה"]):
                     links_to_visit.append(full_url)
-                    links_to_visit.extend(
-                        find_deep_contact_links(page, full_url, depth - 1, visited)
-                    )
+                    links_to_visit.extend(find_deep_contact_links(page, full_url, depth - 1, visited))
             except:
                 continue
     except Exception as e:
@@ -119,62 +84,34 @@ def find_deep_contact_links(page, base_url, depth=2, visited=None):
 
 
 def extract_text_from_url(page, url):
-    try:
-        retry_count = 0
-        while retry_count < 3:
-            try:
-                page.goto(url, timeout=30000, wait_until="networkidle")
-                text = page.inner_text("body")
-                return text
-            except Exception as e:
-                retry_count += 1
-                time.sleep(2)
-        logging.error(f"[FAILED] Could not fetch {url} after retries")
-        return ""
-    except:
-        return ""
+    for _ in range(3):
+        try:
+            page.goto(url, timeout=30000, wait_until="networkidle")
+            return page.inner_text("body")
+        except:
+            time.sleep(2)
+    logging.error(f"[FAILED] Could not fetch {url} after retries")
+    return ""
 
 
 def extract_relevant_contacts_from_text(text, city_name, source_url=None):
     people = {}
     lines = [line.strip() for line in text.split("\n") if line.strip()]
-    blocks = []
 
-    # Group lines into blocks (sliding window of 2–5 lines)
-    i = 0
-    while i < len(lines):
-        block = lines[i]
-        for j in range(1, 5):  # try to join 2–5 lines together
-            if i + j < len(lines):
-                block += " " + lines[i + j]
-        blocks.append(block)
-        i += 1
-
-    for block in blocks:
+    for i in range(len(lines)):
+        block = " ".join(lines[i:i+5])
         if "@" in block or re.search(r"0[2-9][-\s]?\d{7}", block):
             contact_obj = Contacts(block, city_name, url=source_url)
-
             if not contact_obj.name and contact_obj.email:
-                name_guess = contact_obj.email.split("@")[0]
-                parsed_name = HumanName(name_guess)
-                contact_obj.name = str(parsed_name)
-
-            elif contact_obj.name and not any(
-                char in contact_obj.name for char in "אבגדהוזחטיכלמנסעפצקרשת"
-            ):
+                parsed = HumanName(contact_obj.email.split("@")[0])
+                contact_obj.name = str(parsed)
+            elif contact_obj.name and not any(c in contact_obj.name for c in "אבגדהוזחטיכלמנסעפצקרשת"):
                 if contact_obj.email:
-                    name_guess = contact_obj.email.split("@")[0]
-                    parsed_name = HumanName(name_guess)
+                    parsed = HumanName(contact_obj.email.split("@")[0])
                     contact_obj.role = contact_obj.name
-                    contact_obj.name = str(parsed_name)
-
-            if (
-                contact_obj.name in people
-                and not contact_obj.email
-                and people[contact_obj.name].get("מייל")
-            ):
+                    contact_obj.name = str(parsed)
+            if contact_obj.name in people and not contact_obj.email and people[contact_obj.name].get("מייל"):
                 continue
-
             people[contact_obj.name] = contact_obj.to_dict()
 
     return {city_name: people}
@@ -182,14 +119,7 @@ def extract_relevant_contacts_from_text(text, city_name, source_url=None):
 
 def process_city(row, existing_data):
     city = row["עיר"]
-
-    url = row["קישור"]
-    # במקרה שיש רווח כי הוכנס בטעות זה יטפל בזה לא למחוק!
-    if isinstance(url, str) and url.startswith(" "):
-        url = url.strip()
-
-    if str(url).lower() == "nan":
-        url = None
+    url = str(row["קישור"]).strip() if isinstance(row["קישור"], str) else None
 
     if pd.isna(url) or city in existing_data and existing_data[city]:
         logging.info(f"[SKIP] {city}: Already scraped or no URL")
@@ -202,29 +132,25 @@ def process_city(row, existing_data):
         site_profiles[hostname] = profile
 
     if profile.get("skip"):
-        logging.info(
-            f"[SKIP] {city}: marked to skip ({profile.get('reason', 'no reason')})"
-        )
+        logging.info(f"[SKIP] {city}: marked to skip ({profile.get('reason', 'no reason')})")
         return city, {}
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
+        city_data = {}
 
         try:
-            retry_count = 0
-            while retry_count < 3:
+            for _ in range(3):
                 try:
                     page.goto(url, timeout=30000, wait_until="networkidle")
                     break
                 except:
-                    retry_count += 1
                     time.sleep(2)
 
             links = find_deep_contact_links(page, url)
             logging.info(f"{city}: Found {len(links)} contact-related links")
 
-            city_data = {}
             for link in links:
                 text = extract_text_from_url(page, link)
                 if not text.strip():
@@ -232,74 +158,48 @@ def process_city(row, existing_data):
 
                 html_dump_dir = os.path.join(base_dir, "logs", "html_dump")
                 os.makedirs(html_dump_dir, exist_ok=True)
-                with open(
-                    os.path.join(html_dump_dir, f"{city}.txt"), "w", encoding="utf-8"
-                ) as f:
+                with open(os.path.join(html_dump_dir, f"{city}.txt"), "w", encoding="utf-8") as f:
                     f.write(text)
 
-                contact_info = extract_relevant_contacts_from_text(text, city, link)
-                extracted_data = contact_info.get(city, {})
+                extracted_data = extract_relevant_contacts_from_text(text, city, link).get(city, {})
                 city_data.update(extracted_data)
 
                 for name, contact in extracted_data.items():
-                    input_output_logger.info(
-                        json.dumps(
-                            {"City": city, "Link": link, "Name": name, **contact},
-                            ensure_ascii=False,
-                        )
-                    )
+                    input_output_logger.info(json.dumps({"City": city, "Link": link, "Name": name, **contact}, ensure_ascii=False))
 
             os.makedirs(os.path.join(base_dir, "incremental_results"), exist_ok=True)
             city_file = os.path.join(base_dir, "incremental_results", f"{city}.json")
             with open(city_file, "w", encoding="utf-8") as f:
                 json.dump(city_data, f, ensure_ascii=False, indent=2)
+
             apply_hebrew_transliteration(city_file)
 
             if not city_data:
-                failed_logger.info(
-                    json.dumps(
-                        {"City": city, "url": url, "status": "empty"},
-                        ensure_ascii=False,
-                    )
-                )
+                failed_logger.info(json.dumps({"City": city, "url": url, "status": "empty"}, ensure_ascii=False))
 
             return city, city_data
         except Exception as e:
             logging.error(f"[ERROR] {city}: {e}")
-            failed_logger.info(
-                json.dumps(
-                    {"City": city, "url": url, "error": str(e), "status": "exception"},
-                    ensure_ascii=False,
-                )
-            )
+            failed_logger.info(json.dumps({"City": city, "url": url, "error": str(e), "status": "exception"}, ensure_ascii=False))
             return city, {}
         finally:
             browser.close()
 
 
 def scrape_with_browser(file_path: str | None = None):
-    """Scrape all cities and store results in ``file_path``.
-
-    If ``file_path`` is ``None`` the user will be prompted to provide a
-    filename, preserving the previous interactive behaviour.
-    """
-
     if file_path is None:
         file_name = input("Enter the name of the output file (e.g., 'contacts.json'): ")
         if not file_name.endswith(".json"):
             file_name += ".json"
         dict_path = os.path.join(base_dir, file_name)
     else:
-        dict_path = file_path
-        if not dict_path.endswith(".json"):
-            dict_path += ".json"
+        dict_path = file_path if file_path.endswith(".json") else file_path + ".json"
         file_name = os.path.basename(dict_path)
 
     start_time = time.time()
-    df = pd.read_csv(
-        os.path.join(base_dir, "data", "cities_links.csv"), encoding="utf-8-sig"
-    )
+    df = pd.read_csv(os.path.join(base_dir, "data", "cities_links.csv"), encoding="utf-8-sig")
     total_items = len(df)
+
     results = {}
     if not os.path.exists(dict_path):
         with open(dict_path, "w", encoding="utf-8") as f:
@@ -309,12 +209,9 @@ def scrape_with_browser(file_path: str | None = None):
         results = json.load(f)
 
     with ThreadPoolExecutor(max_workers=5) as executor:
-        future_to_city = {
-            executor.submit(process_city, row, results): row["עיר"]
-            for _, row in df.iterrows()
-        }
-
+        future_to_city = {executor.submit(process_city, row, results): row["עיר"] for _, row in df.iterrows()}
         completed = 0
+
         for future in as_completed(future_to_city):
             city = future_to_city[future]
             try:
@@ -322,38 +219,25 @@ def scrape_with_browser(file_path: str | None = None):
                 results[city] = data
             except Exception as exc:
                 logging.error(f"[TIMEOUT/ERROR] {city}: {exc}")
-                failed_logger.info(
-                    json.dumps(
-                        {"City": city, "error": str(exc), "status": "timeout"},
-                        ensure_ascii=False,
-                    )
-                )
+                failed_logger.info(json.dumps({"City": city, "error": str(exc), "status": "timeout"}, ensure_ascii=False))
             finally:
                 completed += 1
                 if completed % 100 == 0 and completed > 0:
                     elapsed_time = time.time() - start_time
-                    avg_time_per_item = elapsed_time / completed
-                    remaining_items = total_items - completed
-                    estimated_remaining_time = avg_time_per_item * remaining_items
-                    print(
-                        "--- Estimated remaining time: %.2f minutes ---"
-                        % (estimated_remaining_time / 60)
-                    )
+                    avg_time = elapsed_time / completed
+                    est_time = avg_time * (total_items - completed)
+                    print("--- Estimated remaining time: %.2f minutes ---" % (est_time / 60))
 
     with open(dict_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
+
     apply_hebrew_transliteration(dict_path)
 
-    with open(
-        os.path.join(base_dir, "incremental_results", "contacts.json"),
-        "w",
-        encoding="utf-8",
-    ) as f:
+    with open(os.path.join(base_dir, "incremental_results", "contacts.json"), "w", encoding="utf-8") as f:
         json.dump(Contacts.contacts, f, ensure_ascii=False, indent=2)
+
     collect_names()
-    logging.info(
-        f"Done scraping all cities into {file_name}, there were {Contacts.contacts}"
-    )
+    logging.info(f"Done scraping all cities into {file_name}, there were {Contacts.contacts}")
     print(" File saved:", dict_path)
 
 

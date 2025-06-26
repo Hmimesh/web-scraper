@@ -47,13 +47,13 @@ def _load_gov_names() -> dict[str, str]:
 
 
 def _clean_text(text: str) -> str:
-    """Return ``text`` without tabs or duplicate whitespace."""
-    return re.sub(r"\s+", " ", text.replace("\t", " ")).strip()
+    """Return ``text`` without tabs, newlines, or duplicate whitespace."""
+    # Replace newlines and tabs with spaces, then collapse multiple spaces
+    return re.sub(r"\s+", " ", text.replace("\n", " ").replace("\t", " ")).strip()
 
 
 def transliterate_to_hebrew(name: str) -> str | None:
     """Return a Hebrew version of ``name`` using dataset lookup and ChatGPT."""
-
     cache = _load_cache()
     cached = cache.get(name)
     if cached:
@@ -73,8 +73,6 @@ def transliterate_to_hebrew(name: str) -> str | None:
     return result
 
 
-# Mapping of English keywords to their Hebrew department names. This allows
-# detecting the department from contact lines that use English terms.
 ENGLISH_DEPT_KEYWORDS = {
     "youth": "מחלקת נוער",
     "young": "מחלקת צעירים",
@@ -117,7 +115,6 @@ def _dept_from_url(url: str) -> str | None:
 
 class Contacts:
     contacts = 0
-    # Common phrases that might look like names but aren't
     NON_NAME_PHRASES = [
         "לפרטים נוספים",
         "כתובת דואר אלקטרוני",
@@ -128,7 +125,6 @@ class Contacts:
         "אגף",
     ]
 
-    # Non-personal words often used in departmental email addresses
     NON_PERSONAL_USERNAMES = {
         "info",
         "contact",
@@ -147,7 +143,6 @@ class Contacts:
 
     @staticmethod
     def is_valid_name(name: str) -> bool:
-        """Return True if the provided name looks like a real person's name."""
         if not name:
             return False
         if re.search(r"\d", name):
@@ -160,7 +155,6 @@ class Contacts:
         letters = re.sub(r"[^A-Za-zא-ת]", "", name)
         if len(letters) < 2:
             return False
-
         return True
 
     def __init__(self, raw_text, city, url: str | None = None):
@@ -173,17 +167,14 @@ class Contacts:
         self.email = None
         self.phone_mobile = None
         self.phone_office = None
-
         self.parse()
         Contacts.contacts += 1
 
     def parse(self):
-        # Match email
         email_match = re.search(r"[\w\.-]+@[\w\.-]+\.\w+", self.raw_text)
         if email_match:
             self.email = email_match.group(0)
 
-        # Find all phone numbers with or without dash/space
         phones = re.findall(r"0[2-9][-\s]?\d{7}", self.raw_text)
         for phone in phones:
             clean_phone = re.sub(r"[^\d]", "", phone)
@@ -192,7 +183,6 @@ class Contacts:
             else:
                 self.phone_office = clean_phone
 
-        # Try to guess department based on keywords
         department_keywords = {
             "נוער": "מחלקת נוער",
             "צעירים": "מחלקת צעירים",
@@ -204,16 +194,6 @@ class Contacts:
             "קליטה": "מחלקת קליטה",
             "סביבה": "מחלקת איכות סביבה",
             "וותיקים": "מחלקת אזרחים וותיקים",
-            "אגף נוער": "אגף נוער",
-            "אגף צעירים": "אגף צעירים",
-            "אגף תרבות": "אגף תרבות",
-            "אגף אירועים": "אגף אירועים",
-            "אגף חינוך": "אגף חינוך",
-            "אגף קהילה": "אגף קהילה",
-            "אגף רווחה": "אגף רווחה",
-            "אגף קליטה": "אגף קליטה",
-            "אגף סביבה": "אגף איכות סביבה",
-            "אגף ותיקים": "אגף אזרחים וותיקים",
         }
 
         for keyword, dept in department_keywords.items():
@@ -222,16 +202,11 @@ class Contacts:
                 break
 
         if not self.department:
-            match = re.search(
-                r"(מחלק(?:ה|ת)|אגף)\s*[\u05d0-\u05ea\s]{2,20}", self.raw_text
-            )
+            match = re.search(r"(מחלק(?:ה|ת)|אגף)\s*[\u05d0-\u05ea\s]{2,20}", self.raw_text)
             if match:
-                dept = match.group(0).strip()
-                # Normalize 'מחלקה' to 'מחלקת'
-                dept = dept.replace("מחלקה", "מחלקת")
+                dept = match.group(0).strip().replace("מחלקה", "מחלקת")
                 self.department = dept
 
-        # If no Hebrew keyword matched, look for English department keywords
         if not self.department:
             lower_text = self.raw_text.lower()
             for keyword, dept in ENGLISH_DEPT_KEYWORDS.items():
@@ -254,25 +229,11 @@ class Contacts:
             if guessed:
                 self.department = guessed
 
-        # Try to guess role from line
         possible_roles = [
-            "רכז",
-            "רכזת",
-            "מנהל",
-            "מנהלת",
-            "יועץ",
-            "יועצת",
-            "מפקח",
-            "מפקחת",
-            "אחראי",
-            "אחראית",
-            'יו"ר',
-            "עובד",
-            "עובדת",
-            "סגן",
-            "ראש",
-            'מנכ"ל',
+            "רכז", "רכזת", "מנהל", "מנהלת", "יועץ", "יועצת", "מפקח", "מפקחת",
+            "אחראי", "אחראית", 'יו"ר', "עובד", "עובדת", "סגן", "ראש", 'מנכ"ל',
         ]
+
         for word in self.raw_text.split():
             if any(role in word for role in possible_roles):
                 self.role = word
@@ -280,52 +241,44 @@ class Contacts:
 
         if self.name is None:
             candidate = None
-            # Try to extract full Hebrew name first
-            name_candidates = re.findall(
-                r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text
-            )
+            name_candidates = re.findall(r"[א-ת]{2,}(?:\s+[א-ת\"׳]{2,})+", self.raw_text)
             if name_candidates:
                 candidate = name_candidates[0].strip()
-
-            # If no full name found, fall back to a single Hebrew word (first name)
             if not candidate:
                 first_match = re.search(r"\b[א-ת]{2,}\b", self.raw_text)
                 if first_match:
                     candidate = first_match.group(0).strip()
-
-            # If still none, try to extract an English name
             if not candidate:
                 eng_candidates = [
                     m.group(1)
-                    for m in re.finditer(
-                        r"(?=([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+))", self.raw_text
-                    )
+                    for m in re.finditer(r"(?=([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+))", self.raw_text)
                 ]
                 for cand in eng_candidates:
                     if Contacts.is_valid_name(cand):
                         candidate = cand.strip()
                         break
-
             if candidate and Contacts.is_valid_name(candidate):
                 self.name = candidate
 
-            # Fall back to email-derived name if no name detected
-            if not self.name and self.email:
-                # Skip when text contains known non-name phrases
-                if not any(
-                    phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES
-                ):
-                    local = self.email.split("@")[0]
-                    parts = re.split(r"[._-]+", local)
-                    parts = [p for p in parts if p.isalpha()]
-                    if parts and all(
-                        p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts
-                    ):
-                        if len(parts) == 1 and parts[0][-1].isalpha():
-                            parts[0] = parts[0][:-1]
-                        name_guess = " ".join(p.capitalize() for p in parts)
-                        if Contacts.is_valid_name(name_guess):
-                            self.name = name_guess
+        if not self.name and self.email:
+            if not any(phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES):
+                local = self.email.split("@")[0]
+                if local.lower() in Contacts.NON_PERSONAL_USERNAMES:
+                    self.name = "לא נמצא שם"
+                elif not any(phrase in self.raw_text for phrase in Contacts.NON_NAME_PHRASES): 
+                    # Split the local part of the email into parts
+                    # and try to guess a name from it
+                    local = local.replace(".", " ").replace("_", " ").replace("-", " ")
+                    local = re.sub(r"\d", "", local)  # Remove digits
+                    local = local.strip()
+                parts = re.split(r"[._-]+", local)
+                parts = [p for p in parts if p.isalpha()]
+                if parts and all(p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts):
+                    if len(parts) == 1 and parts[0][-1].isalpha():
+                        parts[0] = parts[0][:-1]
+                    name_guess = " ".join(p.capitalize() for p in parts)
+                    if Contacts.is_valid_name(name_guess):
+                        self.name = name_guess
 
         if not self.name:
             guess = guess_hebrew_name(self.raw_text)
@@ -356,3 +309,5 @@ class Contacts:
             "טלפון פרטי": self.phone_mobile,
             "טלפון משרד": self.phone_office,
         }
+    def __repr__(self):
+        return f"Contacts(name={self.name}, role={self.role}, department={self.department}, email={self.email})"
