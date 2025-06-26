@@ -15,7 +15,6 @@ CACHE_FILE = Path(__file__).resolve().parents[1] / "data" / "translation_cache.j
 _translation_cache: dict[str, str] | None = None
 _gov_names: dict[str, str] | None = None
 
-
 def _load_cache() -> dict[str, str]:
     global _translation_cache
     if _translation_cache is None:
@@ -29,14 +28,12 @@ def _load_cache() -> dict[str, str]:
             _translation_cache = {}
     return _translation_cache
 
-
 def _save_cache(cache: dict[str, str]) -> None:
     try:
         with open(CACHE_FILE, "w", encoding="utf-8") as f:
             json.dump(cache, f, ensure_ascii=False, indent=2)
     except Exception:
         pass
-
 
 def _load_gov_names() -> dict[str, str]:
     global _gov_names
@@ -47,21 +44,15 @@ def _load_gov_names() -> dict[str, str]:
             _gov_names = {}
     return _gov_names
 
-
 def transliterate_to_hebrew(name: str) -> str | None:
     """Return a Hebrew version of ``name`` using the shared ``jobs`` helper."""
 
-    # ``jobs.transliterate_to_hebrew`` already handles caching and the official
-    # government name dataset. We delegate to it so the logic remains in one
-    # place. Tests expect that ``guess_hebrew_name`` from this module is used
-    # when patched, so temporarily swap it in for the call.
     original = jobs.guess_hebrew_name
     jobs.guess_hebrew_name = guess_hebrew_name
     try:
         return jobs.transliterate_to_hebrew(name)
     finally:
         jobs.guess_hebrew_name = original
-
 
 def extract_name_from_email(email: str) -> str | None:
     """Guess a personal name from an email address."""
@@ -71,11 +62,9 @@ def extract_name_from_email(email: str) -> str | None:
     if not parts:
         return None
     if len(parts) == 1 and len(parts[0]) > 3 and parts[0][-1].isalpha():
-        # Drop single trailing letter (likely a last-name initial)
         parts[0] = parts[0][:-1]
     guess = " ".join(p.capitalize() for p in parts)
     return guess if Contacts.is_valid_name(guess) else None
-
 
 def collect_names(
     log_file: str = "logs/scraper_io.jsonl",
@@ -124,7 +113,6 @@ def collect_names(
             f.write(nm + "\n")
 
     return names
-
 
 if __name__ == "__main__":
     collect_names()

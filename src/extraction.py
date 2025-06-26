@@ -1,76 +1,66 @@
-"""Post-process contacts CSV using ChatGPT helpers and name databases."""
-
-import argparse
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 import re
+import time
 
-from jobs import transliterate_to_hebrew, _dept_from_email
-from chatgpt_name import guess_hebrew_department
-from gov_names import load_names
-
-
-HEBREW_CHARS = re.compile(r"[\u0590-\u05FF]")
-FALLBACK_NAME = re.compile(r"^\s*לא\s*נמצ")
-
-def _normalize_row(row: pd.Series) -> pd.Series:
-    """Normalize name and department using heuristics and ChatGPT."""
-    # --- Normalize name ---
-    name = str(row.get("שם", "")).strip()
-    if FALLBACK_NAME.search(name):
-        row["שם"] = ""
-
-    elif name and not HEBREW_CHARS.search(name):
-        heb = transliterate_to_hebrew(name)
-        if heb:
-            row["שם"] = heb
-
-    # --- Normalize department ---
-    dept = row.get("מחלקה", "")
-    if not dept or pd.isna(dept):
-        email = row.get("אימייל", "")
-        role = row.get("תפקיד", "")
-        dept = _dept_from_email(email)
-
-        if not dept:
-            context = f"{role} {email}".strip()
-            dept = guess_hebrew_department(context, email)
-
-        if dept:
-            row["מחלקה"] = dept
-
-    return row
-
-
-def main(input_csv: str, output_csv: str) -> None:
+def extract_details_from_url(url):
     try:
-        df = pd.read_csv(input_csv, encoding="utf-8-sig")
-    except FileNotFoundError:
-        print(f"❌ Input file not found: {input_csv}")
-        return
+        response = requests.get(url, timeout=10)
+        soup = BeautifulSoup(response.content, "html.parser")
+        text = soup.get_text(separator="\n")
 
-    if df.empty:
-        print("⚠️ Empty input file.")
-        return
+        # Regular expressions
+        phone_matches = re.findall(r'0[2-9]-?\d{7}', text)
+        email_matches = re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', text)
 
-    names_dataset = load_names()
-    if not names_dataset:
-        print("⚠️ Could not load government names dataset.")
+        # Define keywords for relevant departments
+        keywords = [
+            "נוער", "צעירים", "תרבות", "אירועים", "חינוך",
+            "קהילה", "רווחה", "קליטה", "קיימות", "סביבה", "אזרחים ותיקים", "הגיל השלישי"
+        ]
 
-    df = df.apply(_normalize_row, axis=1)
+        relevant_lines = []
+        for line in text.split("\n"):
+            if any(keyword in line for keyword in keywords):
+                relevant_lines.append(line)
 
-    # Drop rows with no phone or email
-    df.dropna(subset=["טלפון", "אימייל"], how="all", inplace=True)
+        # Try to extract name/title from nearby lines with contact info
+        dept_contacts = []
+        for line in relevant_lines:
+            nearby = text.split("\n")
+            index = nearby.index(line)
+            snippet = "\n".join(nearby[max(0, index-3):index+3])
+            phones = re.findall(r'0[2-9]-?\d{7}', snippet)
+            emails = re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', snippet)
+            if phones or emails:
+                dept_contacts.append({"line": line, "phones": phones, "emails": emails})
 
-    # Drop exact duplicates
-    df.drop_duplicates(subset=["עיר", "שם", "טלפון", "אימייל"], inplace=True)
+        return dept_contacts
 
-    df.to_csv(output_csv, index=False, encoding="utf-8-sig")
-    print(f"✅ Cleaned CSV saved to: {output_csv}")
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+        return []
 
+def main():
+    df = pd.read_csv("cities_links.csv")
+    all_contacts = []
+
+    for i, row in df.iterrows():
+        url = row["קישור"]
+        name = row["עיר"]
+        print(f"[{i+1}/{len(df)}] Scraping: {name}")
+        if pd.notna(url):
+            contacts = extract_details_from_url(url)
+        else:
+            contacts = []
+
+        all_contacts.append({"עיר": name, "contacts": contacts})
+        time.sleep(1)
+
+    # Save raw JSON-style output for easier review or further transformation
+    pd.DataFrame(all_contacts).to_json("relevant_contacts.json", force_ascii=False, indent=2)
+    print("Saved relevant_contacts.json!")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Normalize Hebrew contact rows using ChatGPT")
-    parser.add_argument("input_csv", nargs="?", default="all_contacts.csv")
-    parser.add_argument("output_csv", nargs="?", default="extracted_contacts_filtered.csv")
-    args = parser.parse_args()
-    main(args.input_csv, args.output_csv)
+    main()

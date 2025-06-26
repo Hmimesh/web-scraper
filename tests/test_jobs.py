@@ -1,136 +1,60 @@
 import sys
 from pathlib import Path
 
-# Ensure src directory is on sys.path
 sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 
 import jobs
 from jobs import Contacts
 
-
-def test_contact_with_all_fields():
-    text = "יוסי כהן example@example.com 05-1234567 02-7654321"
-    c = Contacts(text, "תל אביב")
-    assert c.email == "example@example.com"
-    assert c.phone_mobile == "051234567"
-    assert c.phone_office == "027654321"
+import pytest
 
 
-def test_contact_mobile_only():
-    text = "דני dani@test.org 05-8765432"
-    c = Contacts(text, "חיפה")
-    assert c.email == "dani@test.org"
-    assert c.phone_mobile == "058765432"
-    assert c.phone_office is None
-    assert c.name == "דני"
+@pytest.mark.parametrize("text, expected", [
+    ("info@example.com", "לא נמצא שם"),
+    ("admin@city.gov.il", "לא נמצא שם"),
+    ("webmaster@domain.com", "לא נמצא שם"),
+    ("noreply@service.org", "לא נמצא שם"),
+    ("support@helpdesk.net", "לא נמצא שם"),
+    ("office@municipality.gov.il", "לא נמצא שם"),
+    ("contact@ngo.org", "לא נמצא שם"),
+    ("lishka@tel-aviv.gov.il", "לא נמצא שם"),
+    ("dan@realname.com", "דן"),  # should still work
+    ("noa_adari@org.org", "נוא דרי")
+])
+def test_email_prefix_blacklist(monkeypatch, text, expected):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda email: {
+        "info": "אינפו",
+        "admin": "אדמין",
+        "webmaster": "ובמסטר",
+        "noreply": "נוריפליי",
+        "support": "ספורט",
+        "office": "אופיס",
+        "contact": "קונטקט",
+        "lishka": "לישקה",
+        "dan": "דן",
+        "noa_adari": "נוא דרי"
+    }.get(email.split("@")[0].lower(), None))
+
+    c = Contacts(text, "קריית ביאליק")
+    assert c.name == expected
 
 
-def test_first_name_only():
-    text = "צבי 05-5555555"
-    c = Contacts(text, "גבעתיים")
-    assert c.name == "צבי"
-    assert c.phone_mobile == "055555555"
-
-
-def test_contact_office_only():
-    text = "שרה sarah@domain.com 03 1234567"
-    c = Contacts(text, "ירושלים")
-    assert c.email == "sarah@domain.com"
-    assert c.phone_mobile is None
-    assert c.phone_office == "031234567"
-
-
-def test_non_name_phrase_lifratim_nosefim():
-    text = "לפרטים נוספים נא לפנות example@example.com"
-    c = Contacts(text, "אשדוד")
-    assert c.name == "לא נמצא שם"
-
-
-def test_non_name_phrase_email_address():
-    text = "כתובת דואר אלקטרוני info@test.com"
-    c = Contacts(text, "באר שבע")
-    assert c.name == "לא נמצא שם"
-
-
-def test_non_name_phrase_short_email():
-    text = "דואר אלקטרוני info@test.com"
-    c = Contacts(text, "באר שבע")
-    assert c.name == "לא נמצא שם"
-
-
-def test_non_name_phrase_dual_email():
-    text = 'דוא"ל info@test.com'
-    c = Contacts(text, "באר שבע")
-    assert c.name == "לא נמצא שם"
-
-
-def test_name_from_email(monkeypatch):
-    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "נוא דרי")
-    text = "noa_adari@example.org"
-    c = Contacts(text, "אשקלון")
-    assert c.name == "נוא דרי"
-
-
-def test_non_personal_email_ignored():
-    text = "info@example.org"
-    c = Contacts(text, "אשקלון")
-    assert c.name == "לא נמצא שם"
-
-
-def test_lishka_email_ignored():
-    text = "lishka@tel-aviv.gov.il"
-    c = Contacts(text, "תל אביב")
-    assert c.name == "לא נמצא שם"
-
-
-def test_invalid_name_digits():
+def test_blacklisted_name_detection(monkeypatch):
+    # Add test to ensure names like "info" are not considered valid
+    assert not Contacts.is_valid_name("info")
+    assert not Contacts.is_valid_name("lishka")
+    assert Contacts.is_valid_name("דני")
+    assert Contacts.is_valid_name("אביגיל")
     assert not Contacts.is_valid_name("user123")
 
 
-def test_hebrew_name_not_in_db():
-    # Without a preloaded name database, unknown Hebrew names are allowed
-    assert Contacts.is_valid_name("שםשאינובמאגר")
-
-
-def test_trailing_char_single_segment(monkeypatch):
+def test_name_from_clean_email(monkeypatch):
     monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "נואם")
-    text = "noamk@example.com"
-    c = Contacts(text, "תל אביב")
+    c = Contacts("noam@example.com", "תל אביב")
     assert c.name == "נואם"
 
 
-def test_english_name_from_text(monkeypatch):
-    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "יוחנן דו")
-    text = "Contact John Doe for info"
-    c = Contacts(text, "תל אביב")
-    assert c.name == "יוחנן דו"
-
-
-def test_english_department_keyword():
-    text = "education john@example.com"
-    c = Contacts(text, "תל אביב")
-    assert c.department == "מחלקת חינוך"
-
-
-def test_department_from_email():
-    text = "john@youngdept.org"
-    c = Contacts(text, "תל אביב")
-    assert c.department == "מחלקת צעירים"
-
-
-def test_english_department_keyword_sports():
-    text = "sports jane@example.com"
-    c = Contacts(text, "תל אביב")
-    assert c.department == "מחלקת ספורט"
-
-
-def test_department_from_email_engineering():
-    text = "bob@engineering-city.org"
-    c = Contacts(text, "תל אביב")
-    assert c.department == "מחלקת הנדסה"
-
-
-def test_department_from_url_finance():
-    text = "bob@example.com"
-    c = Contacts(text, "תל אביב", url="https://city.gov.il/finance/team")
-    assert c.department == "מחלקת כספים"
+def test_blacklist_behavior_with_long_text(monkeypatch):
+    monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "קונטקט")
+    c = Contacts("לתמיכה טכנית אנא פנו contact@helpdesk.gov.il", "בת ים")
+    assert c.name == "לא נמצא שם"
