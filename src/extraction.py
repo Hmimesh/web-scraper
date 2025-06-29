@@ -140,26 +140,40 @@ def clean_phone_number(phone: str) -> Optional[str]:
     elif cleaned.startswith('972'):
         cleaned = '0' + cleaned[3:]
 
-    # Israeli phone number validation (more permissive):
+    # Israeli phone number validation and formatting:
     # Mobile: 05X-XXX-XXXX (10 digits total)
-    # Landline: 0X-XXX-XXXX (9 digits total, where X is 2-9)
-    # Jerusalem: 02-XXX-XXXX (9 digits)
-    # Tel Aviv: 03-XXX-XXXX (9 digits)
-    # Haifa: 04-XXX-XXXX (9 digits)
+    # Landline: 0X-XXX-XXXX (9 digits total)
 
-    if len(cleaned) >= 9 and cleaned.startswith('0'):
-        # Mobile numbers (10 digits)
+    if len(cleaned) >= 8 and cleaned.startswith('0'):
+        # Mobile numbers (10 digits): 050-XXX-XXXX, 052-XXX-XXXX, etc.
         if re.match(r'^05[0-9]\d{7}$', cleaned):
-            return cleaned
-        # Landline numbers (9 digits) - Jerusalem, Tel Aviv, Haifa, etc.
-        elif re.match(r'^0[2-4]\d{7}$', cleaned):
-            return cleaned
-        # Other area codes (8-9 digits)
-        elif re.match(r'^0[6-9]\d{6,7}$', cleaned):
-            return cleaned
-        # If it starts with 0 and has reasonable length, probably valid
-        elif len(cleaned) in [8, 9, 10]:
-            return cleaned
+            # Format: 052-123-4567
+            return f"{cleaned[:3]}-{cleaned[3:6]}-{cleaned[6:]}"
+
+        # Jerusalem area (02): 02-XXX-XXXX (9 digits)
+        elif re.match(r'^02\d{7}$', cleaned):
+            # Format: 02-123-4567
+            return f"{cleaned[:2]}-{cleaned[2:5]}-{cleaned[5:]}"
+
+        # Tel Aviv area (03): 03-XXX-XXXX (9 digits)
+        elif re.match(r'^03\d{7}$', cleaned):
+            # Format: 03-123-4567
+            return f"{cleaned[:2]}-{cleaned[2:5]}-{cleaned[5:]}"
+
+        # Haifa area (04): 04-XXX-XXXX (9 digits)
+        elif re.match(r'^04\d{7}$', cleaned):
+            # Format: 04-123-4567
+            return f"{cleaned[:2]}-{cleaned[2:5]}-{cleaned[5:]}"
+
+        # Other valid area codes (08, 09): 0X-XXX-XXXX (9 digits)
+        elif re.match(r'^0[89]\d{7}$', cleaned):
+            # Format: 08-123-4567
+            return f"{cleaned[:2]}-{cleaned[2:5]}-{cleaned[5:]}"
+
+        # Special numbers (07X): 07X-XXX-XXXX (10 digits)
+        elif re.match(r'^07[0-9]\d{7}$', cleaned):
+            # Format: 070-123-4567
+            return f"{cleaned[:3]}-{cleaned[3:6]}-{cleaned[6:]}"
 
     return None
 
@@ -343,8 +357,14 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
 
         print(f"Cleaned data: {len(df)} rows")
 
+        # Ensure phone numbers are saved as strings, not floats
+        if 'טלפון' in df.columns:
+            df['טלפון'] = df['טלפון'].astype(str).replace('nan', '')
+            df['טלפון'] = df['טלפון'].replace('None', '')
+            df.loc[df['טלפון'] == '', 'טלפון'] = None
+
         # Save cleaned data
-        df.to_csv(output_file, index=False)
+        df.to_csv(output_file, index=False, encoding="utf-8-sig")
         print(f"Saved cleaned data to {output_file}")
 
         # Print summary statistics
