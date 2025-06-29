@@ -123,6 +123,10 @@ class Contacts:
         "דוא",
         "לשכה",
         "אגף",
+        "תמיכה",
+        "פנו",
+        "אנא פנו",
+        "לתמיכה",
     ]
 
     NON_PERSONAL_USERNAMES = {
@@ -139,6 +143,19 @@ class Contacts:
         "lishka",
         "agaf",
         "department",
+        "webmaster",
+        "noreply",
+        "no-reply",
+        "donotreply",
+        # Hebrew equivalents
+        "קונטקט",
+        "אינפו",
+        "אדמין",
+        "ספורט",
+        "אופיס",
+        "לישקה",
+        "ובמסטר",
+        "נוריפליי",
     }
 
     @staticmethod
@@ -274,22 +291,20 @@ class Contacts:
                 parts = re.split(r"[._-]+", local)
                 parts = [p for p in parts if p.isalpha()]
                 if parts and all(p.lower() not in Contacts.NON_PERSONAL_USERNAMES for p in parts):
-                    if len(parts) == 1 and parts[0][-1].isalpha():
-                        parts[0] = parts[0][:-1]
                     name_guess = " ".join(p.capitalize() for p in parts)
                     if Contacts.is_valid_name(name_guess):
                         self.name = name_guess
 
         if not self.name:
             guess = guess_hebrew_name(self.raw_text)
-            if guess:
+            if guess and Contacts.is_valid_name(guess):
                 self.name = guess
             else:
                 self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
         else:
             if not re.search(r"[א-ת]", self.name):
                 guess = guess_hebrew_name(self.name)
-                if guess:
+                if guess and Contacts.is_valid_name(guess):
                     self.name = guess
 
         if self.name:

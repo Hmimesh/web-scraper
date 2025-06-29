@@ -121,7 +121,11 @@ def process_city(row, existing_data):
     city = row["עיר"]
     url = str(row["קישור"]).strip() if isinstance(row["קישור"], str) else None
 
-    if pd.isna(url) or city in existing_data and existing_data[city]:
+    # Check for NaN values (both pandas NaN and string representations)
+    if (pd.isna(url) or
+        url is None or
+        url.lower().strip() in ['nan', 'none', 'null', ''] or
+        city in existing_data and existing_data[city]):
         logging.info(f"[SKIP] {city}: Already scraped or no URL")
         return city, existing_data.get(city, {})
 
