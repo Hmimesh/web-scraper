@@ -200,6 +200,18 @@ def clean_name(name: str) -> Optional[str]:
     # Remove quotes, newlines, and tabs
     name = name.replace('"', '').replace("'", '').replace('\n', ' ').replace('\t', ' ')
 
+    # Check for blacklisted names (from jobs.py)
+    blacklisted_names = {
+        "info", "contact", "office", "admin", "support", "service", "team",
+        "mail", "email", "example", "lishka", "agaf", "department",
+        "webmaster", "noreply", "no-reply", "donotreply",
+        # Hebrew equivalents
+        "קונטקט", "אינפו", "אדמין", "ספורט", "אופיס", "לישקה", "ובמסטר", "נוריפליי"
+    }
+
+    if name.lower() in blacklisted_names:
+        return None
+
     # Remove common prefixes/suffixes that aren't names
     name = re.sub(r'^(תפקיד|מחלקה|אגף|לשכה|מנהל|מנהלת)[::\s]*', '', name)
     name = re.sub(r'[::\s]*(תפקיד|מחלקה|אגף|לשכה)$', '', name)
@@ -212,10 +224,17 @@ def clean_name(name: str) -> Optional[str]:
         r'^.{1,2}$',      # Too short (1-2 characters)
         r'^(לפרטים נוספים|פרטים נוספים|צור קשר|יצירת קשר).*',  # Contact info text
         r'^(כתובת|טלפון|פקס|דוא"ל|אימייל).*',  # Field labels
+        r'^(תמיכה|פנו|אנא פנו|לתמיכה).*',  # Support text
     ]
 
     for pattern in meaningless_patterns:
         if re.match(pattern, name, re.IGNORECASE):
+            return None
+
+    # Check if name contains blacklisted words
+    name_lower = name.lower()
+    for blacklisted in blacklisted_names:
+        if blacklisted in name_lower:
             return None
 
     # Clean up common formatting issues
@@ -261,25 +280,80 @@ def clean_role(role: str) -> Optional[str]:
 
     return role
 
+def normalize_phone_for_dedup(phone: str) -> str:
+    """Normalize phone number for deduplication by removing all formatting"""
+    if pd.isna(phone) or not phone:
+        return ""
+
+    phone_str = str(phone).strip()
+
+    # Remove all non-digit characters
+    digits_only = re.sub(r'[^\d]', '', phone_str)
+
+    # Handle international formats - normalize to local format
+    if digits_only.startswith('972'):
+        digits_only = '0' + digits_only[3:]
+
+    # Remove leading zeros for comparison (but keep one if it's an Israeli number)
+    if digits_only.startswith('0') and len(digits_only) > 1:
+        return digits_only
+
+    return digits_only
+
 def remove_duplicate_contacts(df: pd.DataFrame) -> pd.DataFrame:
-    """Remove duplicate contacts based on phone and email"""
+    """Remove duplicate contacts based on normalized phone and email"""
+    print("Creating normalized phone numbers for deduplication...")
+
+    # Create normalized phone numbers for better duplicate detection
+    df['_normalized_phone'] = df['טלפון'].apply(normalize_phone_for_dedup)
+    df['_normalized_email'] = df['אימייל'].astype(str).str.lower().str.strip()
+
     # Create a composite key for deduplication
-    df['dedup_key'] = df['טלפון'].astype(str) + '|' + df['אימייל'].astype(str)
+    df['dedup_key'] = df['_normalized_phone'] + '|' + df['_normalized_email']
+
+    # Count duplicates before removal
+    duplicates_count = df.duplicated(subset=['dedup_key']).sum()
+    if duplicates_count > 0:
+        print(f"Found {duplicates_count} duplicate contacts to remove")
 
     # Keep first occurrence of each unique contact
     df_deduped = df.drop_duplicates(subset=['dedup_key'], keep='first')
-    df_deduped = df_deduped.drop('dedup_key', axis=1)
+
+    # Clean up temporary columns
+    df_deduped = df_deduped.drop(['dedup_key', '_normalized_phone', '_normalized_email'], axis=1)
 
     return df_deduped
 
 def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
     """Main function to clean CSV contact data"""
     try:
-        # Read the CSV file
+        # Read the CSV file with proper UTF-8 BOM handling
         print(f"Reading {input_file}...")
-        df = pd.read_csv(input_file)
+        try:
+            # First try with UTF-8 BOM encoding (most common for Hebrew files)
+            df = pd.read_csv(input_file, encoding='utf-8-sig')
+            print("Successfully read file with UTF-8 BOM encoding")
+        except UnicodeDecodeError:
+            try:
+                # Fallback to regular UTF-8
+                df = pd.read_csv(input_file, encoding='utf-8')
+                print("Successfully read file with UTF-8 encoding")
+            except UnicodeDecodeError:
+                # Last resort - try with cp1255 (Hebrew Windows encoding)
+                df = pd.read_csv(input_file, encoding='cp1255')
+                print("Successfully read file with CP1255 encoding")
 
         print(f"Original data: {len(df)} rows")
+
+        # First pass: Remove obvious duplicates based on raw phone numbers
+        print("Removing obvious duplicates before cleaning...")
+        initial_count = len(df)
+        df['_temp_normalized_phone'] = df['טלפון'].apply(normalize_phone_for_dedup)
+        df = df.drop_duplicates(subset=['_temp_normalized_phone'], keep='first')
+        df = df.drop('_temp_normalized_phone', axis=1)
+        removed_initial = initial_count - len(df)
+        if removed_initial > 0:
+            print(f"Removed {removed_initial} obvious duplicates based on phone numbers")
 
         # Clean each column
         print("Cleaning phone numbers...")
@@ -292,7 +366,10 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
         df['שם'] = df['שם'].apply(clean_name)
 
         print("Cleaning departments...")
-        df['מחלקה'] = df['מחלקה'].apply(clean_department)
+        if 'מחלקה' in df.columns:
+            df['מחלקה'] = df['מחלקה'].apply(clean_department)
+        else:
+            df['מחלקה'] = ""
         
         # Optional OpenAI processing
         if use_openai and os.getenv("OPENAI_API_KEY"):
@@ -335,7 +412,10 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
 
 
         print("Cleaning roles...")
-        df['תפקיד'] = df['תפקיד'].apply(clean_role)
+        if 'תפקיד' in df.columns:
+            df['תפקיד'] = df['תפקיד'].apply(clean_role)
+        else:
+            df['תפקיד'] = ""
 
         # Remove rows where both phone and email are empty
         print("Removing rows without contact information...")
@@ -345,9 +425,22 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
         print("Removing rows without names...")
         df = df.dropna(subset=['שם'])
 
-        # Remove duplicates
-        print("Removing duplicate contacts...")
+        # Remove duplicates - be aggressive about it!
+        print("Removing duplicate contacts (final pass)...")
+        initial_count = len(df)
         df = remove_duplicate_contacts(df)
+        removed_final = initial_count - len(df)
+        if removed_final > 0:
+            print(f"Removed {removed_final} additional duplicates in final pass")
+
+        # Extra aggressive check: remove contacts with identical phone numbers
+        print("Final check for identical phone numbers...")
+        phone_dupes = df[df['טלפון'].notna()].duplicated(subset=['טלפון'], keep=False)
+        if phone_dupes.any():
+            print(f"WARNING: Found {phone_dupes.sum()} contacts with identical phone numbers after cleaning!")
+            # Keep only the first occurrence of each phone number
+            df = df.drop_duplicates(subset=['טלפון'], keep='first')
+            print("Removed contacts with duplicate phone numbers (kept first occurrence)")
 
         # Sort by city and name
         df = df.sort_values(['עיר', 'שם'])
@@ -363,9 +456,10 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
             df['טלפון'] = df['טלפון'].replace('None', '')
             df.loc[df['טלפון'] == '', 'טלפון'] = None
 
-        # Save cleaned data
+        # Save cleaned data with UTF-8 BOM to prevent gibberish
+        print(f"Saving cleaned data to {output_file} with UTF-8 BOM encoding...")
         df.to_csv(output_file, index=False, encoding="utf-8-sig")
-        print(f"Saved cleaned data to {output_file}")
+        print(f"✓ Successfully saved cleaned data to {output_file}")
 
         # Print summary statistics
         print("\n=== Cleaning Summary ===")
@@ -374,6 +468,16 @@ def clean_csv_data(input_file: str, output_file: str, use_openai: bool = True):
         print(f"Contacts with email: {df['אימייל'].notna().sum()}")
         print(f"Contacts with both: {(df['טלפון'].notna() & df['אימייל'].notna()).sum()}")
         print(f"Unique cities: {df['עיר'].nunique()}")
+
+        # Check for any remaining phone number issues
+        phone_numbers = df['טלפון'].dropna()
+        if len(phone_numbers) > 0:
+            unique_phones = phone_numbers.nunique()
+            total_phones = len(phone_numbers)
+            if unique_phones != total_phones:
+                print(f"⚠️  WARNING: {total_phones - unique_phones} duplicate phone numbers still exist!")
+            else:
+                print(f"✓ All {unique_phones} phone numbers are unique")
 
     except Exception as e:
         print(f"Error processing {input_file}: {e}")

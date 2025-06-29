@@ -1083,3 +1083,6 @@
 {"City": "שלומי", "url": "https://www.shelomi.org.il/", "status": "empty"}
 {"City": "שער שומרון", "url": "https://www.shaar-s.org.il/", "status": "empty"}
 {"City": "תל מונד", "url": "https://www.tel-mond.muni.il/", "status": "empty"}
+{"City": "עיר בדיקה", "url": "invalid-url", "status": "empty"}
+{"City": "עיר בדיקה", "url": "invalid-url", "status": "empty"}
+{"City": "עיר בדיקה", "url": "invalid-url", "status": "empty"}
