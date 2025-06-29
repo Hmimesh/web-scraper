@@ -2,8 +2,8 @@
 # Post-processing after running main.sh
 set -e
 
-INPUT="all_contacts.csv"
-OUTPUT="extracted_contacts_fillter.csv"
+INPUT="contacts_Try_One.csv"
+OUTPUT="extracted_contacts_fillter_Try_One.csv"
 
 if [ -f "$INPUT" ]; then
     python3 ./src/extraction.py "$INPUT" "$OUTPUT"

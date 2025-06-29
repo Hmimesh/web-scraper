@@ -12,7 +12,7 @@ from jobs import Contacts
 from datafunc import apply_hebrew_transliteration
 from nameparser import HumanName
 from collect_names import collect_names
-
+from tqdm import tqdm
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 logging.basicConfig(
@@ -212,7 +212,7 @@ def scrape_with_browser(file_path: str | None = None):
         future_to_city = {executor.submit(process_city, row, results): row["עיר"] for _, row in df.iterrows()}
         completed = 0
 
-        for future in as_completed(future_to_city):
+        for future in tqdm(as_completed(future_to_city), total=total_items, desc="scraping cities"):
             city = future_to_city[future]
             try:
                 city, data = future.result(timeout=60)
