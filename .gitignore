@@ -6,4 +6,5 @@ __pycache__/
 *.pyc
 *.log
 data/translation_cache.json
-*/output/
+*/output/logs/*.log
+logs/*.jsonl
