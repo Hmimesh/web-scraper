@@ -172,6 +172,30 @@ class Contacts:
         letters = re.sub(r"[^A-Za-zא-ת]", "", name)
         if len(letters) < 2:
             return False
+
+        # Additional strict checks for garbage patterns
+        garbage_indicators = [
+            "טלפון", "פקס", "מס", "המחלקה", "מנהל המחלקה", "שם מנהל",
+            "לא נמצא", "שעות עבודה", "קבלת קהל", "מועצה", "עירייה",
+            "מוקד", "לשכת", "מחלקת", "אגף", "גבייה", "שומה", "הנהלת",
+            "מבקר", "מענה", "זימון", "תור", "חיפוש", "תוצאות", "סינון",
+            "נפתח", "חלון", "חדש", "שירות", "ארצי", "מידע", "סיוע",
+            "דיווח", "תרבות", "תורנית", "כתובת", "תאם", "פגישה", "טלפונית",
+            "פקידת", "זכאות", "עדיף"
+        ]
+
+        for indicator in garbage_indicators:
+            if indicator in name:
+                return False
+
+        # Reject if too long (likely a sentence)
+        if len(name) > 40:
+            return False
+
+        # Reject if too many words (likely a description)
+        if len(name.split()) > 4:
+            return False
+
         return True
 
     def __init__(self, raw_text, city, url: str | None = None):
@@ -300,7 +324,9 @@ class Contacts:
             if guess and Contacts.is_valid_name(guess):
                 self.name = guess
             else:
-                self.name = f"לא נמצא שם ({self.role})" if self.role else "לא נמצא שם"
+                # Don't create a contact if we can't find a valid name
+                # This prevents garbage text from being treated as names
+                self.name = None
         else:
             if not re.search(r"[א-ת]", self.name):
                 guess = guess_hebrew_name(self.name)

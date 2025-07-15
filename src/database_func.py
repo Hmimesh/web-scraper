@@ -102,6 +102,11 @@ def extract_relevant_contacts_from_text(text, city_name, source_url=None):
         block = " ".join(lines[i:i+5])
         if "@" in block or re.search(r"0[2-9][-\s]?\d{7}", block):
             contact_obj = Contacts(block, city_name, url=source_url)
+
+            # Skip contacts without valid names
+            if not contact_obj.name:
+                continue
+
             if not contact_obj.name and contact_obj.email:
                 parsed = HumanName(contact_obj.email.split("@")[0])
                 contact_obj.name = str(parsed)
@@ -110,6 +115,11 @@ def extract_relevant_contacts_from_text(text, city_name, source_url=None):
                     parsed = HumanName(contact_obj.email.split("@")[0])
                     contact_obj.role = contact_obj.name
                     contact_obj.name = str(parsed)
+
+            # Skip if still no valid name after processing
+            if not contact_obj.name:
+                continue
+
             if contact_obj.name in people and not contact_obj.email and people[contact_obj.name].get("מייל"):
                 continue
             people[contact_obj.name] = contact_obj.to_dict()

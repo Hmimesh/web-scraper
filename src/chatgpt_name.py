@@ -5,11 +5,38 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
 api_key = os.getenv("OPENAI_API_KEY")
 import logging
 
+# Import the government names dataset for fallback
+try:
+    from gov_names import load_names
+except ImportError:
+    load_names = None
+
 
 def guess_hebrew_name(text: str) -> str | None:
-    """Return the best Hebrew personal name for the given text using ChatGPT."""
+    """Return the best Hebrew personal name for the given text using static mappings or ChatGPT."""
+    if not text:
+        return None
+
+    # First, try to find the name in our static mappings
+    if load_names:
+        try:
+            name_mappings = load_names()
+            # Check if the text exactly matches a known English name
+            if text in name_mappings:
+                return name_mappings[text]
+
+            # Check if any word in the text matches a known name
+            words = text.split()
+            for word in words:
+                word_clean = word.strip('.,!?()[]{}":;').title()
+                if word_clean in name_mappings:
+                    return name_mappings[word_clean]
+        except Exception as e:
+            logging.warning(f"Failed to load static name mappings: {e}")
+
+    # Fallback to ChatGPT if no static mapping found
     api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key or not text:
+    if not api_key:
         return None
 
     try:
