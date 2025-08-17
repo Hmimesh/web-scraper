@@ -43,5 +43,17 @@ python3 ./src/name_pull.py
 
 echo "✅ Process completed! Files saved:"
 echo "   JSON: $OUT"
-echo "   CSV: all_contacts.csv"
-echo "   Excel: all_contacts.xlsx"
+echo "   CSV: output/all_contacts.csv"
+echo "   Excel: output/all_contacts.xlsx"
+
+# Show file sizes for verification
+if [ -f "$OUT" ]; then
+    JSON_SIZE=$(du -h "$OUT" | cut -f1)
+    echo "📊 JSON file size: $JSON_SIZE"
+fi
+
+if [ -f "output/all_contacts.csv" ]; then
+    CSV_SIZE=$(du -h "output/all_contacts.csv" | cut -f1)
+    CSV_LINES=$(wc -l < "output/all_contacts.csv" 2>/dev/null || echo "unknown")
+    echo "📊 CSV file size: $CSV_SIZE, Lines: $CSV_LINES"
+fi

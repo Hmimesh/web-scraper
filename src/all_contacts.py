@@ -174,8 +174,12 @@ def load_contacts(path: Path | None = None) -> dict:
 
 
 def save_outputs(df: pd.DataFrame, base_filename: str = "all_contacts") -> None:
-    csv_file = f"{base_filename}.csv"
-    excel_file = f"{base_filename}.xlsx"
+    # Ensure output directory exists
+    output_dir = BASE_DIR / "output"
+    output_dir.mkdir(exist_ok=True)
+
+    csv_file = output_dir / f"{base_filename}.csv"
+    excel_file = output_dir / f"{base_filename}.xlsx"
 
     df.to_csv(csv_file, index=False, encoding="utf-8-sig")
     print(f"✅ הקובץ נשמר: {csv_file}")
@@ -238,6 +242,11 @@ def main(json_path: str | None = None) -> None:
             print(f"  {city}: {city_contacts} valid contacts")
 
     df = pd.DataFrame(rows)
+
+    # Ensure phone numbers are stored as strings to preserve leading zeros
+    if 'טלפון' in df.columns:
+        df['טלפון'] = df['טלפון'].astype(str)
+
     print(f"\nTotal valid contacts: {len(df)}")
     print(f"Unique phone numbers: {len(phone_seen)}")
 

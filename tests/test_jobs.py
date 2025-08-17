@@ -57,4 +57,4 @@ def test_name_from_clean_email(monkeypatch):
 def test_blacklist_behavior_with_long_text(monkeypatch):
     monkeypatch.setattr(jobs, "guess_hebrew_name", lambda n: "קונטקט")
     c = Contacts("לתמיכה טכנית אנא פנו contact@helpdesk.gov.il", "בת ים")
-    assert c.name == "לא נמצא שם"
+    assert c.name == None

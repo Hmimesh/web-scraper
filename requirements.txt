@@ -5,3 +5,5 @@ requests
 openpyxl
 nameparser
 openai==0.28
+pytest
+pytest-html

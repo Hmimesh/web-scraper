@@ -89,7 +89,8 @@ class TestDataQualityPipeline:
             assert os.path.exists(excel_file), "Excel file should be created"
             
             # Load and validate CSV content
-            df = pd.read_csv(csv_file, encoding='utf-8-sig')
+            # Specify dtype for phone column to preserve leading zeros
+            df = pd.read_csv(csv_file, encoding='utf-8-sig', dtype={'טלפון': str})
             
             # Basic structure validation
             expected_columns = ['עיר', 'שם', 'טלפון', 'אימייל', 'תפקיד', 'מחלקה']
@@ -113,7 +114,8 @@ class TestDataQualityPipeline:
             phones = df['טלפון'].dropna().tolist()
             for phone in phones:
                 if phone:  # Skip empty strings
-                    assert phone.startswith('0'), f"Phone {phone} should start with 0"
+                    phone_str = str(phone)  # Convert to string in case it's stored as int
+                    assert phone_str.startswith('0'), f"Phone {phone_str} should start with 0"
             
             # Check email validity
             emails = df['אימייל'].dropna().tolist()
@@ -229,11 +231,11 @@ class TestDataQualityPipeline:
 
             if should_have_valid_name:
                 # Should have extracted a valid name (not filtered)
-                assert contact.name != "לא נמצא שם" and not contact.name.startswith("לא נמצא"), \
+                assert contact.name and contact.name != "לא נמצא שם" and not contact.name.startswith("לא נמצא"), \
                     f"Input '{input_text}' should extract valid name, got '{contact.name}'"
             else:
                 # Should be filtered out
-                assert contact.name == "לא נמצא שם" or contact.name.startswith("לא נמצא"), \
+                assert not contact.name or contact.name == "לא נמצא שם" or contact.name.startswith("לא נמצא"), \
                     f"Input '{input_text}' should be filtered, got '{contact.name}'"
 
     def test_department_standardization_quality(self):

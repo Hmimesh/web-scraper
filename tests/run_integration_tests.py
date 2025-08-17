@@ -19,20 +19,27 @@ def run_test_suite(test_file, description):
     print(f"\n{'='*60}")
     print(f"🧪 Running {description}")
     print(f"{'='*60}")
-    
+
     start_time = time.time()
-    
+
+    # Ensure output directory exists for test results
+    output_dir = Path(__file__).parent.parent / "output"
+    output_dir.mkdir(exist_ok=True)
+
     try:
         result = subprocess.run([
-            sys.executable, "-m", "pytest", 
-            test_file, 
-            "-v", 
+            sys.executable, "-m", "pytest",
+            test_file,
+            "-v",
             "--tb=short",
-            "--color=yes"
+            "--color=yes",
+            f"--junitxml=output/test_results_{Path(test_file).stem}.xml",
+            "--html=output/test_report.html",
+            "--self-contained-html"
         ], capture_output=True, text=True, cwd=Path(__file__).parent.parent)
-        
+
         duration = time.time() - start_time
-        
+
         if result.returncode == 0:
             print(f"✅ {description} - PASSED ({duration:.2f}s)")
             return True, duration, result.stdout
@@ -41,7 +48,7 @@ def run_test_suite(test_file, description):
             print("STDOUT:", result.stdout)
             print("STDERR:", result.stderr)
             return False, duration, result.stdout + result.stderr
-            
+
     except Exception as e:
         duration = time.time() - start_time
         print(f"💥 {description} - ERROR ({duration:.2f}s): {e}")
@@ -50,9 +57,13 @@ def run_test_suite(test_file, description):
 
 def main():
     """Run all integration tests and provide comprehensive reporting."""
-    
+
     print("🚀 Starting Comprehensive Integration Test Suite")
     print("=" * 80)
+
+    # Ensure output directory exists and save test summary there
+    output_dir = Path(__file__).parent.parent / "output"
+    output_dir.mkdir(exist_ok=True)
     
     # Test suites to run
     test_suites = [
@@ -165,7 +176,26 @@ def main():
         print(f"  {area}")
     
     print("\n" + "="*80)
-    
+
+    # Save test summary to output directory
+    summary_file = output_dir / "test_summary.txt"
+    with open(summary_file, 'w', encoding='utf-8') as f:
+        f.write(f"Test Summary - {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write("=" * 50 + "\n")
+        f.write(f"Overall Status: {passed_count}/{total_count} test suites passed\n")
+        f.write(f"Total Runtime: {total_duration:.2f} seconds\n\n")
+
+        for test_file, description, success, duration, output in results:
+            status = "PASS" if success else "FAIL"
+            f.write(f"{status} | {description} | {duration:.2f}s\n")
+
+        if passed_count == total_count:
+            f.write("\n🎊 ALL TESTS PASSED - Pipeline is production ready!\n")
+        else:
+            f.write(f"\n⚠️ {len([r for r in results if not r[2]])} test suite(s) failed\n")
+
+    print(f"📄 Test summary saved to: {summary_file}")
+
     if passed_count == total_count:
         print("🎊 CONGRATULATIONS! Your web scraper pipeline is robust and ready!")
         return 0

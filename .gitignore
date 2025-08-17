@@ -8,3 +8,4 @@ __pycache__/
 data/translation_cache.json
 */output/logs/*.log
 logs/*.jsonl
+output/
